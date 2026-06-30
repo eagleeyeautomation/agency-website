@@ -12,7 +12,8 @@ pnpm dev
 ## Production
 
 ```bash
-pnpm build
+pnpm install --frozen-lockfile
+pnpm check
 pnpm start
 ```
 
@@ -24,6 +25,7 @@ This app is ready for Vercel or any Node host that supports Next.js.
 - Package manager: `pnpm@11.7.0`
 - Install command: `pnpm install --frozen-lockfile`
 - Build command: `pnpm build`
+- Check command: `pnpm check`
 - Start command: `pnpm start`
 
 Set these environment variables in the deployment target:
@@ -37,6 +39,8 @@ NEXT_PUBLIC_BOOKING_URL=
 Leave `NEXT_PUBLIC_BOOKING_URL` blank to use an email-based scheduling link.
 
 The homepage content lives in `app/page.tsx`, global styling in `app/globals.css`, and project imagery in `public/images`.
+
+See `DEPLOYMENT.md` for the full Vercel deployment checklist.
 
 ## Related Repositories
 

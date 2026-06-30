@@ -1,15 +1,56 @@
-node_modules
-.pnpm-store
-.next
-out
-.vercel
-dist
+# Logs
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage and build output
+coverage
+*.lcov
+.nyc_output
+build/Release
+dist
+out
+.next
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# Caches
+.pnpm-store
+.npm
+.eslintcache
+.stylelintcache
+.cache
+.parcel-cache
+.turbo
 *.tsbuildinfo
-.DS_Store
-env.local
+
+# Environment
 .env
-.env*.local
+.env.*
+!.env.example
+env.local
+
+# OS/editor files
+.DS_Store
+.vscode-test
+
+# Vercel
+.vercel
 
 # Local sibling checkouts used during ecosystem maintenance
 prn-command-center/
