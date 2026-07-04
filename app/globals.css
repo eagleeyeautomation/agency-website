@@ -572,6 +572,14 @@ h3 {
   font-size: 28px;
 }
 
+.price-line {
+  margin-bottom: 18px;
+  color: var(--gold-dark) !important;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
 .pricing-card .clean-list {
   margin-top: 20px;
 }
@@ -791,6 +799,34 @@ h3 {
   margin-top: 26px;
 }
 
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hours-grid div {
+  display: grid;
+  gap: 6px;
+  border: 1px solid rgba(207, 181, 59, 0.34);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 14px;
+}
+
+.hours-grid strong {
+  color: var(--old-gold);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.hours-grid span {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  font-weight: 800;
+}
+
 .contact-options span {
   border-color: rgba(207, 181, 59, 0.34);
   background: rgba(255, 255, 255, 0.08);
@@ -943,7 +979,8 @@ footer .brand-logo {
   .process-grid,
   .pricing-grid,
   .service-detail-grid,
-  .portfolio-detail-grid {
+  .portfolio-detail-grid,
+  .hours-grid {
     grid-template-columns: 1fr;
   }
 

@@ -60,12 +60,12 @@ export default function AboutPage() {
           <p className="eyebrow">Work with us</p>
           <h2>Build the system your team actually needs.</h2>
           <p>
-            Start with a discovery call and we will map the fastest path from
+            Start with a demo request and we will map the fastest path from
             operational bottleneck to useful business software.
           </p>
         </div>
         <a className="button primary light" href="/contact">
-          Request a consultation
+          Request a Demo
           <ArrowRight size={18} aria-hidden="true" />
         </a>
       </section>

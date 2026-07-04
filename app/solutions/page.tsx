@@ -70,7 +70,7 @@ export default function SolutionsPage() {
           </p>
         </div>
         <a className="button primary light" href="/contact">
-          Request a consultation
+          Request a Demo
           <ArrowRight size={18} aria-hidden="true" />
         </a>
       </section>

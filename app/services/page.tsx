@@ -75,7 +75,7 @@ export default function ServicesPage() {
                 ))}
               </ul>
               <a className="button package-button" href="/contact">
-                Discuss fit
+                {tier.cta}
                 <ArrowRight size={18} aria-hidden="true" />
               </a>
             </article>

@@ -21,7 +21,7 @@ export const outcomes = [
   "AI-powered front office coverage",
   "CRM pipelines that match real operations",
   "Custom dashboards for faster decisions",
-  "Software built around the business"
+  "AI support available 24/7"
 ];
 
 export const primaryNav = [
@@ -36,7 +36,7 @@ export const primaryNav = [
 export const footerNav = [
   { label: "Home", href: "/" },
   ...primaryNav,
-  { label: "PRN Staffers Case Study", href: "/success-stories/prn-staffers" },
+  { label: "PRN Staffers Digital Transformation", href: "/success-stories/prn-staffers" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" }
@@ -133,6 +133,22 @@ export const productPlatforms = [
     text: "Executive summaries, KPI interpretation, state comparisons, trends, risk signals, and recommended actions from centralized business data.",
     items: ["KPI interpretation", "Trend analysis", "Executive recommendations"],
     href: "/products"
+  },
+  {
+    title: "Executive Dashboards",
+    eyebrow: "Leadership visibility",
+    icon: Target,
+    text: "Premium dashboard experiences that help owners and executives understand company health, activity, trends, and priorities quickly.",
+    items: ["KPI dashboards", "State reporting", "Executive summaries"],
+    href: "/products"
+  },
+  {
+    title: "Website Development",
+    eyebrow: "Digital presence",
+    icon: Globe2,
+    text: "Modern business websites and landing pages built to support trust, conversion, lead capture, AI chat, and CRM handoff.",
+    items: ["Business websites", "Landing pages", "Lead capture"],
+    href: "/solutions"
   }
 ];
 
@@ -172,10 +188,11 @@ export const portfolioProjects = [
 export const prnStaffersCaseStudy = {
   title: "PRN Staffers Digital Transformation",
   subtitle:
-    "PRN Staffers became the first major implementation of Eagle Eye Automation, combining multi-state websites, AI communication tools, GoHighLevel automation, and an executive command center.",
+    "PRN Staffers became the first major implementation of Eagle Eye Automation, combining a four-state operation, multi-state websites, AI communication tools, GoHighLevel automation, and an executive command center.",
   challenge:
     "PRN Staffers needed better visibility, faster lead response, AI call handling, multi-state website support, GoHighLevel automation, and a centralized executive dashboard.",
   solution: [
+    "Four-state operation support",
     "Four live PRN Staffers websites",
     "AI Voice Receptionist",
     "AI Chat",
@@ -303,28 +320,40 @@ export const faqs = [
 export const pricingPackages = [
   {
     title: "Starter",
+    price: "Starting at $1,500",
     text: "A focused launch package for businesses that need a stronger digital foundation.",
-    items: ["Website", "CRM", "AI Chat"]
+    items: ["Website development", "CRM foundation", "AI Chat setup"],
+    cta: "Request a Demo"
   },
   {
     title: "Growth",
+    price: "Starting at $3,500",
     text: "A practical automation package for teams ready to speed up response and reporting.",
-    items: ["AI Voice", "Automations", "Dashboards"],
+    items: ["AI Voice Receptionist", "Workflow automation", "Executive dashboards"],
+    cta: "Request a Demo",
     featured: true
   },
   {
     title: "Enterprise",
+    price: "Request a Quote",
     text: "A custom build path for advanced operations, integrations, and leadership visibility.",
-    items: ["Custom Software", "Integrations", "Executive Reporting"]
+    items: ["Eagle Eye Command Center", "GoHighLevel implementation", "Business intelligence"],
+    cta: "Request a Quote"
   }
 ];
 
 export const contactOptions = [
-  "Discovery Call",
+  "Request a Demo",
   "Contact Form",
   "Calendly or GoHighLevel Calendar",
-  "Phone",
-  "Email"
+  "Business Hours: Monday-Friday, 9 AM-5 PM ET",
+  "AI Support: 24/7"
+];
+
+export const businessHours = [
+  { label: "Business Hours", value: "Monday-Friday, 9 AM-5 PM ET" },
+  { label: "AI Phone & Chat Support", value: "Available 24/7" },
+  { label: "Demo Requests", value: "Reviewed during business hours" }
 ];
 
 export const socialLinks = [
@@ -399,7 +428,7 @@ export function SiteHeader() {
           ))}
         </div>
         <a className="nav-cta" href="/contact">
-          Discovery call
+          Request a Demo
         </a>
       </nav>
     </header>
@@ -430,6 +459,10 @@ export function SiteFooter() {
           <Globe2 size={16} aria-hidden="true" />
           <span>www.eagleeyeautomation.com</span>
         </a>
+        <span className="footer-note">
+          <Sparkles size={16} aria-hidden="true" />
+          <span>AI support available 24/7</span>
+        </span>
       </div>
       <div className="social-links" aria-label="Social media links">
         {socialLinks.map(({ href, label, mark }) => (
@@ -469,6 +502,7 @@ export function ContactForm() {
           <option>CRM</option>
           <option>Web</option>
           <option>Dashboards</option>
+          <option>Request a Demo</option>
           <option>Custom Business Software</option>
         </select>
       </label>
@@ -482,7 +516,7 @@ export function ContactForm() {
         />
       </label>
       <button className="button primary" type="submit">
-        Send inquiry
+        Request a Demo
         <ArrowRight size={18} aria-hidden="true" />
       </button>
     </form>

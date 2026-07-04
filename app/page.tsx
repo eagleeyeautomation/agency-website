@@ -4,6 +4,7 @@ import {
   ContactForm,
   SiteFooter,
   SiteHeader,
+  businessHours,
   contactOptions,
   founderExperience,
   getContactDetails,
@@ -49,11 +50,11 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button primary" href="/contact">
-              Book a discovery call
+              Request a Demo
               <ArrowRight size={18} aria-hidden="true" />
             </a>
-            <a className="button secondary" href="/services">
-              Explore services
+            <a className="button secondary" href="/products">
+              Explore products
             </a>
           </div>
         </div>
@@ -124,7 +125,7 @@ export default function Home() {
           </p>
         </div>
         <div className="service-grid service-grid-wide">
-          {productPlatforms.slice(0, 4).map(({ icon: Icon, title, items, text }) => (
+          {productPlatforms.slice(0, 8).map(({ icon: Icon, title, items, text }) => (
             <article className="service-card" key={title}>
               <div className="icon-box">
                 <Icon size={24} aria-hidden="true" />
@@ -254,6 +255,7 @@ export default function Home() {
             >
               {tier.featured ? <span className="package-badge">Popular</span> : null}
               <h3>{tier.title}</h3>
+              <p className="price-line">{tier.price}</p>
               <p>{tier.text}</p>
               <ul className="clean-list">
                 {tier.items.map((item) => (
@@ -264,7 +266,7 @@ export default function Home() {
                 ))}
               </ul>
               <a className="button package-button" href="/contact">
-                Discuss fit
+                {tier.cta}
               </a>
             </article>
           ))}
@@ -274,12 +276,20 @@ export default function Home() {
       <section id="contact" className="contact-section">
         <div className="contact-copy">
           <p className="eyebrow">Contact</p>
-          <h2>Start with a discovery call.</h2>
+          <h2>Request a demo.</h2>
           <p>
             Tell us what is slowing the business down. We will review your
             current process, identify the fastest automation opportunities, and
             recommend the right package or custom build path.
           </p>
+          <div className="hours-grid" aria-label="Business hours">
+            {businessHours.map((item) => (
+              <div key={item.label}>
+                <strong>{item.label}</strong>
+                <span>{item.value}</span>
+              </div>
+            ))}
+          </div>
           <div className="contact-options">
             {contactOptions.map((option) => (
               <span key={option}>{option}</span>
@@ -288,7 +298,7 @@ export default function Home() {
           <div className="cta-actions">
             <a className="button primary light" href={bookingHref}>
               <PhoneCall size={18} aria-hidden="true" />
-              Book discovery call
+              Request a Demo
             </a>
             <a className="button secondary light" href={`mailto:${contactEmail}`}>
               {contactEmail}

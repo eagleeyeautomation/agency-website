@@ -18,6 +18,8 @@ export default function PricingPage() {
         <p>
           Start with a focused foundation, expand into automation, or build a
           custom operating system around GoHighLevel and executive visibility.
+          Starter and Growth packages use starting-at pricing. Enterprise
+          solutions are quoted after scoping.
         </p>
       </section>
 
@@ -27,6 +29,7 @@ export default function PricingPage() {
             <article className={`pricing-card${tier.featured ? " featured" : ""}`} key={tier.title}>
               {tier.featured ? <span className="package-badge">Popular</span> : null}
               <h2>{tier.title}</h2>
+              <p className="price-line">{tier.price}</p>
               <p>{tier.text}</p>
               <ul className="clean-list">
                 {tier.items.map((item) => (
@@ -37,7 +40,7 @@ export default function PricingPage() {
                 ))}
               </ul>
               <a className="button package-button" href="/contact">
-                Discuss fit
+                {tier.cta}
                 <ArrowRight size={18} aria-hidden="true" />
               </a>
             </article>

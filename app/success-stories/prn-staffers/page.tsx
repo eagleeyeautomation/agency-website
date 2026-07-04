@@ -82,12 +82,12 @@ export default function PrnStaffersCaseStudyPage() {
           <p className="eyebrow">Transformation</p>
           <h2>Want a transformation like PRN Staffers?</h2>
           <p>
-            Request a consultation and we will map the websites, AI, GoHighLevel,
+            Request a demo and we will map the websites, AI, GoHighLevel,
             automation, and reporting systems that fit your business.
           </p>
         </div>
         <a className="button primary light" href="/contact">
-          Request a consultation
+          Request a Demo
           <ArrowRight size={18} aria-hidden="true" />
         </a>
       </section>

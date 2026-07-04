@@ -5,7 +5,7 @@ import { SiteFooter, SiteHeader, productPlatforms } from "../site-content";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Eagle Eye Automation products including Eagle Eye Command Center, AI Voice Receptionist, AI Chat Assistant, GoHighLevel implementation, workflow automation, and business intelligence."
+    "Eagle Eye Automation products including Eagle Eye Command Center, AI Voice Receptionist, AI Chat Assistant, GoHighLevel implementation, workflow automation, executive dashboards, business intelligence, and website development."
 };
 
 export default function ProductsPage() {
@@ -57,7 +57,7 @@ export default function ProductsPage() {
           </p>
         </div>
         <a className="button primary light" href="/contact">
-          Request a consultation
+          Request a Demo
           <ArrowRight size={18} aria-hidden="true" />
         </a>
       </section>
