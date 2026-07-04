@@ -9,9 +9,10 @@ import {
   getContactDetails,
   industries,
   outcomes,
+  productPlatforms,
   portfolioProjects,
+  prnStaffersCaseStudy,
   pricingPackages,
-  serviceGroups,
   tagline
 } from "./site-content";
 
@@ -42,7 +43,9 @@ export default function Home() {
           <p className="hero-copy">
             Eagle Eye Automation helps service businesses streamline operations
             through AI receptionists, workflow automation, GoHighLevel systems,
-            dashboards, and custom software.
+            dashboards, and custom software. Eagle Eye Command Center is our
+            flagship software platform for turning GoHighLevel into an
+            executive operating system.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="/contact">
@@ -112,21 +115,22 @@ export default function Home() {
 
       <section id="services" className="section services-section">
         <div className="section-heading">
-          <p className="eyebrow">Services</p>
-          <h2>Professional systems for the next stage of growth.</h2>
+          <p className="eyebrow">Products</p>
+          <h2>Software and automation systems for the next stage of growth.</h2>
           <p>
-            From AI front-office coverage to custom reporting, each service is
-            designed to reduce manual work and give your team a cleaner path
-            from lead to delivery.
+            From Eagle Eye Command Center to AI front-office coverage, each
+            system is designed to reduce manual work and give your team a
+            cleaner path from lead to delivery.
           </p>
         </div>
         <div className="service-grid service-grid-wide">
-          {serviceGroups.map(({ icon: Icon, title, items }) => (
+          {productPlatforms.slice(0, 4).map(({ icon: Icon, title, items, text }) => (
             <article className="service-card" key={title}>
               <div className="icon-box">
                 <Icon size={24} aria-hidden="true" />
               </div>
               <h3>{title}</h3>
+              <p>{text}</p>
               <ul className="clean-list">
                 {items.map((item) => (
                   <li key={item}>
@@ -140,23 +144,75 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section split-section">
+        <div>
+          <p className="eyebrow">Flagship platform</p>
+          <h2>Eagle Eye Command Center turns GoHighLevel into executive intelligence.</h2>
+          <p>
+            The Command Center is built for leaders who need one place to see
+            leads, calls, chats, appointments, tasks, pipeline value, alerts,
+            and recommended actions.
+          </p>
+          <a className="button package-button" href="/products">
+            View products
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
+        </div>
+        <div className="system-panel">
+          <div className="system-panel-header">
+            <Sparkles size={20} aria-hidden="true" />
+            Executive operating system for GoHighLevel
+          </div>
+          <div className="tool-grid">
+            {["Leads", "AI Calls", "AI Chats", "Pipeline", "Tasks", "Appointments", "Reviews", "Alerts"].map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
+          <div className="metric-row">
+            <div>
+              <strong>1</strong>
+              <span>Executive view</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>AI coverage</span>
+            </div>
+            <div>
+              <strong>GHL</strong>
+              <span>Version 1 focus</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="portfolio" className="section portfolio-section">
         <div className="section-heading">
-          <p className="eyebrow">Portfolio</p>
-          <h2>Projects that show the range of the work.</h2>
+          <p className="eyebrow">Success story</p>
+          <h2>PRN Staffers is the flagship implementation.</h2>
           <p>
-            Examples across operations, AI, CRM, web, and reporting show how the
-            brand moves from strategy to useful business systems.
+            The PRN Staffers Digital Transformation brought together websites,
+            AI voice, AI chat, GoHighLevel automation, intake workflows, and a
+            centralized executive command center.
           </p>
         </div>
-        <div className="portfolio-grid">
-          {portfolioProjects.map((project) => (
-            <article className="portfolio-card" key={project.title}>
-              <span>{project.type}</span>
-              <h3>{project.title}</h3>
-              <p>{project.text}</p>
-            </article>
-          ))}
+        <div className="case-study-preview">
+          <article className="story-panel">
+            <p className="eyebrow">PRN Staffers Digital Transformation</p>
+            <h3>{prnStaffersCaseStudy.subtitle}</h3>
+            <a className="button secondary" href="/success-stories/prn-staffers">
+              Read the case study
+              <ArrowRight size={18} aria-hidden="true" />
+            </a>
+          </article>
+          <div className="portfolio-grid compact-grid">
+            {portfolioProjects.slice(0, 4).map((project) => (
+              <article className="portfolio-card" key={project.title}>
+                <span>{project.type}</span>
+                <h3>{project.title}</h3>
+                <p>{project.text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

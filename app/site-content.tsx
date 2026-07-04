@@ -1,12 +1,17 @@
 import {
   ArrowRight,
   Check,
+  BarChart3,
+  Bot,
+  BrainCircuit,
   Globe2,
   MailCheck,
+  MessageCircle,
   PhoneCall,
   Sparkles,
   Target,
-  Workflow
+  Workflow,
+  Settings2
 } from "lucide-react";
 import Image from "next/image";
 
@@ -17,6 +22,24 @@ export const outcomes = [
   "CRM pipelines that match real operations",
   "Custom dashboards for faster decisions",
   "Software built around the business"
+];
+
+export const primaryNav = [
+  { label: "Products", href: "/products" },
+  { label: "Solutions", href: "/solutions" },
+  { label: "Industries", href: "/industries" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Success Stories", href: "/success-stories" },
+  { label: "FAQ", href: "/faq" }
+];
+
+export const footerNav = [
+  { label: "Home", href: "/" },
+  ...primaryNav,
+  { label: "PRN Staffers Case Study", href: "/success-stories/prn-staffers" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" }
 ];
 
 export const founderExperience = [
@@ -57,6 +80,62 @@ export const serviceGroups = [
   }
 ];
 
+export const productPlatforms = [
+  {
+    title: "Eagle Eye Command Center",
+    eyebrow: "Flagship platform",
+    icon: BarChart3,
+    text: "A CEO-ready operating system for GoHighLevel that turns live CRM, pipeline, appointment, conversation, task, and AI activity into executive visibility.",
+    items: [
+      "Executive dashboards",
+      "Business intelligence",
+      "GoHighLevel data layer",
+      "Leadership alerts"
+    ],
+    href: "/products"
+  },
+  {
+    title: "AI Voice Receptionist",
+    eyebrow: "24/7 call coverage",
+    icon: PhoneCall,
+    text: "AI call handling that answers, qualifies, captures details, and routes follow-up so opportunities are not missed when the team is busy.",
+    items: ["Call answering", "Lead qualification", "Missed-call recovery"],
+    href: "/solutions"
+  },
+  {
+    title: "AI Chat Assistant",
+    eyebrow: "Website conversion",
+    icon: MessageCircle,
+    text: "Website chat support that helps visitors ask questions, request help, and move into the right CRM workflow.",
+    items: ["Website chat", "Lead capture", "CRM handoff"],
+    href: "/solutions"
+  },
+  {
+    title: "GoHighLevel CRM Implementation",
+    eyebrow: "CRM foundation",
+    icon: Workflow,
+    text: "GoHighLevel setup, pipelines, workflows, calendars, automation, and reporting structure built around real business operations.",
+    items: ["Pipelines", "Workflows", "Calendars", "Tasks"],
+    href: "/solutions"
+  },
+  {
+    title: "Workflow Automation",
+    eyebrow: "Operational leverage",
+    icon: Settings2,
+    text: "Repeatable automations for intake, reminders, handoffs, missed calls, follow-up, internal alerts, and reporting routines.",
+    items: ["Intake automation", "Follow-up workflows", "Team alerts"],
+    href: "/solutions"
+  },
+  {
+    title: "Business Intelligence",
+    eyebrow: "Decision support",
+    icon: BrainCircuit,
+    text: "Executive summaries, KPI interpretation, state comparisons, trends, risk signals, and recommended actions from centralized business data.",
+    items: ["KPI interpretation", "Trend analysis", "Executive recommendations"],
+    href: "/products"
+  }
+];
+
 export const portfolioProjects = [
   {
     title: "PRN Staffers Command Center",
@@ -90,6 +169,68 @@ export const portfolioProjects = [
   }
 ];
 
+export const prnStaffersCaseStudy = {
+  title: "PRN Staffers Digital Transformation",
+  subtitle:
+    "PRN Staffers became the first major implementation of Eagle Eye Automation, combining multi-state websites, AI communication tools, GoHighLevel automation, and an executive command center.",
+  challenge:
+    "PRN Staffers needed better visibility, faster lead response, AI call handling, multi-state website support, GoHighLevel automation, and a centralized executive dashboard.",
+  solution: [
+    "Four live PRN Staffers websites",
+    "AI Voice Receptionist",
+    "AI Chat",
+    "GoHighLevel CRM setup",
+    "Pipelines and workflows",
+    "Missed-call follow-up",
+    "Intake automation",
+    "Executive Command Center",
+    "Multi-state reporting"
+  ],
+  results: [
+    "Improved online presence across four states",
+    "Better lead capture",
+    "24/7 AI phone and chat support",
+    "More consistent follow-up",
+    "Centralized business visibility",
+    "Stronger foundation for future growth"
+  ],
+  testimonials: [
+    {
+      quote:
+        "Eagle Eye Automation helped us organize our digital systems and improve how we respond to opportunities.",
+      role: "PRN Staffers team member"
+    },
+    {
+      quote:
+        "The AI tools help our team stay focused while making sure inquiries are not missed.",
+      role: "PRN Staffers team member"
+    },
+    {
+      quote:
+        "The Command Center gives leadership a clearer view of what is happening across the business.",
+      role: "PRN Staffers leadership"
+    }
+  ]
+};
+
+export const solutions = [
+  {
+    title: "Lead response systems",
+    text: "Capture website, phone, chat, and CRM activity in one operational flow so new opportunities move quickly.",
+    items: ["Speed-to-lead", "Missed-call follow-up", "Conversation routing"]
+  },
+  {
+    title: "GoHighLevel operating systems",
+    text: "Set up pipelines, calendars, tasks, tags, workflows, and reporting around how the business actually runs.",
+    items: ["CRM architecture", "Pipeline visibility", "Workflow governance"]
+  },
+  {
+    title: "Executive visibility",
+    text: "Turn daily operational activity into the metrics, alerts, and summaries leadership needs to make decisions.",
+    items: ["Command Center", "KPI reporting", "Business intelligence"]
+  }
+];
+
 export const industries = [
   {
     title: "Home Care",
@@ -110,6 +251,52 @@ export const industries = [
   {
     title: "Professional Services",
     text: "Client onboarding, proposals, delivery tracking, reporting, and repeatable service operations."
+  }
+];
+
+export const blogPosts = [
+  {
+    title: "Why GoHighLevel needs an executive layer",
+    text: "CRM data becomes more valuable when leadership can see health, risk, and next actions without digging through every pipeline.",
+    href: "/blog"
+  },
+  {
+    title: "How AI receptionists protect speed-to-lead",
+    text: "A practical look at using AI voice and chat to capture more opportunities while keeping the human team focused.",
+    href: "/blog"
+  },
+  {
+    title: "The PRN Staffers implementation playbook",
+    text: "Lessons from combining websites, AI communication, GoHighLevel workflows, and executive reporting into one operating system.",
+    href: "/success-stories/prn-staffers"
+  }
+];
+
+export const faqs = [
+  {
+    question: "What is Eagle Eye Command Center?",
+    answer:
+      "Eagle Eye Command Center is the flagship software platform from Eagle Eye Automation. Version 1 focuses on turning GoHighLevel activity into executive dashboards, alerts, insights, and business intelligence."
+  },
+  {
+    question: "Do you replace GoHighLevel?",
+    answer:
+      "No. Eagle Eye Command Center is designed to sit on top of GoHighLevel and make its data easier for executives to understand and act on."
+  },
+  {
+    question: "Can you build the CRM setup too?",
+    answer:
+      "Yes. Eagle Eye Automation can help with GoHighLevel setup, pipelines, workflows, calendars, missed-call follow-up, intake automation, and reporting structure."
+  },
+  {
+    question: "Do you offer AI phone and chat tools?",
+    answer:
+      "Yes. The site highlights AI Voice Receptionist and AI Chat Assistant services for businesses that need faster response and better lead capture."
+  },
+  {
+    question: "Is PRN Staffers a real implementation?",
+    answer:
+      "Yes. PRN Staffers is presented as the flagship implementation using factual project elements: multi-state websites, AI voice and chat support, GoHighLevel automation, intake workflows, and an executive command center."
   }
 ];
 
@@ -205,10 +392,11 @@ export function SiteHeader() {
       </a>
       <nav aria-label="Primary">
         <div className="nav-links">
-          <a href="/#about">About</a>
-          <a href="/services">Services</a>
-          <a href="/portfolio">Portfolio</a>
-          <a href="/contact">Contact</a>
+          {primaryNav.map((item) => (
+            <a key={item.href} href={item.href}>
+              {item.label}
+            </a>
+          ))}
         </div>
         <a className="nav-cta" href="/contact">
           Discovery call
@@ -250,6 +438,13 @@ export function SiteFooter() {
           </a>
         ))}
       </div>
+      <nav className="footer-nav" aria-label="Footer navigation">
+        {footerNav.map((item) => (
+          <a key={item.href} href={item.href}>
+            {item.label}
+          </a>
+        ))}
+      </nav>
     </footer>
   );
 }
