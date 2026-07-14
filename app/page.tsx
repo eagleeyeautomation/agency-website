@@ -2,15 +2,23 @@ import Image from "next/image";
 import { ArrowRight, Check, PhoneCall, Sparkles } from "lucide-react";
 import {
   ContactForm,
+  GhlEmbedSlot,
   SiteFooter,
   SiteHeader,
   businessHours,
+  companyMission,
   contactOptions,
+  eagleEyeBrainUrl,
+  eeosProductSiteUrl,
+  eeosSignals,
   founderExperience,
   getContactDetails,
+  ghlReadinessAreas,
   industries,
   outcomes,
+  productFullName,
   productPlatforms,
+  productTagline,
   portfolioProjects,
   prnStaffersCaseStudy,
   pricingPackages,
@@ -40,21 +48,23 @@ export default function Home() {
             <Sparkles size={16} aria-hidden="true" />
             {tagline}
           </p>
-          <h1>AI, automation, CRM, and software for sharper operations.</h1>
+          <h1>EEOS is the AI operating system for service businesses.</h1>
           <p className="hero-copy">
-            Eagle Eye Automation helps service businesses streamline operations
-            through AI receptionists, workflow automation, GoHighLevel systems,
-            dashboards, and custom software. Eagle Eye Command Center is our
-            flagship software platform for turning GoHighLevel into an
-            executive operating system.
+            Eagle Eye Automation builds AI software that helps service
+            businesses grow. EEOS — Eagle Eye Operating System helps owners
+            understand leads, calls, missed opportunities, follow-ups,
+            appointments, pipeline activity, and daily business performance.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="/contact">
               Request a Demo
               <ArrowRight size={18} aria-hidden="true" />
             </a>
-            <a className="button secondary" href="/products">
-              Explore products
+            <a className="button secondary" href={eeosProductSiteUrl}>
+              Explore EEOS
+            </a>
+            <a className="button secondary" href={eagleEyeBrainUrl}>
+              Talk to the Eagle Eye Brain
             </a>
           </div>
         </div>
@@ -74,10 +84,9 @@ export default function Home() {
           <p className="eyebrow">Who we are</p>
           <h2>Built from real business operations, not theory.</h2>
           <p>
-            Eagle Eye Automation helps businesses streamline operations through
-            AI, automation, CRM integrations, and custom software solutions. The
-            work is practical: answer faster, follow up cleaner, see the numbers,
-            and give teams systems they can actually use.
+            {companyMission} The work is practical: answer faster, follow up
+            cleaner, see the numbers, and give teams systems they can actually
+            use.
           </p>
         </div>
         <div className="about-grid">
@@ -116,12 +125,12 @@ export default function Home() {
 
       <section id="services" className="section services-section">
         <div className="section-heading">
-          <p className="eyebrow">Products</p>
+          <p className="eyebrow">EEOS and services</p>
           <h2>Software and automation systems for the next stage of growth.</h2>
           <p>
-            From Eagle Eye Command Center to AI front-office coverage, each
-            system is designed to reduce manual work and give your team a
-            cleaner path from lead to delivery.
+            From EEOS to AI front-office coverage, each system is designed to
+            reduce manual work and give your team a cleaner path from lead to
+            delivery.
           </p>
         </div>
         <div className="service-grid service-grid-wide">
@@ -147,25 +156,26 @@ export default function Home() {
 
       <section className="section split-section">
         <div>
-          <p className="eyebrow">Flagship platform</p>
-          <h2>Eagle Eye Command Center turns GoHighLevel into executive intelligence.</h2>
+          <p className="eyebrow">Powered by EEOS — Eagle Eye Operating System</p>
+          <h2>{productFullName}</h2>
           <p>
-            The Command Center is built for leaders who need one place to see
-            leads, calls, chats, appointments, tasks, pipeline value, alerts,
-            and recommended actions.
+            {productTagline}. EEOS is the executive AI layer that helps service
+            business owners make sense of the daily activity already happening
+            across calls, forms, calendars, follow-ups, pipelines, and client
+            conversations.
           </p>
-          <a className="button package-button" href="/products">
-            View products
+          <a className="button package-button" href={eeosProductSiteUrl}>
+            Visit EEOS Product Site
             <ArrowRight size={18} aria-hidden="true" />
           </a>
         </div>
         <div className="system-panel">
           <div className="system-panel-header">
             <Sparkles size={20} aria-hidden="true" />
-            Executive operating system for GoHighLevel
+            Executive AI layer for service businesses
           </div>
           <div className="tool-grid">
-            {["Leads", "AI Calls", "AI Chats", "Pipeline", "Tasks", "Appointments", "Reviews", "Alerts"].map((item) => (
+            {eeosSignals.map((item) => (
               <span key={item}>{item}</span>
             ))}
           </div>
@@ -180,9 +190,43 @@ export default function Home() {
             </div>
             <div>
               <strong>GHL</strong>
-              <span>Version 1 focus</span>
+              <span>Ready structure</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section ghl-section">
+        <div className="section-heading">
+          <p className="eyebrow">GoHighLevel-ready</p>
+          <h2>Prepared for forms, calendars, chat, funnels, tracking, and automation.</h2>
+          <p>
+            The frontend is structured so GoHighLevel can be connected later
+            without changing the site strategy. No live APIs or external GHL
+            scripts are connected yet.
+          </p>
+        </div>
+        <div className="ghl-grid">
+          {ghlReadinessAreas.map((area) => (
+            <GhlEmbedSlot
+              key={area.title}
+              label={area.title}
+              kind={
+                area.title === "Forms"
+                  ? "form"
+                  : area.title === "Calendars"
+                    ? "calendar"
+                    : area.title === "Chat widget"
+                      ? "chat"
+                      : area.title === "Tracking scripts"
+                        ? "tracking"
+                        : area.title === "Funnels"
+                          ? "funnel"
+                          : "automation"
+              }
+              detail={area.text}
+            />
+          ))}
         </div>
       </section>
 
@@ -193,7 +237,7 @@ export default function Home() {
           <p>
             The PRN Staffers Digital Transformation brought together websites,
             AI voice, AI chat, GoHighLevel automation, intake workflows, and a
-            centralized executive command center.
+            centralized executive AI layer.
           </p>
         </div>
         <div className="case-study-preview">

@@ -15,31 +15,41 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-export const tagline = "Sharper systems. Faster growth.";
+export const companyName = "Eagle Eye Automation";
+export const companyMission =
+  "We build AI software that helps service businesses grow.";
+export const productName = "EEOS";
+export const productFullName = "EEOS — Eagle Eye Operating System";
+export const productTagline = "The AI Operating System for Service Businesses";
+export const tagline = productTagline;
+export const eeosProductSiteUrl = "https://eeos-platform-production.up.railway.app/";
+export const eagleEyeBrainUrl = `${eeosProductSiteUrl}talk-to-selling-brain`;
 
 export const outcomes = [
-  "AI-powered front office coverage",
-  "CRM pipelines that match real operations",
-  "Custom dashboards for faster decisions",
-  "AI support available 24/7"
+  "Executive visibility across leads and calls",
+  "GoHighLevel-ready lead capture",
+  "Pipeline, appointment, and follow-up clarity",
+  "AI support prepared for 24/7 coverage"
 ];
 
 export const primaryNav = [
-  { label: "Products", href: "/products" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "Industries", href: "/industries" },
+  { label: "About", href: "/about" },
+  { label: "Visit EEOS Product Site", href: eeosProductSiteUrl },
+  { label: "Services", href: "/services" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Success Stories", href: "/success-stories" },
-  { label: "FAQ", href: "/faq" }
+  { label: "Book Demo", href: "/contact" }
 ];
 
 export const footerNav = [
   { label: "Home", href: "/" },
   ...primaryNav,
+  { label: "Products", href: "/products" },
+  { label: "Solutions", href: "/solutions" },
+  { label: "Industries", href: "/industries" },
+  { label: "Success Stories", href: "/success-stories" },
+  { label: "FAQ", href: "/faq" },
   { label: "PRN Staffers Digital Transformation", href: "/success-stories/prn-staffers" },
-  { label: "Blog", href: "/blog" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" }
+  { label: "Blog", href: "/blog" }
 ];
 
 export const founderExperience = [
@@ -82,17 +92,17 @@ export const serviceGroups = [
 
 export const productPlatforms = [
   {
-    title: "Eagle Eye Command Center",
+    title: productFullName,
     eyebrow: "Flagship platform",
     icon: BarChart3,
-    text: "A CEO-ready operating system for GoHighLevel that turns live CRM, pipeline, appointment, conversation, task, and AI activity into executive visibility.",
+    text: "The executive AI layer for service businesses. EEOS helps owners understand leads, calls, missed opportunities, follow-ups, appointments, pipeline activity, and daily performance.",
     items: [
-      "Executive dashboards",
-      "Business intelligence",
-      "GoHighLevel data layer",
-      "Leadership alerts"
+      "Executive AI dashboard",
+      "GoHighLevel-ready data layer",
+      "Missed opportunity intelligence",
+      "Daily performance visibility"
     ],
-    href: "/products"
+    href: "/eeos"
   },
   {
     title: "AI Voice Receptionist",
@@ -248,6 +258,44 @@ export const solutions = [
   }
 ];
 
+export const eeosSignals = [
+  "Leads",
+  "Calls",
+  "Missed opportunities",
+  "Follow-ups",
+  "Appointments",
+  "Pipeline activity",
+  "Daily performance",
+  "Owner alerts"
+];
+
+export const ghlReadinessAreas = [
+  {
+    title: "Forms",
+    text: "Dedicated sections are prepared for GoHighLevel lead, demo, contact, and funnel forms."
+  },
+  {
+    title: "Calendars",
+    text: "Demo and consultation CTAs are structured so GHL calendars can replace temporary booking links."
+  },
+  {
+    title: "Chat widget",
+    text: "The layout leaves a clean global chat zone for a future GoHighLevel chat widget."
+  },
+  {
+    title: "Tracking scripts",
+    text: "The site is ready for future GHL tracking, funnel attribution, and automation code snippets."
+  },
+  {
+    title: "Funnels",
+    text: "EEOS, services, pricing, and contact pages can route visitors into GHL funnel steps."
+  },
+  {
+    title: "Automation",
+    text: "Contact intent, demo requests, service interests, and EEOS inquiries are labeled for future workflows."
+  }
+];
+
 export const industries = [
   {
     title: "Home Care",
@@ -291,14 +339,14 @@ export const blogPosts = [
 
 export const faqs = [
   {
-    question: "What is Eagle Eye Command Center?",
+    question: "What is EEOS?",
     answer:
-      "Eagle Eye Command Center is the flagship software platform from Eagle Eye Automation. Version 1 focuses on turning GoHighLevel activity into executive dashboards, alerts, insights, and business intelligence."
+      "EEOS — Eagle Eye Operating System is the flagship software platform from Eagle Eye Automation. It is the executive AI layer for service businesses that need clearer visibility across leads, calls, missed opportunities, follow-ups, appointments, pipeline activity, and daily performance."
   },
   {
     question: "Do you replace GoHighLevel?",
     answer:
-      "No. Eagle Eye Command Center is designed to sit on top of GoHighLevel and make its data easier for executives to understand and act on."
+      "No. EEOS is designed to sit on top of GoHighLevel and make CRM, communication, appointment, and pipeline data easier for owners to understand and act on."
   },
   {
     question: "Can you build the CRM setup too?",
@@ -337,15 +385,15 @@ export const pricingPackages = [
     title: "Enterprise",
     price: "Request a Quote",
     text: "A custom build path for advanced operations, integrations, and leadership visibility.",
-    items: ["Eagle Eye Command Center", "GoHighLevel implementation", "Business intelligence"],
+    items: ["EEOS implementation", "GoHighLevel implementation", "Business intelligence"],
     cta: "Request a Quote"
   }
 ];
 
 export const contactOptions = [
   "Request a Demo",
-  "Contact Form",
-  "Calendly or GoHighLevel Calendar",
+  "GoHighLevel-ready Contact Form",
+  "GoHighLevel Calendar Slot",
   "Business Hours: Monday-Friday, 9 AM-5 PM ET",
   "AI Support: 24/7"
 ];
@@ -482,11 +530,43 @@ export function SiteFooter() {
   );
 }
 
+export function GhlEmbedSlot({
+  label,
+  kind,
+  detail
+}: {
+  label: string;
+  kind: "form" | "calendar" | "chat" | "tracking" | "funnel" | "automation";
+  detail: string;
+}) {
+  return (
+    <div
+      className="ghl-embed-slot"
+      data-ghl-ready="true"
+      data-ghl-embed-kind={kind}
+      data-ghl-company={companyName}
+      data-ghl-product={productName}
+    >
+      <span>{label}</span>
+      <strong>{kind}</strong>
+      <p>{detail}</p>
+    </div>
+  );
+}
+
 export function ContactForm() {
   const { formAction } = getContactDetails();
 
   return (
-    <form className="contact-form" action={formAction} method="post">
+    <form
+      className="contact-form"
+      action={formAction}
+      method="post"
+      data-ghl-ready="true"
+      data-ghl-form-purpose="demo-request"
+      data-ghl-product={productName}
+      data-ghl-company={companyName}
+    >
       <label>
         Name
         <input name="name" type="text" autoComplete="name" required />
@@ -497,7 +577,8 @@ export function ContactForm() {
       </label>
       <label>
         What do you need help with?
-        <select name="service" defaultValue="AI & Automation">
+        <select name="service" defaultValue={productFullName}>
+          <option>{productFullName}</option>
           <option>AI & Automation</option>
           <option>CRM</option>
           <option>Web</option>
