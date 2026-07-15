@@ -38,6 +38,15 @@ main {
   overflow: hidden;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 .site-header {
   position: fixed;
   top: 16px;
@@ -327,9 +336,67 @@ h3 {
 
 .enterprise-section,
 .solutions-overview,
+.automation-flow-section,
+.product-visual-section,
 .why-section {
   background:
     linear-gradient(180deg, #ffffff, var(--warm-white));
+}
+
+.video-story-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.76fr) minmax(480px, 1.24fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(7, 19, 33, 0.98), rgba(5, 5, 5, 0.94)),
+    var(--navy);
+  color: #ffffff;
+}
+
+.video-story-copy p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.video-frame,
+.visual-frame {
+  overflow: hidden;
+  border: 1px solid rgba(207, 181, 59, 0.25);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 90px rgba(7, 19, 33, 0.22);
+}
+
+.story-video,
+.video-fallback img,
+.wide-visual {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.story-video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.video-fallback {
+  display: none;
+}
+
+.automation-flow-section .section-heading,
+.product-visual-section .section-heading {
+  max-width: 980px;
+}
+
+.automation-flow-section h2 {
+  font-size: clamp(30px, 3.5vw, 48px);
+}
+
+.visual-frame {
+  background: #ffffff;
 }
 
 .enterprise-grid,
@@ -1315,6 +1382,7 @@ footer .brand-logo {
   .contact-section,
   .case-study-preview,
   .eeos-showcase,
+  .video-story-section,
   .case-card,
   .case-study-layout {
     grid-template-columns: 1fr;
@@ -1461,5 +1529,15 @@ footer .brand-logo {
 
   .contact-section {
     margin: 0 20px 40px;
+  }
+}
+
+@media (max-width: 680px), (prefers-reduced-motion: reduce) {
+  .story-video {
+    display: none;
+  }
+
+  .video-fallback {
+    display: block;
   }
 }

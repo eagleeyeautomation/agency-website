@@ -119,6 +119,55 @@ export default function Home() {
         ))}
       </section>
 
+      <section className="section video-story-section" aria-labelledby="video-story-title">
+        <div className="video-story-copy">
+          <p className="eyebrow">Automation visual story</p>
+          <h2 id="video-story-title">From first inquiry to executive visibility.</h2>
+          <p>
+            See how a service-business lead can move through AI communication,
+            CRM activity, staff notification, appointment scheduling,
+            follow-up, and EEOS intelligence in one controlled operating flow.
+          </p>
+        </div>
+        <div className="video-frame">
+          <video
+            className="story-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+            controlsList="nodownload"
+            preload="metadata"
+            poster="/images/automation-story-poster.webp"
+            aria-describedby="automation-video-transcript"
+          >
+            <source
+              src="/videos/eagle-eye-automation-story.webm"
+              type="video/webm"
+              media="(min-width: 681px) and (prefers-reduced-motion: no-preference)"
+            />
+          </video>
+          <picture className="video-fallback" aria-hidden="true">
+            <source
+              media="(max-width: 680px)"
+              srcSet="/images/automation-story-mobile.webp"
+            />
+            <img
+              src="/images/automation-story-poster.webp"
+              alt=""
+              loading="lazy"
+            />
+          </picture>
+          <p id="automation-video-transcript" className="sr-only">
+            Silent animation showing a service-business team, website lead,
+            AI response, CRM update, staff notification, appointment scheduling,
+            follow-up, and EEOS executive intelligence. No real customer,
+            staff, credential, token, or production data is displayed.
+          </p>
+        </div>
+      </section>
+
       <section className="section enterprise-section">
         <div className="section-heading">
           <p className="eyebrow">Enterprise power for growing businesses</p>
@@ -211,6 +260,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section automation-flow-section" aria-labelledby="automation-flow-title">
+        <div className="section-heading">
+          <p className="eyebrow">Automation flow</p>
+          <h2 id="automation-flow-title">Lead Enters → AI Responds → CRM Updates → Staff Is Notified → Appointment Is Scheduled → Follow-Up Continues</h2>
+          <p>
+            This visual shows the operating pattern Eagle Eye Automation can
+            design when the approved systems, permissions, and workflows are in
+            place. It does not imply every automation is active for every
+            client.
+          </p>
+        </div>
+        <div className="visual-frame">
+          <Image
+            src="/images/automation-flow-visual.webp"
+            alt="Premium automation flow diagram showing lead entry, AI response, CRM update, staff notification, appointment scheduling, and continued follow-up"
+            width={1280}
+            height={520}
+            sizes="(max-width: 900px) 100vw, 88vw"
+            className="wide-visual"
+          />
+        </div>
+      </section>
+
       <section className="section capability-stack">
         {capabilitySections.map(({ icon: Icon, id, eyebrow, title, text, items, href }) => (
           <article className="capability-panel" id={id} key={id}>
@@ -235,6 +307,28 @@ export default function Home() {
             </ul>
           </article>
         ))}
+      </section>
+
+      <section className="section product-visual-section" aria-labelledby="product-visual-title">
+        <div className="section-heading">
+          <p className="eyebrow">Product visuals</p>
+          <h2 id="product-visual-title">Sanitized visual support for the full Eagle Eye Automation platform.</h2>
+          <p>
+            CRM, websites, Voice AI, SMS, workflow automation, dashboards,
+            Eagle Eye Brain, and EEOS are represented with generic product
+            interface visuals only.
+          </p>
+        </div>
+        <div className="visual-frame">
+          <Image
+            src="/images/product-visuals-sanitized.webp"
+            alt="Sanitized product visual grid for CRM, websites, Voice AI, SMS, workflow automation, dashboards, Eagle Eye Brain, and EEOS"
+            width={1280}
+            height={720}
+            sizes="(max-width: 900px) 100vw, 88vw"
+            className="wide-visual"
+          />
+        </div>
       </section>
 
       <section id="industries" className="section industry-section">
