@@ -5,7 +5,7 @@ import { SiteFooter, SiteHeader, pricingPackages } from "../site-content";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Eagle Eye Automation pricing paths for starter, growth, and enterprise AI automation, GoHighLevel, dashboard, and software builds."
+    "Eagle Eye Automation pricing paths for EEOS, starter, growth, and enterprise AI automation, GoHighLevel-ready websites, dashboard, and software builds."
 };
 
 export default function PricingPage() {
@@ -17,7 +17,7 @@ export default function PricingPage() {
         <h1>Packages that match your stage of growth.</h1>
         <p>
           Start with a focused foundation, expand into automation, or build a
-          custom operating system around GoHighLevel and executive visibility.
+          custom EEOS operating layer around GoHighLevel and executive visibility.
           Starter and Growth packages use starting-at pricing. Enterprise
           solutions are quoted after scoping.
         </p>

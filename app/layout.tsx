@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 
 const siteUrl =
@@ -9,19 +8,31 @@ const canonicalSiteUrl = siteUrl.replace(/\/$/, "");
 export const metadata: Metadata = {
   metadataBase: new URL(`${canonicalSiteUrl}/`),
   title: {
-    default: "Eagle Eye Automation | AI, CRM, Websites, and Dashboards",
+    default: "Eagle Eye Automation | AI Software and Automation for Service Businesses",
     template: "%s | Eagle Eye Automation"
   },
   description:
-    "Eagle Eye Automation builds AI receptionists, workflow automations, GoHighLevel CRM systems, business websites, dashboards, and custom software.",
+    "Eagle Eye Automation helps small service businesses access Fortune 500-level CRM, automation, AI-powered websites, customer engagement, and business intelligence.",
+  keywords: [
+    "Eagle Eye Automation",
+    "EEOS",
+    "Eagle Eye Operating System",
+    "AI Operating System for Service Businesses",
+    "GoHighLevel",
+    "service business automation",
+    "AI software"
+  ],
+  applicationName: "Eagle Eye Automation",
+  authors: [{ name: "Eagle Eye Automation" }],
+  category: "AI software",
   icons: {
     icon: "/images/eagle-eye-automation-icon.png",
     apple: "/images/eagle-eye-automation-icon.png"
   },
   openGraph: {
-    title: "Eagle Eye Automation",
+    title: "Eagle Eye Automation | AI Software and Automation for Service Businesses",
     description:
-      "AI, automation, CRM, web, dashboard, and custom software systems for businesses that want sharper operations.",
+      "Eagle Eye Automation gives service businesses access to intelligent automation, advanced customer management, AI-powered websites, business intelligence, and operational tools traditionally available only to large enterprises.",
     url: `${canonicalSiteUrl}/`,
     siteName: "Eagle Eye Automation",
     images: [
@@ -37,12 +48,47 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eagle Eye Automation",
+    title: "Eagle Eye Automation | AI Software and Automation",
     description:
-      "AI receptionists, workflow automation, GoHighLevel CRM, websites, dashboards, and custom business software.",
+      "AI software, CRM automation, AI-powered websites, customer engagement, and business intelligence for growing service businesses.",
     images: ["/images/eagle-eye-automation-logo.png"]
   }
 };
+
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Eagle Eye Automation",
+    url: canonicalSiteUrl,
+    slogan: "Building AI Today That Helps Businesses Succeed Tomorrow.",
+    description:
+      "Eagle Eye Automation helps small service businesses access Fortune 500-level CRM, automation, AI-powered websites, customer engagement, and business intelligence.",
+    sameAs: [
+      "https://www.linkedin.com/company/eagle-eye-automation",
+      "https://www.instagram.com/eagleeyeautomation",
+      "https://www.facebook.com/eagleeyeautomation"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Eagle Eye Automation",
+    url: canonicalSiteUrl,
+    description:
+      "AI software and automation for small and growing service businesses."
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "EEOS — Eagle Eye Operating System",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    url: "https://eeos-platform-production.up.railway.app/",
+    description:
+      "EEOS is the AI Operating System for Service Businesses. It connects lead generation, customer engagement, automation, operational visibility, business intelligence, and executive recommendations in one connected platform."
+  }
+];
 
 export default function RootLayout({
   children
@@ -51,14 +97,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body
+        data-company="Eagle Eye Automation"
+        data-product="EEOS"
+        data-product-full-name="EEOS — Eagle Eye Operating System"
+        data-ghl-ready="true"
+      >
         {children}
-        <Script
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="6a452da652b633f8610a7e14"
-          data-source="WEB_USER"
-          strategy="afterInteractive"
+        <script
+          id="eagle-eye-automation-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
         />
       </body>
     </html>

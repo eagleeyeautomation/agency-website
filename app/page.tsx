@@ -6,12 +6,14 @@ import {
   SiteFooter,
   SiteHeader,
   businessHours,
+  companyStrengths,
+  corporateHeadline,
+  corporateSupportingMessage,
   companyMission,
   contactOptions,
   eagleEyeBrainUrl,
   eeosProductSiteUrl,
   eeosSignals,
-  founderExperience,
   getContactDetails,
   ghlReadinessAreas,
   industries,
@@ -48,12 +50,9 @@ export default function Home() {
             <Sparkles size={16} aria-hidden="true" />
             {tagline}
           </p>
-          <h1>EEOS is the AI operating system for service businesses.</h1>
+          <h1>{corporateHeadline}</h1>
           <p className="hero-copy">
-            Eagle Eye Automation builds AI software that helps service
-            businesses grow. EEOS — Eagle Eye Operating System helps owners
-            understand leads, calls, missed opportunities, follow-ups,
-            appointments, pipeline activity, and daily business performance.
+            {corporateSupportingMessage}
           </p>
           <div className="hero-actions">
             <a className="button primary" href="/contact">
@@ -82,40 +81,41 @@ export default function Home() {
       <section id="about" className="section about-section">
         <div className="section-heading">
           <p className="eyebrow">Who we are</p>
-          <h2>Built from real business operations, not theory.</h2>
+          <h2>Enterprise-grade software thinking for growing service businesses.</h2>
           <p>
-            {companyMission} The work is practical: answer faster, follow up
-            cleaner, see the numbers, and give teams systems they can actually
-            use.
+            {companyMission} We close the gap between disconnected small-business
+            tools and the integrated systems, automation, customer management,
+            and business intelligence large enterprises depend on.
           </p>
         </div>
         <div className="about-grid">
           <article className="story-panel">
-            <p className="eyebrow">Our story</p>
-            <h3>Systems for business owners who need clarity.</h3>
+            <p className="eyebrow">Corporate mission</p>
+            <h3>One connected ecosystem for leads, customers, operations, and intelligence.</h3>
             <p>
-              Eagle Eye Automation was created to help operators replace
-              scattered tools and manual admin with connected systems. We focus
-              on the places where growth usually gets messy: leads, client
-              intake, handoffs, follow-up, reporting, and custom internal tools.
+              Eagle Eye Automation was created to close the technology gap
+              between large enterprises and small service businesses. We build
+              intelligent software and connected automation systems that help
+              organizations capture more opportunities, improve customer
+              experiences, simplify operations, and make better decisions.
             </p>
           </article>
-          <article className="founder-panel">
-            <div className="founder-avatar" aria-hidden="true">
-              GB
+          <article className="company-panel">
+            <div className="company-avatar" aria-hidden="true">
+              AI
             </div>
             <div>
-              <p className="eyebrow">Meet the founder</p>
-              <h3>George &quot;Eagle&quot; Brown</h3>
+              <p className="eyebrow">Technology philosophy</p>
+              <h3>Compete smarter without enterprise-level complexity.</h3>
               <p>
-                George brings operator experience across home care, real estate,
-                AI automation, and business consulting. That mix shapes Eagle
-                Eye Automation&apos;s approach: understand the business first,
-                then build technology that removes friction.
+                We design AI software, CRM systems, websites, workflow
+                automation, reporting, and dashboards around how service
+                businesses actually operate, so teams can respond faster and
+                lead with better information.
               </p>
             </div>
             <div className="experience-list">
-              {founderExperience.map((item) => (
+              {companyStrengths.map((item) => (
                 <span key={item}>{item}</span>
               ))}
             </div>

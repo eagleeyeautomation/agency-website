@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
-import { SiteFooter, SiteHeader, founderExperience } from "../site-content";
+import {
+  SiteFooter,
+  SiteHeader,
+  companyValues,
+  companyMission,
+  companyStrengths,
+  corporateHeadline,
+  productFullName
+} from "../site-content";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Eagle Eye Automation, the company building AI, GoHighLevel, workflow automation, dashboards, and business intelligence systems."
+    "About Eagle Eye Automation, the company building EEOS, AI software, GoHighLevel-ready websites, workflow automation, dashboards, and business intelligence systems."
 };
 
 export default function AboutPage() {
@@ -14,44 +22,88 @@ export default function AboutPage() {
       <SiteHeader />
       <section className="page-hero">
         <p className="eyebrow">About</p>
-        <h1>Business systems built from real operational experience.</h1>
+        <h1>{corporateHeadline}</h1>
         <p>
-          Eagle Eye Automation helps service businesses move from scattered
-          tools and manual admin to connected AI, CRM, automation, dashboard,
-          and software systems.
+          Eagle Eye Automation was created to close the technology gap between
+          large enterprises and small service businesses. {companyMission}
         </p>
       </section>
 
       <section className="section about-section">
         <div className="about-grid">
           <article className="story-panel">
-            <p className="eyebrow">Our point of view</p>
-            <h2>Technology works best when it matches the business.</h2>
+            <p className="eyebrow">Company story</p>
+            <h2>Intelligent software for service businesses that need more operational power.</h2>
             <p>
-              We start with the operating reality: how leads arrive, how calls
-              are answered, how follow-up happens, how teams use GoHighLevel,
-              and what leadership needs to see every day.
+              We build intelligent software and connected automation systems
+              that help organizations capture more opportunities, improve
+              customer experiences, simplify operations, and make better
+              decisions.
             </p>
           </article>
-          <article className="founder-panel">
-            <div className="founder-avatar" aria-hidden="true">
-              GB
+          <article className="company-panel">
+            <div className="company-avatar" aria-hidden="true">
+              AI
             </div>
             <div>
-              <p className="eyebrow">Founder</p>
-              <h2>George &quot;Eagle&quot; Brown</h2>
+              <p className="eyebrow">Product philosophy</p>
+              <h2>Connected systems over disconnected tools.</h2>
               <p>
-                George brings operator experience across home care, real estate,
-                AI automation, and business consulting. Eagle Eye Automation
-                exists to make that practical knowledge visible in software.
+                {productFullName} is the flagship software platform from Eagle
+                Eye Automation. EEOS brings lead generation, CRM, automation,
+                operational visibility, business intelligence, and executive
+                recommendations into one connected ecosystem.
               </p>
             </div>
             <div className="experience-list">
-              {founderExperience.map((item) => (
+              {companyStrengths.map((item) => (
                 <span key={item}>{item}</span>
               ))}
             </div>
           </article>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-heading">
+          <p className="eyebrow">Mission, vision, and values</p>
+          <h2>Building AI today that helps businesses succeed tomorrow.</h2>
+          <p>
+            Our vision is a market where small and growing service businesses
+            can access the technology advantage, operational discipline, and
+            customer-management intelligence normally reserved for much larger
+            companies.
+          </p>
+        </div>
+        <div className="service-grid">
+          {companyValues.map((value) => (
+            <article className="service-card" key={value.title}>
+              <h3>{value.title}</h3>
+              <p>{value.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section split-section">
+        <div>
+          <p className="eyebrow">Industries served</p>
+          <h2>Focused on service businesses where response, follow-up, and visibility matter.</h2>
+          <p>
+            Eagle Eye Automation supports organizations such as home care,
+            healthcare services, churches and faith organizations, professional
+            services, contractors, local service companies, and multi-location
+            businesses.
+          </p>
+        </div>
+        <div className="system-panel">
+          <div className="system-panel-header">Eagle Eye Automation + EEOS</div>
+          <p>
+            Eagle Eye Automation is the company. EEOS is the flagship software
+            platform. Together, they give service businesses a connected
+            operating layer for leads, customers, workflows, reporting, and
+            executive intelligence.
+          </p>
         </div>
       </section>
 

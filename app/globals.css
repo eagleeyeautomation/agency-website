@@ -5,6 +5,7 @@
   --panel: #ffffff;
   --soft: #f7f5ef;
   --deep: #050505;
+  --navy: #071321;
   --gold: #c7a02f;
   --gold-dark: #8d6b12;
   --old-gold: #cfb53b;
@@ -152,8 +153,17 @@ nav a:hover {
 
 .page-hero {
   padding: 154px clamp(20px, 5vw, 72px) 74px;
-  background: var(--deep);
+  background:
+    linear-gradient(135deg, rgba(7, 19, 33, 0.96), rgba(5, 5, 5, 1) 58%),
+    var(--deep);
   color: #ffffff;
+}
+
+.product-hero {
+  background:
+    linear-gradient(135deg, rgba(7, 19, 33, 0.98), rgba(5, 5, 5, 0.92)),
+    radial-gradient(circle at 82% 22%, rgba(207, 181, 59, 0.2), transparent 34%),
+    var(--navy);
 }
 
 .page-hero h1 {
@@ -319,7 +329,7 @@ h3 {
 .process-card,
 .system-panel,
 .story-panel,
-.founder-panel,
+.company-panel,
 .portfolio-card,
 .portfolio-detail-card,
 .industry-card,
@@ -342,7 +352,7 @@ h3 {
 .service-detail-card p,
 .process-card p,
 .story-panel p,
-.founder-panel p,
+.company-panel p,
 .portfolio-card p,
 .portfolio-detail-card p,
 .industry-card p,
@@ -402,7 +412,7 @@ h3 {
 }
 
 .story-panel,
-.founder-panel {
+.company-panel {
   border-radius: 8px;
   padding: clamp(26px, 4vw, 38px);
 }
@@ -419,13 +429,13 @@ h3 {
   color: rgba(255, 255, 255, 0.76);
 }
 
-.founder-panel {
+.company-panel {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 24px;
 }
 
-.founder-avatar {
+.company-avatar {
   display: grid;
   width: 88px;
   height: 88px;
@@ -481,7 +491,8 @@ h3 {
 }
 
 .portfolio-section,
-.pricing-section {
+.pricing-section,
+.ghl-section {
   background: var(--warm-white);
 }
 
@@ -616,6 +627,61 @@ h3 {
 .system-panel {
   border-radius: 8px;
   padding: 28px;
+}
+
+.ghl-section {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.ghl-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ghl-embed-slot {
+  display: grid;
+  min-height: 220px;
+  align-content: start;
+  gap: 14px;
+  border: 1px dashed rgba(141, 107, 18, 0.56);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.92), rgba(255, 255, 255, 0.98));
+  padding: 24px;
+}
+
+.ghl-embed-slot span {
+  color: var(--gold-dark);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ghl-embed-slot strong {
+  color: var(--navy);
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.ghl-embed-slot p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.eeos-card {
+  display: grid;
+  min-height: 180px;
+  align-content: start;
+  gap: 24px;
+  background:
+    linear-gradient(180deg, #ffffff, #fffaf0);
+}
+
+.eeos-card svg {
+  color: var(--gold-dark);
 }
 
 .system-panel-header {
@@ -843,6 +909,22 @@ h3 {
   box-shadow: none;
 }
 
+.contact-form-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-form-stack .ghl-embed-slot {
+  min-height: 180px;
+  border-color: rgba(207, 181, 59, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-form-stack .ghl-embed-slot strong,
+.contact-form-stack .ghl-embed-slot p {
+  color: #ffffff;
+}
+
 .contact-form label {
   display: grid;
   gap: 8px;
@@ -980,6 +1062,7 @@ footer .brand-logo {
   .pricing-grid,
   .service-detail-grid,
   .portfolio-detail-grid,
+  .ghl-grid,
   .hours-grid {
     grid-template-columns: 1fr;
   }
@@ -1064,7 +1147,7 @@ footer .brand-logo {
     grid-template-columns: 1fr;
   }
 
-  .founder-panel {
+  .company-panel {
     grid-template-columns: 1fr;
   }
 
@@ -1072,7 +1155,7 @@ footer .brand-logo {
     grid-template-columns: 1fr;
   }
 
-  .founder-avatar {
+  .company-avatar {
     width: 72px;
     height: 72px;
     font-size: 22px;

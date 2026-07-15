@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MailCheck, PhoneCall } from "lucide-react";
 import {
   ContactForm,
+  GhlEmbedSlot,
   SiteFooter,
   SiteHeader,
   businessHours,
@@ -12,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Request a demo with Eagle Eye Automation for AI automation, GoHighLevel CRM, websites, dashboards, or custom business software."
+    "Request a demo with Eagle Eye Automation for EEOS, AI automation, GoHighLevel-ready websites, CRM, dashboards, or custom business software."
 };
 
 export default function ContactPage() {
@@ -72,7 +73,14 @@ export default function ContactPage() {
             ) : null}
           </div>
         </div>
-        <ContactForm />
+        <div className="contact-form-stack">
+          <ContactForm />
+          <GhlEmbedSlot
+            label="Book Demo Calendar"
+            kind="calendar"
+            detail="Prepared for a GoHighLevel calendar embed when live scheduling is connected."
+          />
+        </div>
       </section>
 
       <SiteFooter />

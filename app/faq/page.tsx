@@ -5,7 +5,7 @@ import { SiteFooter, SiteHeader, faqs } from "../site-content";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Frequently asked questions about Eagle Eye Automation, Eagle Eye Command Center, GoHighLevel implementation, AI voice, AI chat, and automation."
+    "Frequently asked questions about Eagle Eye Automation, EEOS, GoHighLevel implementation, AI voice, AI chat, and automation."
 };
 
 export default function FaqPage() {
@@ -16,8 +16,8 @@ export default function FaqPage() {
         <p className="eyebrow">FAQ</p>
         <h1>Answers before the discovery call.</h1>
         <p>
-          A quick guide to Eagle Eye Command Center, GoHighLevel implementation,
-          AI voice, AI chat, automation, and how the work fits together.
+          A quick guide to EEOS, GoHighLevel implementation, AI voice, AI chat,
+          automation, and how the work fits together.
         </p>
       </section>
 

@@ -21,23 +21,26 @@ export const companyMission =
 export const productName = "EEOS";
 export const productFullName = "EEOS — Eagle Eye Operating System";
 export const productTagline = "The AI Operating System for Service Businesses";
-export const tagline = productTagline;
+export const tagline = "Building AI Today That Helps Businesses Succeed Tomorrow.";
+export const corporateHeadline = "Small Businesses Deserve Fortune 500-Level Technology";
+export const corporateSupportingMessage =
+  "Eagle Eye Automation gives service businesses access to intelligent automation, advanced customer management, AI-powered websites, business intelligence, and operational tools traditionally available only to large enterprises.";
 export const eeosProductSiteUrl = "https://eeos-platform-production.up.railway.app/";
 export const eagleEyeBrainUrl = `${eeosProductSiteUrl}talk-to-selling-brain`;
 
 export const outcomes = [
-  "Executive visibility across leads and calls",
-  "GoHighLevel-ready lead capture",
-  "Pipeline, appointment, and follow-up clarity",
-  "AI support prepared for 24/7 coverage"
+  "Enterprise technology built for growing businesses",
+  "Connected CRM, websites, automation, and intelligence",
+  "Operational clarity without enterprise-level complexity",
+  "Practical AI systems for service-business growth"
 ];
 
 export const primaryNav = [
-  { label: "About", href: "/about" },
-  { label: "Visit EEOS Product Site", href: eeosProductSiteUrl },
+  { label: "Solutions", href: "/solutions" },
   { label: "Services", href: "/services" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Book Demo", href: "/contact" }
+  { label: "Products", href: "/products" },
+  { label: "About", href: "/about" },
+  { label: "EEOS", href: eeosProductSiteUrl }
 ];
 
 export const footerNav = [
@@ -52,11 +55,30 @@ export const footerNav = [
   { label: "Blog", href: "/blog" }
 ];
 
-export const founderExperience = [
-  "Home care expertise",
-  "Real estate experience",
-  "AI automation",
-  "Business consulting"
+export const companyStrengths = [
+  "Service-business focus",
+  "Connected automation systems",
+  "Practical AI software",
+  "Executive visibility"
+];
+
+export const companyValues = [
+  {
+    title: "Human-centered automation",
+    text: "Automation should reduce repetitive work while keeping people in control of important customer and operational decisions."
+  },
+  {
+    title: "Connected systems",
+    text: "Websites, CRM, customer engagement, reporting, and executive visibility work better when they are designed as one ecosystem."
+  },
+  {
+    title: "Practical intelligence",
+    text: "AI should help teams see priorities, respond faster, and make better decisions without adding unnecessary complexity."
+  },
+  {
+    title: "Scalable foundations",
+    text: "Growing businesses deserve technology that can support better processes today and stronger operating discipline tomorrow."
+  }
 ];
 
 export const serviceGroups = [

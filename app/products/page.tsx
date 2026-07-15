@@ -5,7 +5,7 @@ import { SiteFooter, SiteHeader, productPlatforms } from "../site-content";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Eagle Eye Automation products including Eagle Eye Command Center, AI Voice Receptionist, AI Chat Assistant, GoHighLevel implementation, workflow automation, executive dashboards, business intelligence, and website development."
+    "Eagle Eye Automation products including EEOS — Eagle Eye Operating System, AI Voice Receptionist, AI Chat Assistant, GoHighLevel implementation, workflow automation, executive dashboards, business intelligence, and website development."
 };
 
 export default function ProductsPage() {
@@ -14,7 +14,7 @@ export default function ProductsPage() {
       <SiteHeader />
       <section className="page-hero">
         <p className="eyebrow">Products</p>
-        <h1>Eagle Eye Command Center is the flagship software platform.</h1>
+        <h1>EEOS is the flagship software platform.</h1>
         <p>
           Our product suite helps GoHighLevel-powered businesses answer faster,
           follow up cleaner, automate repeatable work, and give leadership a
