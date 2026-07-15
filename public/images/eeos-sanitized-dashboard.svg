@@ -1,0 +1,54 @@
+<svg width="1040" height="760" viewBox="0 0 1040 760" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Sanitized EEOS dashboard visual</title>
+  <desc id="desc">Generic executive dashboard illustration with sample metrics and recommendation cards. No real customer, staff, credential, token, contact, or production identifier data is shown.</desc>
+  <rect width="1040" height="760" rx="32" fill="#071321"/>
+  <rect x="28" y="28" width="984" height="704" rx="24" fill="#0B1728" stroke="#C7A02F" stroke-opacity="0.32" stroke-width="2"/>
+  <rect x="58" y="58" width="924" height="78" rx="18" fill="#111F33"/>
+  <circle cx="98" cy="97" r="18" fill="#CFB53B"/>
+  <rect x="134" y="82" width="186" height="16" rx="8" fill="#F7F5EF"/>
+  <rect x="134" y="106" width="112" height="10" rx="5" fill="#8EA4C2"/>
+  <rect x="700" y="80" width="82" height="34" rx="17" fill="#182A43"/>
+  <rect x="800" y="80" width="82" height="34" rx="17" fill="#182A43"/>
+  <rect x="900" y="80" width="52" height="34" rx="17" fill="#CFB53B"/>
+  <rect x="58" y="166" width="218" height="150" rx="18" fill="#FFFFFF"/>
+  <text x="82" y="204" fill="#071321" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">Lead Generation</text>
+  <text x="82" y="247" fill="#8D6B12" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900">+24%</text>
+  <rect x="82" y="274" width="150" height="12" rx="6" fill="#E8DDAF"/>
+  <rect x="82" y="274" width="112" height="12" rx="6" fill="#C7A02F"/>
+  <rect x="306" y="166" width="218" height="150" rx="18" fill="#FFFFFF"/>
+  <text x="330" y="204" fill="#071321" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">CRM Visibility</text>
+  <text x="330" y="247" fill="#8D6B12" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900">92</text>
+  <rect x="330" y="274" width="150" height="12" rx="6" fill="#E8DDAF"/>
+  <rect x="330" y="274" width="132" height="12" rx="6" fill="#C7A02F"/>
+  <rect x="554" y="166" width="218" height="150" rx="18" fill="#FFFFFF"/>
+  <text x="578" y="204" fill="#071321" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">Automation</text>
+  <text x="578" y="247" fill="#8D6B12" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900">18</text>
+  <rect x="578" y="274" width="150" height="12" rx="6" fill="#E8DDAF"/>
+  <rect x="578" y="274" width="98" height="12" rx="6" fill="#C7A02F"/>
+  <rect x="58" y="346" width="466" height="228" rx="18" fill="#111F33" stroke="#263B5A"/>
+  <text x="82" y="388" fill="#F7F5EF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="900">Executive Recommendations</text>
+  <rect x="82" y="420" width="394" height="42" rx="12" fill="#172943"/>
+  <rect x="102" y="435" width="16" height="12" rx="6" fill="#CFB53B"/>
+  <rect x="134" y="434" width="252" height="10" rx="5" fill="#C6D2E2"/>
+  <rect x="134" y="450" width="188" height="8" rx="4" fill="#7187A6"/>
+  <rect x="82" y="482" width="394" height="42" rx="12" fill="#172943"/>
+  <rect x="102" y="497" width="16" height="12" rx="6" fill="#CFB53B"/>
+  <rect x="134" y="496" width="286" height="10" rx="5" fill="#C6D2E2"/>
+  <rect x="134" y="512" width="154" height="8" rx="4" fill="#7187A6"/>
+  <rect x="554" y="346" width="428" height="228" rx="18" fill="#FFFFFF"/>
+  <text x="584" y="388" fill="#071321" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="900">Eagle Eye Brain</text>
+  <text x="584" y="418" fill="#5C5A52" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Public AI intelligence experience</text>
+  <path d="M612 520C628 473 663 448 711 444C763 440 802 462 827 510C843 542 872 558 916 558" stroke="#C7A02F" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="612" cy="520" r="13" fill="#071321"/>
+  <circle cx="711" cy="444" r="13" fill="#071321"/>
+  <circle cx="827" cy="510" r="13" fill="#071321"/>
+  <circle cx="916" cy="558" r="13" fill="#071321"/>
+  <rect x="58" y="606" width="924" height="86" rx="18" fill="#0F2138" stroke="#263B5A"/>
+  <text x="84" y="642" fill="#F7F5EF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900">Connected platform layer</text>
+  <rect x="84" y="662" width="108" height="12" rx="6" fill="#CFB53B"/>
+  <rect x="218" y="662" width="108" height="12" rx="6" fill="#8EA4C2"/>
+  <rect x="352" y="662" width="108" height="12" rx="6" fill="#8EA4C2"/>
+  <rect x="486" y="662" width="108" height="12" rx="6" fill="#8EA4C2"/>
+  <rect x="620" y="662" width="108" height="12" rx="6" fill="#8EA4C2"/>
+  <rect x="754" y="662" width="108" height="12" rx="6" fill="#8EA4C2"/>
+</svg>

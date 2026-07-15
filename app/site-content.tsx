@@ -27,6 +27,8 @@ export const corporateSupportingMessage =
   "Eagle Eye Automation gives service businesses access to intelligent automation, advanced customer management, AI-powered websites, business intelligence, and operational tools traditionally available only to large enterprises.";
 export const eeosProductSiteUrl = "https://eeos-platform-production.up.railway.app/";
 export const eagleEyeBrainUrl = `${eeosProductSiteUrl}talk-to-selling-brain`;
+export const eeosDescription =
+  "EEOS is the AI Operating System for Service Businesses. It brings lead generation, customer engagement, automation, operational visibility, business intelligence, and executive recommendations into one connected platform.";
 
 export const outcomes = [
   "Enterprise technology built for growing businesses",
@@ -36,19 +38,20 @@ export const outcomes = [
 ];
 
 export const primaryNav = [
+  { label: "Home", href: "/" },
   { label: "Solutions", href: "/solutions" },
-  { label: "Services", href: "/services" },
-  { label: "Products", href: "/products" },
+  { label: "Automation", href: "/services#automation" },
+  { label: "Websites", href: "/services#websites" },
+  { label: "CRM", href: "/services#crm" },
+  { label: "Industries", href: "/industries" },
   { label: "About", href: "/about" },
   { label: "EEOS", href: eeosProductSiteUrl }
 ];
 
 export const footerNav = [
-  { label: "Home", href: "/" },
   ...primaryNav,
   { label: "Products", href: "/products" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "Industries", href: "/industries" },
+  { label: "Services", href: "/services" },
   { label: "Success Stories", href: "/success-stories" },
   { label: "FAQ", href: "/faq" },
   { label: "PRN Staffers Digital Transformation", href: "/success-stories/prn-staffers" },
@@ -83,24 +86,28 @@ export const companyValues = [
 
 export const serviceGroups = [
   {
+    id: "automation",
     title: "AI & Automation",
     icon: Sparkles,
     items: ["AI Receptionists", "AI Chatbots", "Workflow Automation"],
     text: "AI systems that handle first response, answer common questions, qualify leads, and trigger the next step."
   },
   {
+    id: "crm",
     title: "CRM",
     icon: Workflow,
     items: ["GoHighLevel Setup", "Pipeline Design", "Lead Automation"],
     text: "GoHighLevel and CRM builds that organize leads, appointments, follow-up, and client movement."
   },
   {
+    id: "websites",
     title: "Web",
     icon: Globe2,
     items: ["Business Websites", "Landing Pages", "Client Portals"],
     text: "Professional web experiences built to convert attention into action and support client workflows."
   },
   {
+    id: "dashboards",
     title: "Dashboards",
     icon: Target,
     items: [
@@ -182,6 +189,16 @@ export const productPlatforms = [
     items: ["Business websites", "Landing pages", "Lead capture"],
     href: "/solutions"
   }
+];
+
+export const eeosCapabilities = [
+  "Lead generation",
+  "CRM visibility",
+  "Workflow automation",
+  "Operational intelligence",
+  "Executive recommendations",
+  "Eagle Eye Brain",
+  "Multi-location visibility"
 ];
 
 export const portfolioProjects = [

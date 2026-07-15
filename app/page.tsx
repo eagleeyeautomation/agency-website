@@ -12,13 +12,13 @@ import {
   companyMission,
   contactOptions,
   eagleEyeBrainUrl,
+  eeosCapabilities,
+  eeosDescription,
   eeosProductSiteUrl,
-  eeosSignals,
   getContactDetails,
   ghlReadinessAreas,
   industries,
   outcomes,
-  productFullName,
   productPlatforms,
   productTagline,
   portfolioProjects,
@@ -154,44 +154,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section split-section">
-        <div>
-          <p className="eyebrow">Powered by EEOS — Eagle Eye Operating System</p>
-          <h2>{productFullName}</h2>
-          <p>
-            {productTagline}. EEOS is the executive AI layer that helps service
-            business owners make sense of the daily activity already happening
-            across calls, forms, calendars, follow-ups, pipelines, and client
-            conversations.
-          </p>
-          <a className="button package-button" href={eeosProductSiteUrl}>
-            Visit EEOS Product Site
+      <section id="eeos" className="section eeos-showcase">
+        <div className="eeos-showcase-copy">
+          <p className="eyebrow">Flagship product</p>
+          <h2>Meet EEOS</h2>
+          <p className="eeos-subheading">{productTagline}</p>
+          <p>{eeosDescription}</p>
+          <div className="eeos-role-grid" aria-label="EEOS product roles">
+            <span>Eagle Eye Automation is the company.</span>
+            <span>EEOS is the flagship software platform.</span>
+            <span>Eagle Eye Brain is the public AI intelligence experience.</span>
+            <span>Executive Recommendations are the actionable output.</span>
+          </div>
+          <ul className="eeos-capability-list">
+            {eeosCapabilities.map((capability) => (
+              <li key={capability}>
+                <Check size={16} aria-hidden="true" />
+                <span>{capability}</span>
+              </li>
+            ))}
+          </ul>
+          <a className="button primary" href={eeosProductSiteUrl}>
+            Explore EEOS
             <ArrowRight size={18} aria-hidden="true" />
           </a>
         </div>
-        <div className="system-panel">
-          <div className="system-panel-header">
-            <Sparkles size={20} aria-hidden="true" />
-            Executive AI layer for service businesses
-          </div>
-          <div className="tool-grid">
-            {eeosSignals.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </div>
-          <div className="metric-row">
-            <div>
-              <strong>1</strong>
-              <span>Executive view</span>
-            </div>
-            <div>
-              <strong>24/7</strong>
-              <span>AI coverage</span>
-            </div>
-            <div>
-              <strong>GHL</strong>
-              <span>Ready structure</span>
-            </div>
+        <div className="eeos-visual-card">
+          <Image
+            src="/images/eeos-sanitized-dashboard.svg"
+            alt="Sanitized EEOS dashboard visual showing generic executive recommendations, lead generation, automation, and business intelligence panels"
+            width={1040}
+            height={760}
+            sizes="(max-width: 900px) 100vw, 48vw"
+            className="eeos-visual"
+          />
+          <div className="eeos-visual-caption">
+            Sanitized product visual. No consumer data, staff information,
+            credentials, identifiers, or real contact records.
           </div>
         </div>
       </section>

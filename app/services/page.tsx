@@ -30,8 +30,8 @@ export default function ServicesPage() {
 
       <section className="section services-section">
         <div className="service-detail-grid">
-          {serviceGroups.map(({ icon: Icon, title, text, items }) => (
-            <article className="service-detail-card" key={title}>
+          {serviceGroups.map(({ icon: Icon, id, title, text, items }) => (
+            <article className="service-detail-card" id={id} key={title}>
               <div className="icon-box">
                 <Icon size={24} aria-hidden="true" />
               </div>

@@ -684,6 +684,108 @@ h3 {
   color: var(--gold-dark);
 }
 
+.eeos-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(7, 19, 33, 0.98), rgba(5, 5, 5, 0.94)),
+    radial-gradient(circle at 78% 24%, rgba(207, 181, 59, 0.18), transparent 32%),
+    var(--navy);
+  color: #ffffff;
+}
+
+.eeos-showcase h2 {
+  max-width: 620px;
+}
+
+.eeos-showcase > * {
+  min-width: 0;
+}
+
+.eeos-showcase-copy > p:not(.eyebrow),
+.eeos-showcase .eeos-subheading {
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.eeos-showcase .eeos-subheading {
+  margin-bottom: 14px;
+  color: var(--old-gold);
+  font-weight: 900;
+}
+
+.eeos-role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 28px 0;
+}
+
+.eeos-role-grid span {
+  display: grid;
+  min-height: 70px;
+  align-items: center;
+  border: 1px solid rgba(207, 181, 59, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.88);
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.eeos-capability-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.eeos-capability-list li {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 9px;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 800;
+}
+
+.eeos-capability-list svg {
+  flex: 0 0 auto;
+  color: var(--old-gold);
+}
+
+.eeos-visual-card {
+  overflow: hidden;
+  border: 1px solid rgba(207, 181, 59, 0.26);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.36);
+}
+
+.eeos-visual {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.eeos-visual-caption {
+  border-top: 1px solid rgba(207, 181, 59, 0.2);
+  background: rgba(5, 5, 5, 0.32);
+  color: rgba(255, 255, 255, 0.68);
+  padding: 14px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .system-panel-header {
   display: flex;
   align-items: center;
@@ -1053,6 +1155,7 @@ footer .brand-logo {
   .about-grid,
   .contact-section,
   .case-study-preview,
+  .eeos-showcase,
   .case-card,
   .case-study-layout {
     grid-template-columns: 1fr;
@@ -1063,6 +1166,8 @@ footer .brand-logo {
   .service-detail-grid,
   .portfolio-detail-grid,
   .ghl-grid,
+  .eeos-role-grid,
+  .eeos-capability-list,
   .hours-grid {
     grid-template-columns: 1fr;
   }
@@ -1102,11 +1207,17 @@ footer .brand-logo {
 
   .nav-links {
     width: 100%;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .nav-cta {
     width: 100%;
+  }
+
+  nav a {
+    flex: 1 1 92px;
+    padding: 0 10px;
   }
 
   .brand-logo {
