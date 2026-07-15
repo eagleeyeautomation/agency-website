@@ -1,31 +1,77 @@
 import Image from "next/image";
-import { ArrowRight, Check, PhoneCall, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  BarChart3,
+  Check,
+  Globe2,
+  MessageCircle,
+  PhoneCall,
+  Sparkles,
+  Workflow
+} from "lucide-react";
 import {
   ContactForm,
-  GhlEmbedSlot,
   SiteFooter,
   SiteHeader,
   businessHours,
-  companyStrengths,
-  corporateHeadline,
-  corporateSupportingMessage,
   companyMission,
+  companyStrengths,
   contactOptions,
+  corporateHeroSupportingMessage,
+  corporateHeadline,
   eagleEyeBrainUrl,
   eeosCapabilities,
   eeosDescription,
   eeosProductSiteUrl,
   getContactDetails,
-  ghlReadinessAreas,
   industries,
-  outcomes,
-  productPlatforms,
   productTagline,
-  portfolioProjects,
-  prnStaffersCaseStudy,
-  pricingPackages,
+  solutionGroups,
   tagline
 } from "./site-content";
+
+const platformHighlights = [
+  "Intelligent automation",
+  "Advanced customer management",
+  "AI-powered websites",
+  "Executive insight"
+];
+
+const capabilitySections = [
+  {
+    id: "automation",
+    eyebrow: "Automation",
+    title: "Operational workflows that keep the business moving.",
+    text: "Eagle Eye Automation designs workflow automation, scheduling support, lead routing, notifications, task management, and follow-up systems around the way service businesses actually operate.",
+    icon: Workflow,
+    items: ["Workflow automation", "Scheduling", "Task management", "Lead routing"]
+  },
+  {
+    id: "crm",
+    eyebrow: "CRM",
+    title: "Customer-management systems with executive visibility.",
+    text: "CRM architecture, sales pipelines, appointment booking, reputation workflows, and reporting structures help teams organize opportunities and keep the next action clear.",
+    icon: BarChart3,
+    items: ["CRM visibility", "Sales pipelines", "Appointment booking", "Reporting"]
+  },
+  {
+    id: "websites",
+    eyebrow: "AI-powered websites",
+    title: "Web experiences built to capture and route demand.",
+    text: "Modern websites, landing pages, lead capture, chat automation, and conversion paths connect public interest to the systems that help staff respond quickly.",
+    icon: Globe2,
+    items: ["Websites", "Lead capture", "Chat automation", "CRM handoff"]
+  },
+  {
+    id: "brain",
+    eyebrow: "Eagle Eye Brain",
+    title: "A public AI intelligence experience for business growth.",
+    text: "Eagle Eye Brain gives visitors and prospects a smarter way to explore needs, ask questions, and move into the right next step without replacing human oversight.",
+    icon: MessageCircle,
+    items: ["AI guidance", "Service discovery", "Lead qualification", "Executive context"],
+    href: eagleEyeBrainUrl
+  }
+];
 
 export default function Home() {
   const { bookingHref, contactEmail, contactPhone, contactPhoneHref } =
@@ -35,10 +81,10 @@ export default function Home() {
     <main>
       <SiteHeader />
 
-      <section id="top" className="hero">
+      <section id="top" className="hero corporate-hero">
         <Image
           src="/images/automation-command-center.png"
-          alt="Modern automation command center showing connected workflows and dashboards"
+          alt="Modern enterprise technology command center with connected automation dashboards"
           fill
           priority
           sizes="100vw"
@@ -51,104 +97,47 @@ export default function Home() {
             {tagline}
           </p>
           <h1>{corporateHeadline}</h1>
-          <p className="hero-copy">
-            {corporateSupportingMessage}
-          </p>
+          <p className="hero-copy">{corporateHeroSupportingMessage}</p>
           <div className="hero-actions">
-            <a className="button primary" href="/contact">
-              Request a Demo
+            <a className="button primary" href="/solutions">
+              Explore Our Solutions
               <ArrowRight size={18} aria-hidden="true" />
             </a>
             <a className="button secondary" href={eeosProductSiteUrl}>
               Explore EEOS
             </a>
-            <a className="button secondary" href={eagleEyeBrainUrl}>
-              Talk to the Eagle Eye Brain
-            </a>
           </div>
         </div>
       </section>
 
-      <section className="proof-band" aria-label="Automation outcomes">
-        {outcomes.map((outcome) => (
-          <div key={outcome} className="proof-item">
+      <section className="proof-band premium-proof" aria-label="Platform highlights">
+        {platformHighlights.map((highlight) => (
+          <div key={highlight} className="proof-item">
             <Check size={18} aria-hidden="true" />
-            <span>{outcome}</span>
+            <span>{highlight}</span>
           </div>
         ))}
       </section>
 
-      <section id="about" className="section about-section">
+      <section className="section enterprise-section">
         <div className="section-heading">
-          <p className="eyebrow">Who we are</p>
-          <h2>Enterprise-grade software thinking for growing service businesses.</h2>
+          <p className="eyebrow">Enterprise power for growing businesses</p>
+          <h2>Modern software discipline without enterprise complexity.</h2>
           <p>
-            {companyMission} We close the gap between disconnected small-business
-            tools and the integrated systems, automation, customer management,
-            and business intelligence large enterprises depend on.
+            {companyMission} Eagle Eye Automation closes the gap between
+            disconnected tools and the connected systems larger companies use to
+            manage demand, serve customers, automate work, and lead with better
+            information.
           </p>
         </div>
-        <div className="about-grid">
-          <article className="story-panel">
-            <p className="eyebrow">Corporate mission</p>
-            <h3>One connected ecosystem for leads, customers, operations, and intelligence.</h3>
-            <p>
-              Eagle Eye Automation was created to close the technology gap
-              between large enterprises and small service businesses. We build
-              intelligent software and connected automation systems that help
-              organizations capture more opportunities, improve customer
-              experiences, simplify operations, and make better decisions.
-            </p>
-          </article>
-          <article className="company-panel">
-            <div className="company-avatar" aria-hidden="true">
-              AI
-            </div>
-            <div>
-              <p className="eyebrow">Technology philosophy</p>
-              <h3>Compete smarter without enterprise-level complexity.</h3>
+        <div className="enterprise-grid">
+          {companyStrengths.map((strength) => (
+            <article className="premium-card" key={strength}>
+              <span>{strength}</span>
               <p>
-                We design AI software, CRM systems, websites, workflow
-                automation, reporting, and dashboards around how service
-                businesses actually operate, so teams can respond faster and
-                lead with better information.
+                Built for service businesses that need dependable systems,
+                cleaner handoffs, and clearer operational visibility.
               </p>
-            </div>
-            <div className="experience-list">
-              {companyStrengths.map((item) => (
-                <span key={item}>{item}</span>
-              ))}
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="services" className="section services-section">
-        <div className="section-heading">
-          <p className="eyebrow">EEOS and services</p>
-          <h2>Software and automation systems for the next stage of growth.</h2>
-          <p>
-            From EEOS to AI front-office coverage, each system is designed to
-            reduce manual work and give your team a cleaner path from lead to
-            delivery.
-          </p>
-        </div>
-        <div className="service-grid service-grid-wide">
-          {productPlatforms.slice(0, 8).map(({ icon: Icon, title, items, text }) => (
-            <article className="service-card" key={title}>
-              <div className="icon-box">
-                <Icon size={24} aria-hidden="true" />
-              </div>
-              <h3>{title}</h3>
-              <p>{text}</p>
-              <ul className="clean-list">
-                {items.map((item) => (
-                  <li key={item}>
-                    <Check size={16} aria-hidden="true" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
             </article>
           ))}
         </div>
@@ -195,82 +184,70 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section ghl-section">
+      <section id="solutions" className="section solutions-overview">
         <div className="section-heading">
-          <p className="eyebrow">GoHighLevel-ready</p>
-          <h2>Prepared for forms, calendars, chat, funnels, tracking, and automation.</h2>
+          <p className="eyebrow">Solutions overview</p>
+          <h2>One operating layer for acquisition, engagement, automation, and intelligence.</h2>
           <p>
-            The frontend is structured so GoHighLevel can be connected later
-            without changing the site strategy. No live APIs or external GHL
-            scripts are connected yet.
+            Eagle Eye Automation organizes the core systems small and growing
+            service businesses need into clear capability groups.
           </p>
         </div>
-        <div className="ghl-grid">
-          {ghlReadinessAreas.map((area) => (
-            <GhlEmbedSlot
-              key={area.title}
-              label={area.title}
-              kind={
-                area.title === "Forms"
-                  ? "form"
-                  : area.title === "Calendars"
-                    ? "calendar"
-                    : area.title === "Chat widget"
-                      ? "chat"
-                      : area.title === "Tracking scripts"
-                        ? "tracking"
-                        : area.title === "Funnels"
-                          ? "funnel"
-                          : "automation"
-              }
-              detail={area.text}
-            />
+        <div className="solution-group-grid">
+          {solutionGroups.map((group) => (
+            <article className="solution-group-card" key={group.title}>
+              <h3>{group.title}</h3>
+              <p>{group.text}</p>
+              <ul className="clean-list">
+                {group.items.map((item) => (
+                  <li key={item}>
+                    <Check size={16} aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
       </section>
 
-      <section id="portfolio" className="section portfolio-section">
-        <div className="section-heading">
-          <p className="eyebrow">Success story</p>
-          <h2>PRN Staffers is the flagship implementation.</h2>
-          <p>
-            The PRN Staffers Digital Transformation brought together websites,
-            AI voice, AI chat, GoHighLevel automation, intake workflows, and a
-            centralized executive AI layer.
-          </p>
-        </div>
-        <div className="case-study-preview">
-          <article className="story-panel">
-            <p className="eyebrow">PRN Staffers Digital Transformation</p>
-            <h3>{prnStaffersCaseStudy.subtitle}</h3>
-            <a className="button secondary" href="/success-stories/prn-staffers">
-              Read the case study
-              <ArrowRight size={18} aria-hidden="true" />
-            </a>
+      <section className="section capability-stack">
+        {capabilitySections.map(({ icon: Icon, id, eyebrow, title, text, items, href }) => (
+          <article className="capability-panel" id={id} key={id}>
+            <div className="capability-icon">
+              <Icon size={24} aria-hidden="true" />
+            </div>
+            <div>
+              <p className="eyebrow">{eyebrow}</p>
+              <h2>{title}</h2>
+              <p>{text}</p>
+              {href ? (
+                <a className="button package-button" href={href}>
+                  Talk to the Eagle Eye Brain
+                  <ArrowRight size={18} aria-hidden="true" />
+                </a>
+              ) : null}
+            </div>
+            <ul className="capability-list">
+              {items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </article>
-          <div className="portfolio-grid compact-grid">
-            {portfolioProjects.slice(0, 4).map((project) => (
-              <article className="portfolio-card" key={project.title}>
-                <span>{project.type}</span>
-                <h3>{project.title}</h3>
-                <p>{project.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
+        ))}
       </section>
 
-      <section id="industries" className="section split-section">
-        <div>
+      <section id="industries" className="section industry-section">
+        <div className="section-heading">
           <p className="eyebrow">Industries</p>
-          <h2>Focused on industries where operations matter every day.</h2>
+          <h2>Designed for service businesses where response and follow-up matter.</h2>
           <p>
-            Eagle Eye Automation works especially well for businesses with
-            high-volume communication, follow-up, scheduling, reporting, and
-            repeatable client workflows.
+            The platform approach is strongest for teams with high-volume
+            communication, repeatable client workflows, scheduling needs, and
+            operational reporting pressure.
           </p>
         </div>
-        <div className="industry-grid">
+        <div className="industry-grid industry-grid-large">
           {industries.map((industry) => (
             <article className="industry-card" key={industry.title}>
               <h3>{industry.title}</h3>
@@ -280,50 +257,41 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="section pricing-section">
+      <section className="section why-section">
         <div className="section-heading">
-          <p className="eyebrow">Pricing</p>
-          <h2>Packages that match your stage of growth.</h2>
+          <p className="eyebrow">Why Eagle Eye Automation</p>
+          <h2>A practical technology partner for companies ready to operate sharper.</h2>
           <p>
-            Start with the foundation, add automation as the business grows, or
-            build a custom operating system around advanced reporting and
-            integrations.
+            Eagle Eye Automation builds connected systems around real business
+            workflows, not isolated tools. The result is cleaner intake, faster
+            response, better visibility, and smarter executive decision support.
           </p>
         </div>
-        <div className="pricing-grid">
-          {pricingPackages.map((tier) => (
-            <article
-              className={`pricing-card${tier.featured ? " featured" : ""}`}
-              key={tier.title}
-            >
-              {tier.featured ? <span className="package-badge">Popular</span> : null}
-              <h3>{tier.title}</h3>
-              <p className="price-line">{tier.price}</p>
-              <p>{tier.text}</p>
-              <ul className="clean-list">
-                {tier.items.map((item) => (
-                  <li key={item}>
-                    <Check size={16} aria-hidden="true" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <a className="button package-button" href="/contact">
-                {tier.cta}
-              </a>
+        <div className="why-grid">
+          {[
+            "Corporate software thinking",
+            "Service-business operating focus",
+            "AI with human oversight",
+            "Systems built for scale"
+          ].map((item) => (
+            <article className="premium-card" key={item}>
+              <span>{item}</span>
+              <p>
+                A focused approach to intelligent automation, customer
+                engagement, and business visibility.
+              </p>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="contact" className="contact-section">
+      <section id="contact" className="contact-section corporate-cta">
         <div className="contact-copy">
-          <p className="eyebrow">Contact</p>
-          <h2>Request a demo.</h2>
+          <p className="eyebrow">Corporate CTA</p>
+          <h2>Build the operating system your business should have had already.</h2>
           <p>
             Tell us what is slowing the business down. We will review your
-            current process, identify the fastest automation opportunities, and
-            recommend the right package or custom build path.
+            current process and recommend the right solution path.
           </p>
           <div className="hours-grid" aria-label="Business hours">
             {businessHours.map((item) => (

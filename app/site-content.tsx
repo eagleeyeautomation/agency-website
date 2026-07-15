@@ -25,6 +25,8 @@ export const tagline = "Building AI Today That Helps Businesses Succeed Tomorrow
 export const corporateHeadline = "Small Businesses Deserve Fortune 500-Level Technology";
 export const corporateSupportingMessage =
   "Eagle Eye Automation gives service businesses access to intelligent automation, advanced customer management, AI-powered websites, business intelligence, and operational tools traditionally available only to large enterprises.";
+export const corporateHeroSupportingMessage =
+  "Eagle Eye Automation gives service businesses the intelligent software, automation, customer-management tools, websites, and executive insight they need to compete, grow, and operate with confidence.";
 export const eeosProductSiteUrl = "https://eeos-platform-production.up.railway.app/";
 export const eagleEyeBrainUrl = `${eeosProductSiteUrl}talk-to-selling-brain`;
 export const eeosDescription =
@@ -199,6 +201,57 @@ export const eeosCapabilities = [
   "Executive recommendations",
   "Eagle Eye Brain",
   "Multi-location visibility"
+];
+
+export const solutionGroups = [
+  {
+    title: "Customer Acquisition",
+    text: "Create a stronger path from first visit to qualified opportunity.",
+    items: [
+      "Websites",
+      "Lead capture",
+      "CRM",
+      "Sales pipelines",
+      "Appointment booking",
+      "Reputation management"
+    ]
+  },
+  {
+    title: "Customer Engagement",
+    text: "Respond faster and keep communication moving across every channel.",
+    items: [
+      "Voice AI",
+      "SMS",
+      "Email",
+      "Follow-up",
+      "Chat automation",
+      "Missed-call response"
+    ]
+  },
+  {
+    title: "Business Automation",
+    text: "Turn repeatable operations into cleaner, more dependable workflows.",
+    items: [
+      "Workflow automation",
+      "Scheduling",
+      "Task management",
+      "Lead routing",
+      "Notifications",
+      "Operational processes"
+    ]
+  },
+  {
+    title: "Business Intelligence",
+    text: "Give leadership the visibility needed to make better decisions.",
+    items: [
+      "Dashboards",
+      "Reporting",
+      "Performance insights",
+      "Executive recommendations",
+      "EEOS intelligence",
+      "Eagle Eye Brain"
+    ]
+  }
 ];
 
 export const portfolioProjects = [
