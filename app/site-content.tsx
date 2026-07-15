@@ -42,9 +42,9 @@ export const outcomes = [
 export const primaryNav = [
   { label: "Home", href: "/" },
   { label: "Solutions", href: "/solutions" },
-  { label: "Automation", href: "/services#automation" },
-  { label: "Websites", href: "/services#websites" },
-  { label: "CRM", href: "/services#crm" },
+  { label: "Automation", href: "/automation" },
+  { label: "Websites", href: "/websites" },
+  { label: "CRM", href: "/crm" },
   { label: "Industries", href: "/industries" },
   { label: "About", href: "/about" },
   { label: "EEOS", href: eeosProductSiteUrl }
@@ -206,6 +206,7 @@ export const eeosCapabilities = [
 export const solutionGroups = [
   {
     title: "Customer Acquisition",
+    href: "/websites",
     text: "Create a stronger path from first visit to qualified opportunity.",
     items: [
       "Websites",
@@ -218,6 +219,7 @@ export const solutionGroups = [
   },
   {
     title: "Customer Engagement",
+    href: "/automation",
     text: "Respond faster and keep communication moving across every channel.",
     items: [
       "Voice AI",
@@ -230,6 +232,7 @@ export const solutionGroups = [
   },
   {
     title: "Business Automation",
+    href: "/automation",
     text: "Turn repeatable operations into cleaner, more dependable workflows.",
     items: [
       "Workflow automation",
@@ -242,6 +245,7 @@ export const solutionGroups = [
   },
   {
     title: "Business Intelligence",
+    href: "/crm",
     text: "Give leadership the visibility needed to make better decisions.",
     items: [
       "Dashboards",
@@ -347,6 +351,118 @@ export const solutions = [
     title: "Executive visibility",
     text: "Turn daily operational activity into the metrics, alerts, and summaries leadership needs to make decisions.",
     items: ["Command Center", "KPI reporting", "Business intelligence"]
+  }
+];
+
+export const automationTopics = [
+  "Lead response automation",
+  "Missed-call text back",
+  "SMS follow-up",
+  "Email follow-up",
+  "Appointment reminders",
+  "Customer intake",
+  "Lead routing",
+  "Pipeline-stage movement",
+  "Internal staff notifications",
+  "Task creation",
+  "Review requests",
+  "Re-engagement campaigns",
+  "Reporting automation",
+  "Voice AI",
+  "Chat automation",
+  "Calendar automation"
+];
+
+export const automationUseCases = [
+  "Home-care intake",
+  "Professional-service lead follow-up",
+  "Church visitor follow-up",
+  "Contractor estimate requests",
+  "Multi-location lead routing",
+  "Missed-call recovery"
+];
+
+export const websiteTopics = [
+  "Corporate websites",
+  "Service-business websites",
+  "Multi-location websites",
+  "Landing pages",
+  "Lead-capture forms",
+  "AI chat",
+  "Voice AI connection",
+  "CRM integration",
+  "Appointment scheduling",
+  "SEO foundations",
+  "Mobile optimization",
+  "Analytics",
+  "Conversion-focused design",
+  "Automated follow-up",
+  "Website-to-pipeline workflows"
+];
+
+export const websiteSamples = [
+  {
+    type: "Corporate website",
+    industry: "Service business",
+    capabilities: ["Responsive pages", "Lead capture", "CRM-ready CTAs"],
+    label: "Concept design"
+  },
+  {
+    type: "Multi-location website",
+    industry: "Home services",
+    capabilities: ["Location routing", "Mobile layout", "Appointment CTA"],
+    label: "Concept design"
+  },
+  {
+    type: "Landing page",
+    industry: "Professional services",
+    capabilities: ["Campaign focus", "Form capture", "Follow-up trigger"],
+    label: "Concept design"
+  }
+];
+
+export const crmTopics = [
+  "Contact management",
+  "Lead management",
+  "Sales pipelines",
+  "Opportunity stages",
+  "Lead-source tracking",
+  "Task management",
+  "Appointment scheduling",
+  "Notes",
+  "Internal notifications",
+  "SMS",
+  "Email",
+  "Voice AI",
+  "Follow-up sequences",
+  "Reporting",
+  "Multi-location visibility",
+  "Staff assignment",
+  "Duplicate prevention",
+  "Website integration",
+  "Automation integration"
+];
+
+export const crmSamples = [
+  {
+    title: "Lead pipeline",
+    label: "Sample dashboard",
+    details: ["Synthetic stages", "Generic opportunity cards", "No production IDs"]
+  },
+  {
+    title: "Contact profile",
+    label: "Product preview",
+    details: ["Generic name", "Sample notes", "No real phone or email"]
+  },
+  {
+    title: "Task and calendar view",
+    label: "Example workflow",
+    details: ["Sample tasks", "Illustrative schedule", "No consumer data"]
+  },
+  {
+    title: "Multi-location reporting",
+    label: "Illustrative CRM view",
+    details: ["Synthetic locations", "Generic totals", "No client records"]
   }
 ];
 
@@ -553,7 +669,7 @@ export function LogoMark() {
   );
 }
 
-export function SiteHeader() {
+export function SiteHeader({ active }: { active?: string } = {}) {
   return (
     <header className="site-header" aria-label="Primary navigation">
       <a className="brand" href="/" aria-label="Eagle Eye Automation home">
@@ -562,7 +678,12 @@ export function SiteHeader() {
       <nav aria-label="Primary">
         <div className="nav-links">
           {primaryNav.map((item) => (
-            <a key={item.href} href={item.href}>
+            <a
+              key={item.href}
+              href={item.href}
+              className={active === item.label ? "active" : undefined}
+              aria-current={active === item.label ? "page" : undefined}
+            >
               {item.label}
             </a>
           ))}

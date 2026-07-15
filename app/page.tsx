@@ -79,7 +79,7 @@ export default function Home() {
 
   return (
     <main>
-      <SiteHeader />
+      <SiteHeader active="Home" />
 
       <section id="top" className="hero corporate-hero">
         <Image
@@ -255,6 +255,10 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
+              <a className="button package-button" href={group.href}>
+                Explore {group.title}
+                <ArrowRight size={18} aria-hidden="true" />
+              </a>
             </article>
           ))}
         </div>
