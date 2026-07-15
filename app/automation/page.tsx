@@ -105,23 +105,24 @@ export default function AutomationPage() {
             playsInline
             controls
             preload="metadata"
-            poster="/images/automation-story-poster.webp"
+            poster="/images/automation-workflow-video-poster.webp"
             aria-describedby="automation-transcript"
           >
             <source
-              src="/videos/eagle-eye-automation-story.webm"
+              src="/videos/automation-workflow-video.webm"
               type="video/webm"
               media="(min-width: 681px) and (prefers-reduced-motion: no-preference)"
             />
           </video>
           <picture className="video-fallback" aria-hidden="true">
-            <source media="(max-width: 680px)" srcSet="/images/automation-story-mobile.webp" />
-            <img src="/images/automation-story-poster.webp" alt="" loading="lazy" />
+            <source media="(max-width: 680px)" srcSet="/images/automation-workflow-video-mobile.webp" />
+            <img src="/images/automation-workflow-video-poster.webp" alt="" loading="lazy" />
           </picture>
           <p id="automation-transcript" className="sr-only">
-            Silent sanitized automation demo showing lead entry, AI response,
-            CRM update, staff notification, appointment scheduling, follow-up,
-            and reporting. No real records are displayed.
+            Silent sanitized automation demo showing a new lead entering the
+            business, AI response, CRM updates, staff notification, task
+            creation, scheduling, continued follow-up, and dashboard reporting.
+            No real records are displayed.
           </p>
         </div>
       </section>

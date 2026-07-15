@@ -107,23 +107,24 @@ export default function WebsitesPage() {
             playsInline
             controls
             preload="metadata"
-            poster="/images/automation-story-poster.webp"
+            poster="/images/websites-growth-video-poster.webp"
             aria-describedby="website-video-transcript"
           >
             <source
-              src="/videos/eagle-eye-automation-story.webm"
+              src="/videos/websites-growth-video.webm"
               type="video/webm"
               media="(min-width: 681px) and (prefers-reduced-motion: no-preference)"
             />
           </video>
           <picture className="video-fallback" aria-hidden="true">
-            <source media="(max-width: 680px)" srcSet="/images/automation-story-mobile.webp" />
-            <img src="/images/automation-story-poster.webp" alt="" loading="lazy" />
+            <source media="(max-width: 680px)" srcSet="/images/websites-growth-video-mobile.webp" />
+            <img src="/images/websites-growth-video-poster.webp" alt="" loading="lazy" />
           </picture>
           <p id="website-video-transcript" className="sr-only">
-            Silent sanitized sequence showing website lead capture, AI response,
-            CRM update, follow-up automation, and reporting. No real customer
-            data is displayed.
+            Silent sanitized website demo showing a premium website loading on
+            desktop, adapting to tablet and mobile, AI chat, lead form capture,
+            CRM handoff, follow-up automation, and analytics reporting. No real
+            customer data is displayed.
           </p>
         </div>
       </section>
