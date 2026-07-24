@@ -145,41 +145,14 @@ export default function Home() {
           </p>
         </div>
         <div className="video-frame">
-          <video
-            className="story-video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls
-            controlsList="nodownload"
-            preload="metadata"
-            poster="/images/automation-story-poster.webp"
-            aria-describedby="automation-video-transcript"
-          >
-            <source
-              src="/videos/eagle-eye-automation-story.webm"
-              type="video/webm"
-              media="(min-width: 681px) and (prefers-reduced-motion: no-preference)"
-            />
-          </video>
-          <picture className="video-fallback" aria-hidden="true">
-            <source
-              media="(max-width: 680px)"
-              srcSet="/images/automation-story-mobile.webp"
-            />
-            <img
-              src="/images/automation-story-poster.webp"
-              alt=""
-              loading="lazy"
-            />
-          </picture>
-          <p id="automation-video-transcript" className="sr-only">
-            Silent animation showing a service-business team, website lead,
-            AI response, CRM update, staff notification, appointment scheduling,
-            follow-up, and EEOS executive intelligence. No real customer,
-            staff, credential, token, or production data is displayed.
-          </p>
+          <Image
+            src="/images/eeos-executive-intelligence-eagle.png"
+            alt="EEOS executive intelligence eagle with visible illuminated AI brain and AI-powered business growth message"
+            width={1536}
+            height={1024}
+            sizes="(max-width: 900px) 100vw, 58vw"
+            className="wide-visual"
+          />
         </div>
       </section>
 
