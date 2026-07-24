@@ -8,6 +8,7 @@ import {
   MailCheck,
   MessageCircle,
   PhoneCall,
+  ShieldCheck,
   Sparkles,
   Target,
   Workflow,
@@ -22,11 +23,11 @@ export const productName = "EEOS";
 export const productFullName = "EEOS — Eagle Eye Operating System";
 export const productTagline = "The AI Operating System for Service Businesses";
 export const tagline = "See More. Manage Smarter. Grow Faster.";
-export const corporateHeadline = "Small Businesses Deserve Fortune 500-Level Technology";
+export const corporateHeadline = "Fortune 500 Power for Small Business.";
 export const corporateSupportingMessage =
   "Eagle Eye Automation gives small service businesses enterprise-level capabilities through AI executive intelligence, business health monitoring, intelligent automation, secure operations, workflow automation, and decision support.";
 export const corporateHeroSupportingMessage =
-  "EEOS is the AI Operating System that gives small businesses the power of Fortune 500 companies. See more, manage smarter, and grow faster with one executive operating layer.";
+  "The AI Operating System that helps owners lead with executive intelligence.";
 export const eeosApplicationUrl = "https://app.geteeos.com";
 export const eeosApplicationLoginUrl = `${eeosApplicationUrl}/login`;
 export const eagleEyeBrainUrl = "/contact#speak-to-eeos-brain";
@@ -38,6 +39,82 @@ export const outcomes = [
   "Connected CRM, websites, automation, and intelligence",
   "Operational clarity without enterprise-level complexity",
   "Practical AI systems for service-business growth"
+];
+
+export const whatWeBuild = [
+  {
+    title: "AI Operating Systems",
+    icon: BrainCircuit,
+    text: "Executive operating layers that help owners see business health, priorities, risks, and opportunities from one trusted place."
+  },
+  {
+    title: "Business Automation",
+    icon: Workflow,
+    text: "Connected workflows for intake, follow-up, scheduling, task movement, alerts, and handoffs across daily operations."
+  },
+  {
+    title: "Executive Intelligence",
+    icon: Target,
+    text: "Decision-support experiences that translate business activity into useful context, summaries, and next actions."
+  },
+  {
+    title: "Connected Integrations",
+    icon: Settings2,
+    text: "Secure integration foundations that prepare CRM, communication, accounting, and operational systems to work together."
+  },
+  {
+    title: "Secure Operations",
+    icon: ShieldCheck,
+    text: "Role-aware, privacy-conscious software patterns for businesses that need trust, control, and operational discipline."
+  },
+  {
+    title: "Workflow Intelligence",
+    icon: Sparkles,
+    text: "Automation visibility that helps teams understand what is moving, what is blocked, and where leadership attention belongs."
+  }
+];
+
+export const eeosRoadmap = [
+  {
+    title: "EEOS Core",
+    status: "Available",
+    text: "The central AI operating system for business intelligence and executive visibility."
+  },
+  {
+    title: "Intelligence Engine",
+    status: "In Development",
+    text: "Analyzes operational data and produces executive recommendations."
+  },
+  {
+    title: "Executive Command Center",
+    status: "In Development",
+    text: "Provides owners with a real-time executive view of business health and priorities."
+  },
+  {
+    title: "EEA Scout",
+    status: "Planned",
+    text: "Future prospect intelligence platform designed to identify local business opportunities and demand signals."
+  },
+  {
+    title: "Automation Hub",
+    status: "Planned",
+    text: "Future workflow orchestration and automation management."
+  },
+  {
+    title: "Executive Briefing Center",
+    status: "Planned",
+    text: "Future AI-generated executive summaries and daily operational insights."
+  },
+  {
+    title: "Integration Hub",
+    status: "Planned",
+    text: "Future centralized management for CRM, communications, accounting, and operational systems."
+  },
+  {
+    title: "Knowledge Graph",
+    status: "Planned",
+    text: "Future visualization of relationships between customers, workflows, teams, locations, and business data."
+  }
 ];
 
 export const primaryNav = [
@@ -515,16 +592,20 @@ export const industries = [
     text: "Patient-facing workflows, appointment communication, internal handoffs, and admin reduction."
   },
   {
-    title: "Real Estate",
-    text: "Lead routing, pipeline management, listing workflows, follow-up, and client communication."
-  },
-  {
-    title: "Small Business",
-    text: "Simple systems that replace scattered spreadsheets, missed messages, and manual admin."
+    title: "Churches",
+    text: "Visitor follow-up, member communication, event workflows, volunteer coordination, and leadership visibility."
   },
   {
     title: "Professional Services",
     text: "Client onboarding, proposals, delivery tracking, reporting, and repeatable service operations."
+  },
+  {
+    title: "Local Service Businesses",
+    text: "Practical operating systems for owners replacing scattered spreadsheets, missed messages, and manual admin."
+  },
+  {
+    title: "Multi-location Companies",
+    text: "Location-level visibility, consistent follow-up, shared operations, and executive reporting across offices."
   }
 ];
 
@@ -607,10 +688,11 @@ export const setupFee = {
 };
 
 export const eagleEyeBrainQuestions = [
-  "How can EEOS help me see business health faster?",
-  "Where could automation reduce missed follow-up?",
-  "How would GoHighLevel connect to executive visibility?",
-  "What should my owner dashboard show every morning?"
+  "What can EEOS do for my business?",
+  "How can EEOS help me grow?",
+  "Which plan fits my company?",
+  "How does EEOS connect to GoHighLevel?",
+  "How can AI help me manage smarter?"
 ];
 
 export const contactOptions = [

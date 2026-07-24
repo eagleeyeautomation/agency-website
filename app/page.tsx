@@ -6,6 +6,7 @@ import {
   Globe2,
   MessageCircle,
   PhoneCall,
+  BrainCircuit,
   Sparkles,
   Workflow
 } from "lucide-react";
@@ -20,6 +21,7 @@ import {
   corporateHeroSupportingMessage,
   corporateHeadline,
   eagleEyeBrainUrl,
+  eagleEyeBrainQuestions,
   eeosCapabilities,
   eeosDescription,
   eeosApplicationUrl,
@@ -27,15 +29,17 @@ import {
   getContactDetails,
   industries,
   productTagline,
+  eeosRoadmap,
   solutionGroups,
-  tagline
+  tagline,
+  whatWeBuild
 } from "./site-content";
 
 const platformHighlights = [
-  "Intelligent automation",
-  "Advanced customer management",
-  "AI-powered websites",
-  "Executive insight"
+  "AI executive intelligence",
+  "Business health monitoring",
+  "Connected integrations",
+  "Secure operations"
 ];
 
 const capabilitySections = [
@@ -98,14 +102,24 @@ export default function Home() {
             {tagline}
           </p>
           <h1>{corporateHeadline}</h1>
-          <p className="hero-copy">{corporateHeroSupportingMessage}</p>
+          <p className="hero-kicker">{corporateHeroSupportingMessage}</p>
+          <p className="hero-copy">
+            Eagle Eye Automation builds AI, automation, and executive
+            intelligence for small businesses. Our flagship product, EEOS,
+            gives owners enterprise-level visibility, decision support,
+            workflow automation, secure operations, and connected business
+            intelligence without requiring an enterprise-size team.
+          </p>
           <div className="hero-actions">
-            <a className="button primary" href="/solutions">
-              Explore Our Solutions
+            <a className="button primary" href={eeosApplicationUrl}>
+              Explore EEOS
               <ArrowRight size={18} aria-hidden="true" />
             </a>
-            <a className="button secondary" href={eeosApplicationUrl}>
-              Explore EEOS
+            <a className="button secondary" href={bookingHref}>
+              Book Strategy Call
+            </a>
+            <a className="button secondary" href={eeosApplicationLoginUrl}>
+              Login
             </a>
           </div>
         </div>
@@ -169,6 +183,30 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section what-we-build-section" aria-labelledby="what-we-build-title">
+        <div className="section-heading">
+          <p className="eyebrow">What We Build</p>
+          <h2 id="what-we-build-title">AI software and operational platforms for service businesses.</h2>
+          <p>
+            Eagle Eye Automation develops premium AI operating systems,
+            automation layers, and executive intelligence experiences for
+            owners who need enterprise-level capability without enterprise
+            overhead.
+          </p>
+        </div>
+        <div className="build-grid">
+          {whatWeBuild.map(({ icon: Icon, title, text }) => (
+            <article className="build-card" key={title}>
+              <div className="tech-icon">
+                <Icon size={24} aria-hidden="true" />
+              </div>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section enterprise-section">
         <div className="section-heading">
           <p className="eyebrow">Enterprise power for growing businesses</p>
@@ -196,7 +234,7 @@ export default function Home() {
       <section id="eeos" className="section eeos-showcase">
         <div className="eeos-showcase-copy">
           <p className="eyebrow">Flagship product</p>
-          <h2>Meet EEOS</h2>
+          <h2>EEOS is the AI Operating System for Service Businesses.</h2>
           <p className="eeos-subheading">{productTagline}</p>
           <p>{eeosDescription}</p>
           <div className="eeos-role-grid" aria-label="EEOS product roles">
@@ -231,6 +269,32 @@ export default function Home() {
             Sanitized product visual. No consumer data, staff information,
             credentials, identifiers, or real contact records.
           </div>
+        </div>
+      </section>
+
+      <section className="section roadmap-section" aria-labelledby="roadmap-title">
+        <div className="section-heading">
+          <p className="eyebrow">The EEOS Platform Roadmap</p>
+          <h2 id="roadmap-title">A clear product vision, labeled honestly.</h2>
+          <p>
+            EEOS Core is the flagship platform. Additional modules are shown as
+            in development or planned so visitors can understand the long-term
+            direction without mistaking future roadmap work for current
+            shipping capability.
+          </p>
+        </div>
+        <div className="roadmap-grid">
+          {eeosRoadmap.map((item) => (
+            <article className="roadmap-card" key={item.title}>
+              <div className="roadmap-card-header">
+                <h3>{item.title}</h3>
+                <span className={`status-pill status-${item.status.toLowerCase().replace(" ", "-")}`}>
+                  {item.status}
+                </span>
+              </div>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -338,12 +402,12 @@ export default function Home() {
 
       <section id="industries" className="section industry-section">
         <div className="section-heading">
-          <p className="eyebrow">Industries</p>
-          <h2>Designed for service businesses where response and follow-up matter.</h2>
+          <p className="eyebrow">Built for Service Businesses</p>
+          <h2>Designed for target industries where response and follow-up matter.</h2>
           <p>
-            The platform approach is strongest for teams with high-volume
-            communication, repeatable client workflows, scheduling needs, and
-            operational reporting pressure.
+            These are the types of businesses Eagle Eye Automation is built to
+            support as EEOS grows: service teams with communication volume,
+            repeatable workflows, scheduling needs, and reporting pressure.
           </p>
         </div>
         <div className="industry-grid industry-grid-large">
@@ -353,6 +417,56 @@ export default function Home() {
               <p>{industry.text}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="speak-to-eeos-brain" className="section brain-showcase-section" aria-labelledby="brain-title">
+        <div className="brain-visual-card">
+          <Image
+            src="/images/eeos-eagle-brain.svg"
+            alt="Futuristic eagle with a clearly visible illuminated AI brain, circuitry, and executive intelligence signals"
+            width={960}
+            height={720}
+            sizes="(max-width: 900px) 100vw, 48vw"
+            className="brain-visual"
+          />
+        </div>
+        <div className="brain-copy">
+          <p className="eyebrow">
+            <BrainCircuit size={16} aria-hidden="true" />
+            Speak to EEOS Brain
+          </p>
+          <h2 id="brain-title">Speak to EEOS Brain</h2>
+          <p>
+            Speak to EEOS Brain and discover how executive intelligence,
+            automation, and connected business data can help you lead smarter.
+          </p>
+          <p>
+            A real live EEOS Brain conversation is not connected yet, so this
+            public experience is currently contact-driven and handled by Eagle
+            Eye Automation.
+          </p>
+          <div className="brain-question-grid" aria-label="Suggested EEOS Brain questions">
+            {eagleEyeBrainQuestions.map((question) => (
+              <span key={question}>{question}</span>
+            ))}
+          </div>
+          <div className="cta-actions">
+            <a className="button primary" href="/contact#speak-to-eeos-brain">
+              Speak to EEOS Brain
+            </a>
+            <a className="button secondary" href={bookingHref}>
+              Book a Strategy Call
+            </a>
+            <a className="button secondary" href={`mailto:${contactEmail}`}>
+              Email Eagle Eye Automation
+            </a>
+            {contactPhoneHref ? (
+              <a className="button secondary" href={contactPhoneHref}>
+                Call Eagle Eye Automation
+              </a>
+            ) : null}
+          </div>
         </div>
       </section>
 

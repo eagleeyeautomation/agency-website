@@ -88,13 +88,13 @@ export default function ContactPage() {
       <section id="speak-to-eeos-brain" className="section split-section">
         <div>
           <p className="eyebrow">Speak to EEOS Brain</p>
-          <h2>Ask how enterprise-level intelligence could support your business.</h2>
+          <h2>Speak to EEOS Brain</h2>
           <p>
-            EEOS Brain is the public intelligence experience for exploring how
-            Eagle Eye Automation can help your business see more, manage
-            smarter, and grow faster. The live conversational AI is not
-            connected yet, so this experience is currently contact-driven and
-            handled by the Eagle Eye Automation team.
+            Speak to EEOS Brain and discover how executive intelligence,
+            automation, and connected business data can help you lead smarter.
+            A real EEOS Brain conversation is not connected yet, so this
+            experience is currently contact-driven and handled by Eagle Eye
+            Automation.
           </p>
           <div className="tool-grid">
             {eagleEyeBrainQuestions.map((question) => (
@@ -103,14 +103,17 @@ export default function ContactPage() {
           </div>
           <div className="cta-actions">
             <a className="button primary" href={bookingHref}>
+              Speak to EEOS Brain
+            </a>
+            <a className="button secondary" href={bookingHref}>
               Book a Strategy Call
             </a>
             <a className="button secondary" href={`mailto:${contactEmail}`}>
-              {contactEmail}
+              Email Eagle Eye Automation
             </a>
             {contactPhone && contactPhoneHref ? (
               <a className="button secondary" href={contactPhoneHref}>
-                {contactPhone}
+                Call Eagle Eye Automation
               </a>
             ) : null}
           </div>

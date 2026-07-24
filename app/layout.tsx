@@ -8,11 +8,11 @@ const canonicalSiteUrl = siteUrl.replace(/\/$/, "");
 export const metadata: Metadata = {
   metadataBase: new URL(`${canonicalSiteUrl}/`),
   title: {
-    default: "Eagle Eye Automation | AI Software and Automation for Service Businesses",
+    default: "Eagle Eye Automation | Fortune 500 Power for Small Business",
     template: "%s | Eagle Eye Automation"
   },
   description:
-    "Eagle Eye Automation gives small businesses the power of Fortune 500 companies through AI, automation, executive intelligence, business health monitoring, and secure operations.",
+    "Eagle Eye Automation builds EEOS, the AI Operating System that gives small businesses Fortune 500-level visibility, automation, secure operations, and executive intelligence.",
   keywords: [
     "Eagle Eye Automation",
     "EEOS",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     apple: "/images/eagle-eye-automation-icon.png"
   },
   openGraph: {
-    title: "Eagle Eye Automation | AI Software and Automation for Service Businesses",
+    title: "Eagle Eye Automation | Fortune 500 Power for Small Business",
     description:
-      "Eagle Eye Automation gives small businesses the power of Fortune 500 companies through AI, automation, executive intelligence, business health monitoring, and secure operations.",
+      "EEOS is the AI Operating System that helps small business owners lead with executive intelligence, automation, and connected business data.",
     url: `${canonicalSiteUrl}/`,
     siteName: "Eagle Eye Automation",
     images: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eagle Eye Automation | AI Software and Automation",
+    title: "Eagle Eye Automation | Fortune 500 Power for Small Business",
     description:
       "AI software, intelligent automation, executive dashboards, decision support, and business health monitoring for growing service businesses.",
     images: ["/images/eeos-logo-official.png"]
