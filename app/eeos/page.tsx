@@ -3,6 +3,7 @@ import { ArrowRight, Check, Sparkles } from "lucide-react";
 import {
   SiteFooter,
   SiteHeader,
+  eeosApplicationUrl,
   eeosApplicationLoginUrl,
   eeosSignals,
   productFullName,
@@ -125,12 +126,12 @@ export default function EeosPage() {
           <p className="eyebrow">Launch EEOS</p>
           <h2>Owners launch EEOS from app.geteeos.com.</h2>
           <p>
-            Public visitors can learn about EEOS here, request a demonstration,
-            or speak to EEOS Brain. Authenticated owners and platform
-            administrators use the EEOS application.
+            Public visitors can request a demonstration or speak to EEOS Brain
+            from the Eagle Eye Automation website. Authenticated owners and
+            platform administrators use the EEOS application.
           </p>
         </div>
-        <a className="button primary light" href={eeosApplicationLoginUrl}>
+        <a className="button primary light" href={eeosApplicationUrl}>
           Launch EEOS
           <ArrowRight size={18} aria-hidden="true" />
         </a>

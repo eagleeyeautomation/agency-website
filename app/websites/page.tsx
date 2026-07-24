@@ -4,7 +4,7 @@ import { ArrowRight, Check, MonitorSmartphone } from "lucide-react";
 import {
   SiteFooter,
   SiteHeader,
-  eeosMarketingUrl,
+  eeosApplicationUrl,
   websiteSamples,
   websiteTopics
 } from "../site-content";
@@ -82,7 +82,7 @@ export default function WebsitesPage() {
             Explore Website Solutions
             <ArrowRight size={18} aria-hidden="true" />
           </a>
-          <a className="button secondary" href={eeosMarketingUrl}>
+          <a className="button secondary" href={eeosApplicationUrl}>
             Explore EEOS
           </a>
         </div>
@@ -204,7 +204,7 @@ export default function WebsitesPage() {
             A website becomes more valuable when it connects to EEOS, CRM,
             automation, business intelligence, and executive visibility.
           </p>
-          <a className="button primary" href={eeosMarketingUrl}>
+          <a className="button primary" href={eeosApplicationUrl}>
             Connect Your Website to EEOS
             <ArrowRight size={18} aria-hidden="true" />
           </a>

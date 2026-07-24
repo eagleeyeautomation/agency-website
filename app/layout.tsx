@@ -86,7 +86,7 @@ const structuredData = [
     name: "EEOS — Eagle Eye Operating System",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
-    url: "https://app.geteeos.com/login",
+    url: "https://app.geteeos.com",
     description:
       "EEOS is the AI Operating System for Service Businesses. It connects lead generation, customer engagement, automation, operational visibility, business intelligence, and executive recommendations in one connected platform."
   }

@@ -6,7 +6,7 @@ import {
   SiteHeader,
   crmSamples,
   crmTopics,
-  eeosMarketingUrl
+  eeosApplicationUrl
 } from "../site-content";
 
 const pageUrl = "https://www.eagleeyeautomation.com/crm";
@@ -81,7 +81,7 @@ export default function CrmPage() {
             Explore CRM Solutions
             <ArrowRight size={18} aria-hidden="true" />
           </a>
-          <a className="button secondary" href={eeosMarketingUrl}>
+          <a className="button secondary" href={eeosApplicationUrl}>
             Explore EEOS
           </a>
         </div>
@@ -204,7 +204,7 @@ export default function CrmPage() {
             intelligence, business memory, and executive recommendations so
             leaders can understand customer activity in context.
           </p>
-          <a className="button primary" href={eeosMarketingUrl}>
+          <a className="button primary" href={eeosApplicationUrl}>
             See CRM Inside the EEOS Ecosystem
             <ArrowRight size={18} aria-hidden="true" />
           </a>

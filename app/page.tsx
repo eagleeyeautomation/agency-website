@@ -22,8 +22,8 @@ import {
   eagleEyeBrainUrl,
   eeosCapabilities,
   eeosDescription,
+  eeosApplicationUrl,
   eeosApplicationLoginUrl,
-  eeosMarketingUrl,
   getContactDetails,
   industries,
   productTagline,
@@ -104,7 +104,7 @@ export default function Home() {
               Explore Our Solutions
               <ArrowRight size={18} aria-hidden="true" />
             </a>
-            <a className="button secondary" href={eeosMarketingUrl}>
+            <a className="button secondary" href={eeosApplicationUrl}>
               Explore EEOS
             </a>
           </div>
@@ -213,7 +213,7 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <a className="button primary" href={eeosMarketingUrl}>
+          <a className="button primary" href={eeosApplicationUrl}>
             Explore EEOS
             <ArrowRight size={18} aria-hidden="true" />
           </a>

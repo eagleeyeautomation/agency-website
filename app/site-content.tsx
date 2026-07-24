@@ -27,8 +27,8 @@ export const corporateSupportingMessage =
   "Eagle Eye Automation gives small service businesses enterprise-level capabilities through AI executive intelligence, business health monitoring, intelligent automation, secure operations, workflow automation, and decision support.";
 export const corporateHeroSupportingMessage =
   "EEOS is the AI Operating System that gives small businesses the power of Fortune 500 companies. See more, manage smarter, and grow faster with one executive operating layer.";
-export const eeosMarketingUrl = "/eeos";
-export const eeosApplicationLoginUrl = "https://app.geteeos.com/login";
+export const eeosApplicationUrl = "https://app.geteeos.com";
+export const eeosApplicationLoginUrl = `${eeosApplicationUrl}/login`;
 export const eagleEyeBrainUrl = "/contact#speak-to-eeos-brain";
 export const eeosDescription =
   "EEOS is the AI Operating System for Service Businesses. It brings lead generation, customer engagement, automation, operational visibility, business intelligence, and executive recommendations into one connected platform.";
@@ -47,7 +47,7 @@ export const primaryNav = [
   { label: "Websites", href: "/websites" },
   { label: "Industries", href: "/industries" },
   { label: "About", href: "/about" },
-  { label: "EEOS", href: eeosMarketingUrl },
+  { label: "EEOS", href: eeosApplicationUrl },
   { label: "Login to EEOS", href: eeosApplicationLoginUrl }
 ];
 
@@ -134,7 +134,7 @@ export const productPlatforms = [
       "Missed opportunity intelligence",
       "Daily performance visibility"
     ],
-    href: "/eeos"
+    href: eeosApplicationUrl
   },
   {
     title: "AI Voice Receptionist",
