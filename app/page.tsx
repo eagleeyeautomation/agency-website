@@ -22,7 +22,8 @@ import {
   eagleEyeBrainUrl,
   eeosCapabilities,
   eeosDescription,
-  eeosProductSiteUrl,
+  eeosApplicationLoginUrl,
+  eeosMarketingUrl,
   getContactDetails,
   industries,
   productTagline,
@@ -103,7 +104,7 @@ export default function Home() {
               Explore Our Solutions
               <ArrowRight size={18} aria-hidden="true" />
             </a>
-            <a className="button secondary" href={eeosProductSiteUrl}>
+            <a className="button secondary" href={eeosMarketingUrl}>
               Explore EEOS
             </a>
           </div>
@@ -212,7 +213,7 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <a className="button primary" href={eeosProductSiteUrl}>
+          <a className="button primary" href={eeosMarketingUrl}>
             Explore EEOS
             <ArrowRight size={18} aria-hidden="true" />
           </a>
@@ -417,6 +418,9 @@ export default function Home() {
                 {contactPhone}
               </a>
             ) : null}
+            <a className="button secondary light" href={eeosApplicationLoginUrl}>
+              Launch EEOS
+            </a>
           </div>
         </div>
         <ContactForm />

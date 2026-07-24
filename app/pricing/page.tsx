@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowRight, Check } from "lucide-react";
-import { SiteFooter, SiteHeader, pricingPackages } from "../site-content";
+import { SiteFooter, SiteHeader, pricingPackages, setupFee } from "../site-content";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -16,10 +16,9 @@ export default function PricingPage() {
         <p className="eyebrow">Pricing</p>
         <h1>Packages that match your stage of growth.</h1>
         <p>
-          Start with a focused foundation, expand into automation, or build a
-          custom EEOS operating layer around GoHighLevel and executive visibility.
-          Starter and Growth packages use starting-at pricing. Enterprise
-          solutions are quoted after scoping.
+          Start with the founding customer pricing path for EEOS, the AI
+          Operating System that gives small businesses the power of Fortune 500
+          companies through AI, automation, and executive intelligence.
         </p>
       </section>
 
@@ -45,6 +44,11 @@ export default function PricingPage() {
               </a>
             </article>
           ))}
+        </div>
+        <div className="setup-fee-card">
+          <p className="eyebrow">{setupFee.title}</p>
+          <h2>{setupFee.price}</h2>
+          <p>{setupFee.statement}</p>
         </div>
       </section>
       <SiteFooter />

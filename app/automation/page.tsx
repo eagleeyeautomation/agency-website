@@ -6,7 +6,7 @@ import {
   SiteHeader,
   automationTopics,
   automationUseCases,
-  eeosProductSiteUrl
+  eeosMarketingUrl
 } from "../site-content";
 
 const pageUrl = "https://www.eagleeyeautomation.com/automation";
@@ -80,7 +80,7 @@ export default function AutomationPage() {
             Explore Automation Solutions
             <ArrowRight size={18} aria-hidden="true" />
           </a>
-          <a className="button secondary" href={eeosProductSiteUrl}>
+          <a className="button secondary" href={eeosMarketingUrl}>
             Explore EEOS
           </a>
         </div>
@@ -189,7 +189,7 @@ export default function AutomationPage() {
             across the connected business system so leaders can understand what
             happened, what needs attention, and where follow-up should improve.
           </p>
-          <a className="button primary" href={eeosProductSiteUrl}>
+          <a className="button primary" href={eeosMarketingUrl}>
             See How EEOS Connects It All
             <ArrowRight size={18} aria-hidden="true" />
           </a>

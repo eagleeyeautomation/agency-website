@@ -17,18 +17,19 @@ import Image from "next/image";
 
 export const companyName = "Eagle Eye Automation";
 export const companyMission =
-  "We build AI software that helps service businesses grow.";
+  "Our mission is to give small businesses the power of Fortune 500 companies through AI, automation, and executive intelligence.";
 export const productName = "EEOS";
 export const productFullName = "EEOS — Eagle Eye Operating System";
 export const productTagline = "The AI Operating System for Service Businesses";
-export const tagline = "Building AI Today That Helps Businesses Succeed Tomorrow.";
+export const tagline = "See More. Manage Smarter. Grow Faster.";
 export const corporateHeadline = "Small Businesses Deserve Fortune 500-Level Technology";
 export const corporateSupportingMessage =
-  "Eagle Eye Automation gives service businesses access to intelligent automation, advanced customer management, AI-powered websites, business intelligence, and operational tools traditionally available only to large enterprises.";
+  "Eagle Eye Automation gives small service businesses enterprise-level capabilities through AI executive intelligence, business health monitoring, intelligent automation, secure operations, workflow automation, and decision support.";
 export const corporateHeroSupportingMessage =
-  "Eagle Eye Automation gives service businesses the intelligent software, automation, customer-management tools, websites, and executive insight they need to compete, grow, and operate with confidence.";
-export const eeosProductSiteUrl = "https://eeos-platform-production.up.railway.app/";
-export const eagleEyeBrainUrl = `${eeosProductSiteUrl}talk-to-selling-brain`;
+  "EEOS is the AI Operating System that gives small businesses the power of Fortune 500 companies. See more, manage smarter, and grow faster with one executive operating layer.";
+export const eeosMarketingUrl = "/eeos";
+export const eeosApplicationLoginUrl = "https://app.geteeos.com/login";
+export const eagleEyeBrainUrl = "/contact#speak-to-eeos-brain";
 export const eeosDescription =
   "EEOS is the AI Operating System for Service Businesses. It brings lead generation, customer engagement, automation, operational visibility, business intelligence, and executive recommendations into one connected platform.";
 
@@ -44,10 +45,10 @@ export const primaryNav = [
   { label: "Solutions", href: "/solutions" },
   { label: "Automation", href: "/automation" },
   { label: "Websites", href: "/websites" },
-  { label: "CRM", href: "/crm" },
   { label: "Industries", href: "/industries" },
   { label: "About", href: "/about" },
-  { label: "EEOS", href: eeosProductSiteUrl }
+  { label: "EEOS", href: eeosMarketingUrl },
+  { label: "Login to EEOS", href: eeosApplicationLoginUrl }
 ];
 
 export const footerNav = [
@@ -576,26 +577,40 @@ export const faqs = [
 export const pricingPackages = [
   {
     title: "Starter",
-    price: "Starting at $1,500",
-    text: "A focused launch package for businesses that need a stronger digital foundation.",
-    items: ["Website development", "CRM foundation", "AI Chat setup"],
+    price: "$99/month",
+    text: "A focused EEOS starting point for small businesses that want executive visibility and GoHighLevel-first operating clarity.",
+    items: ["EEOS owner access", "Business health monitoring", "GoHighLevel integration readiness"],
     cta: "Request a Demo"
   },
   {
     title: "Growth",
-    price: "Starting at $3,500",
-    text: "A practical automation package for teams ready to speed up response and reporting.",
-    items: ["AI Voice Receptionist", "Workflow automation", "Executive dashboards"],
+    price: "$199/month",
+    text: "A practical growth path for teams ready to combine executive dashboards, automation visibility, and decision support.",
+    items: ["Executive dashboards", "AI executive intelligence", "Workflow automation visibility"],
     cta: "Request a Demo",
     featured: true
   },
   {
-    title: "Enterprise",
-    price: "Request a Quote",
-    text: "A custom build path for advanced operations, integrations, and leadership visibility.",
-    items: ["EEOS implementation", "GoHighLevel implementation", "Business intelligence"],
-    cta: "Request a Quote"
+    title: "Scale",
+    price: "$299/month",
+    text: "A stronger operating layer for multi-location businesses that need deeper visibility and more disciplined execution.",
+    items: ["Multi-location executive visibility", "Business intelligence", "Priority and risk monitoring"],
+    cta: "Request a Demo"
   }
+];
+
+export const setupFee = {
+  title: "One-Time Setup and Onboarding Fee",
+  price: "$250",
+  statement:
+    "The one-time setup and onboarding fee is due when onboarding begins and is separate from the monthly subscription."
+};
+
+export const eagleEyeBrainQuestions = [
+  "How can EEOS help me see business health faster?",
+  "Where could automation reduce missed follow-up?",
+  "How would GoHighLevel connect to executive visibility?",
+  "What should my owner dashboard show every morning?"
 ];
 
 export const contactOptions = [
@@ -632,10 +647,10 @@ export const socialLinks = [
 
 export function getContactDetails() {
   const contactEmail =
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@eagleeyeautomation.com";
-  const contactPhone = process.env.NEXT_PUBLIC_CONTACT_PHONE;
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "eagle@eagleeyeautomation.com";
+  const contactPhone = process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "+1 571-462-2407";
   const contactPhoneHref = contactPhone
-    ? `tel:${contactPhone.replace(/\D/g, "")}`
+    ? "tel:+15714622407"
     : undefined;
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.eagleeyeautomation.com/";
@@ -659,10 +674,10 @@ export function LogoMark() {
   return (
     <span className="brand-logo" aria-hidden="true">
       <Image
-        src="/images/eagle-eye-automation-logo.png"
+        src="/images/eeos-logo-official.png"
         alt=""
-        width={448}
-        height={256}
+        width={1792}
+        height={1024}
         priority
       />
     </span>
@@ -690,6 +705,9 @@ export function SiteHeader({ active }: { active?: string } = {}) {
         </div>
         <a className="nav-cta" href="/contact">
           Request a Demo
+        </a>
+        <a className="nav-cta secondary" href={eeosApplicationLoginUrl}>
+          Launch EEOS
         </a>
       </nav>
     </header>

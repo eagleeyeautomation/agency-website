@@ -3,8 +3,8 @@ import { ArrowRight, Check, Sparkles } from "lucide-react";
 import {
   SiteFooter,
   SiteHeader,
+  eeosApplicationLoginUrl,
   eeosSignals,
-  eeosProductSiteUrl,
   productFullName,
   productTagline
 } from "../site-content";
@@ -43,8 +43,8 @@ export default function EeosPage() {
             clarity. The frontend is ready for future GHL forms, calendars,
             chat, tracking, funnels, and automation codes.
           </p>
-          <a className="button package-button" href={eeosProductSiteUrl}>
-            Visit EEOS Product Site
+          <a className="button package-button" href={eeosApplicationLoginUrl}>
+            Login to EEOS
             <ArrowRight size={18} aria-hidden="true" />
           </a>
         </div>
@@ -105,31 +105,33 @@ export default function EeosPage() {
 
       <section className="section ghl-section">
         <div className="section-heading">
-          <p className="eyebrow">EEOS product site</p>
-          <h2>The full public EEOS product experience lives on the Railway EEOS site.</h2>
+          <p className="eyebrow">EEOS application access</p>
+          <h2>Customers access EEOS through the branded application URL.</h2>
           <p>
-            This corporate page introduces EEOS from the Eagle Eye Automation
-            company site. Product education, module pages, demo requests, and
-            Command Center links belong on the dedicated EEOS product website.
+            Eagle Eye Automation is the company. EEOS is the flagship software
+            platform. GoHighLevel is an integrated operational system, not the
+            EEOS brand. Customers sign in through app.geteeos.com after their
+            organization has been created and onboarding is ready.
           </p>
         </div>
-        <a className="button package-button" href={eeosProductSiteUrl}>
-          Open the EEOS Product Website
+        <a className="button package-button" href={eeosApplicationLoginUrl}>
+          Login to EEOS
           <ArrowRight size={18} aria-hidden="true" />
         </a>
       </section>
 
       <section className="cta-section">
         <div>
-          <p className="eyebrow">Continue to EEOS</p>
-          <h2>Explore EEOS on the dedicated product website.</h2>
+          <p className="eyebrow">Launch EEOS</p>
+          <h2>Owners launch EEOS from app.geteeos.com.</h2>
           <p>
-            Use the EEOS product site for Eagle Eye Brain, C2B Intelligence,
-            B2B Intelligence, Athena, Executive Intelligence, and demo requests.
+            Public visitors can learn about EEOS here, request a demonstration,
+            or speak to EEOS Brain. Authenticated owners and platform
+            administrators use the EEOS application.
           </p>
         </div>
-        <a className="button primary light" href={eeosProductSiteUrl}>
-          Visit EEOS Product Site
+        <a className="button primary light" href={eeosApplicationLoginUrl}>
+          Launch EEOS
           <ArrowRight size={18} aria-hidden="true" />
         </a>
       </section>

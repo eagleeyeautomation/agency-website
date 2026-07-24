@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { MailCheck, PhoneCall } from "lucide-react";
 import {
   ContactForm,
@@ -7,6 +8,7 @@ import {
   SiteHeader,
   businessHours,
   contactOptions,
+  eagleEyeBrainQuestions,
   getContactDetails
 } from "../site-content";
 
@@ -79,6 +81,47 @@ export default function ContactPage() {
             label="Book Demo Calendar"
             kind="calendar"
             detail="Prepared for a GoHighLevel calendar embed when live scheduling is connected."
+          />
+        </div>
+      </section>
+
+      <section id="speak-to-eeos-brain" className="section split-section">
+        <div>
+          <p className="eyebrow">Speak to EEOS Brain</p>
+          <h2>Ask how enterprise-level intelligence could support your business.</h2>
+          <p>
+            EEOS Brain is the public intelligence experience for exploring how
+            Eagle Eye Automation can help your business see more, manage
+            smarter, and grow faster. The live conversational AI is not
+            connected yet, so this experience is currently contact-driven and
+            handled by the Eagle Eye Automation team.
+          </p>
+          <div className="tool-grid">
+            {eagleEyeBrainQuestions.map((question) => (
+              <span key={question}>{question}</span>
+            ))}
+          </div>
+          <div className="cta-actions">
+            <a className="button primary" href={bookingHref}>
+              Book a Strategy Call
+            </a>
+            <a className="button secondary" href={`mailto:${contactEmail}`}>
+              {contactEmail}
+            </a>
+            {contactPhone && contactPhoneHref ? (
+              <a className="button secondary" href={contactPhoneHref}>
+                {contactPhone}
+              </a>
+            ) : null}
+          </div>
+        </div>
+        <div className="system-panel">
+          <Image
+            src="/images/eeos-eagle-brain.svg"
+            alt="Futuristic eagle intelligence visual for EEOS Brain"
+            width={900}
+            height={675}
+            className="eeos-visual"
           />
         </div>
       </section>

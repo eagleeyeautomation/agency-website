@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Eagle Eye Automation"
   },
   description:
-    "Eagle Eye Automation helps small service businesses access Fortune 500-level CRM, automation, AI-powered websites, customer engagement, and business intelligence.",
+    "Eagle Eye Automation gives small businesses the power of Fortune 500 companies through AI, automation, executive intelligence, business health monitoring, and secure operations.",
   keywords: [
     "Eagle Eye Automation",
     "EEOS",
@@ -32,15 +32,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Eagle Eye Automation | AI Software and Automation for Service Businesses",
     description:
-      "Eagle Eye Automation gives service businesses access to intelligent automation, advanced customer management, AI-powered websites, business intelligence, and operational tools traditionally available only to large enterprises.",
+      "Eagle Eye Automation gives small businesses the power of Fortune 500 companies through AI, automation, executive intelligence, business health monitoring, and secure operations.",
     url: `${canonicalSiteUrl}/`,
     siteName: "Eagle Eye Automation",
     images: [
       {
-        url: "/images/eagle-eye-automation-logo.png",
-        width: 1748,
-        height: 899,
-        alt: "Eagle Eye Automation logo"
+        url: "/images/eeos-logo-official.png",
+        width: 1792,
+        height: 1024,
+        alt: "EEOS Eagle Eye Operating System logo"
       }
     ],
     locale: "en_US",
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Eagle Eye Automation | AI Software and Automation",
     description:
-      "AI software, CRM automation, AI-powered websites, customer engagement, and business intelligence for growing service businesses.",
-    images: ["/images/eagle-eye-automation-logo.png"]
+      "AI software, intelligent automation, executive dashboards, decision support, and business health monitoring for growing service businesses.",
+    images: ["/images/eeos-logo-official.png"]
   }
 };
 
@@ -61,9 +61,11 @@ const structuredData = [
     "@type": "Organization",
     name: "Eagle Eye Automation",
     url: canonicalSiteUrl,
-    slogan: "Building AI Today That Helps Businesses Succeed Tomorrow.",
+    slogan: "See More. Manage Smarter. Grow Faster.",
+    email: "eagle@eagleeyeautomation.com",
+    telephone: "+1-571-462-2407",
     description:
-      "Eagle Eye Automation helps small service businesses access Fortune 500-level CRM, automation, AI-powered websites, customer engagement, and business intelligence.",
+      "Eagle Eye Automation gives small businesses the power of Fortune 500 companies through AI, automation, and executive intelligence.",
     sameAs: [
       "https://www.linkedin.com/company/eagle-eye-automation",
       "https://www.instagram.com/eagleeyeautomation",
@@ -84,7 +86,7 @@ const structuredData = [
     name: "EEOS — Eagle Eye Operating System",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
-    url: "https://eeos-platform-production.up.railway.app/",
+    url: "https://app.geteeos.com/login",
     description:
       "EEOS is the AI Operating System for Service Businesses. It connects lead generation, customer engagement, automation, operational visibility, business intelligence, and executive recommendations in one connected platform."
   }
