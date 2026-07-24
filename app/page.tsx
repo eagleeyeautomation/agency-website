@@ -88,8 +88,8 @@ export default function Home() {
 
       <section id="top" className="hero corporate-hero">
         <Image
-          src="/images/eeos-executive-intelligence-eagle.png"
-          alt="EEOS executive intelligence eagle with visible illuminated AI brain and business intelligence signals"
+          src="/images/eeos-hero-eagle-brain-closeup.png"
+          alt="Close-up EEOS eagle with a visible illuminated AI brain and electric blue intelligence signals"
           fill
           priority
           sizes="100vw"
