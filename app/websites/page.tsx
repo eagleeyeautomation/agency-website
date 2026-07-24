@@ -4,6 +4,8 @@ import { ArrowRight, Check, MonitorSmartphone } from "lucide-react";
 import {
   SiteFooter,
   SiteHeader,
+  CommandCenterPreview,
+  EagleGuide,
   eeosApplicationUrl,
   websiteSamples,
   websiteTopics
@@ -71,12 +73,13 @@ export default function WebsitesPage() {
       <SiteHeader active="Websites" />
       <section className="page-hero product-hero">
         <p className="eyebrow">Websites</p>
-        <h1>Websites Built to Generate Opportunities</h1>
+        <h1>Websites as the front door to the operating system.</h1>
         <p>
           We create modern, responsive websites that connect design, lead
           capture, AI communication, CRM, analytics, and automation into one
           business-growth system.
         </p>
+        <EagleGuide message="The Eagle follows every visitor signal from the public website into the systems that help the business respond." />
         <div className="hero-actions">
           <a className="button primary" href="#website-capabilities">
             Explore Website Solutions
@@ -87,6 +90,14 @@ export default function WebsitesPage() {
           </a>
         </div>
       </section>
+
+      <CommandCenterPreview
+        eyebrow="Website command module"
+        title="Your website becomes a business signal intake layer."
+        text="Cinematic digital presence is paired with live HTML content that shows how attention becomes inquiry, follow-up, and executive visibility."
+        signals={["Visitor intent", "AI chat handoff", "Lead capture", "Executive visibility"]}
+        image="/images/website-samples-sanitized.webp"
+      />
 
       <section className="section video-story-section">
         <div className="video-story-copy">

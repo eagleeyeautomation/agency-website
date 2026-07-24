@@ -766,6 +766,72 @@ export function LogoMark() {
   );
 }
 
+export function EagleGuide({
+  message = "The EEOS Eagle guides owners from scattered signals to executive clarity."
+}: {
+  message?: string;
+}) {
+  return (
+    <aside className="eagle-guide" aria-label="EEOS Eagle guide">
+      <div className="eagle-guide-mark">
+        <Image
+          src="/images/eagle-eye-automation-icon.png"
+          alt=""
+          width={256}
+          height={256}
+        />
+      </div>
+      <div>
+        <span>EEOS Eagle Guide</span>
+        <p>{message}</p>
+      </div>
+    </aside>
+  );
+}
+
+export function CommandCenterPreview({
+  eyebrow,
+  title,
+  text,
+  signals,
+  image = "/images/eeos-eagle-brain.svg"
+}: {
+  eyebrow: string;
+  title: string;
+  text: string;
+  signals: string[];
+  image?: string;
+}) {
+  return (
+    <section className="section command-center-section">
+      <div className="command-art">
+        <Image
+          src={image}
+          alt="Cinematic EEOS command center technology artwork"
+          width={960}
+          height={720}
+          sizes="(max-width: 900px) 100vw, 48vw"
+          className="command-art-image"
+        />
+      </div>
+      <div className="command-html-layer">
+        <p className="eyebrow">{eyebrow}</p>
+        <h2>{title}</h2>
+        <p>{text}</p>
+        <div className="signal-console" aria-label={`${title} command signals`}>
+          {signals.map((signal, index) => (
+            <div className="signal-row" key={signal}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{signal}</strong>
+              <em>Ready</em>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function SiteHeader({ active }: { active?: string } = {}) {
   return (
     <header className="site-header" aria-label="Primary navigation">

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ArrowRight, Check } from "lucide-react";
 import {
+  CommandCenterPreview,
+  EagleGuide,
   SiteFooter,
   SiteHeader,
   serviceGroups,
@@ -26,7 +28,16 @@ export default function ServicesPage() {
           answer faster, follow up cleaner, report better, and reduce manual
           admin across the work that matters.
         </p>
+        <EagleGuide message="The Eagle organizes every service into a command layer: intake, automation, visibility, and executive action." />
       </section>
+
+      <CommandCenterPreview
+        eyebrow="Service command modules"
+        title="Services are built as operating-system modules, not isolated tasks."
+        text="Each engagement is designed to fit into a larger AI operating system journey, with cinematic technology direction and real HTML content that explains the business outcome."
+        signals={["AI intake", "Workflow control", "Dashboard visibility", "Owner decisions"]}
+        image="/images/eeos-company-solutions-eagle.png"
+      />
 
       <section className="section services-section">
         <div className="service-detail-grid">

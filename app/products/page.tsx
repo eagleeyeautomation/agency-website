@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { ArrowRight, Check } from "lucide-react";
-import { SiteFooter, SiteHeader, productPlatforms } from "../site-content";
+import {
+  CommandCenterPreview,
+  EagleGuide,
+  SiteFooter,
+  SiteHeader,
+  productPlatforms
+} from "../site-content";
 
 export const metadata: Metadata = {
   title: "Products",
@@ -14,13 +20,22 @@ export default function ProductsPage() {
       <SiteHeader />
       <section className="page-hero">
         <p className="eyebrow">Products</p>
-        <h1>EEOS is the flagship software platform.</h1>
+        <h1>EEOS is the flagship AI operating system.</h1>
         <p>
-          Our product suite helps GoHighLevel-powered businesses answer faster,
-          follow up cleaner, automate repeatable work, and give leadership a
-          daily command view.
+          The product experience is built like a command center: intelligence,
+          automation, visibility, and secure operating control in one premium
+          software ecosystem.
         </p>
+        <EagleGuide message="The Eagle points each owner toward the next layer of visibility: signals, priorities, recommendations, and action." />
       </section>
+
+      <CommandCenterPreview
+        eyebrow="Flagship platform"
+        title="EEOS brings enterprise operating power into one guided cockpit."
+        text="The product suite is organized as business command modules rather than disconnected tools."
+        signals={["Executive dashboard", "AI recommendations", "Integration health", "Secure command access"]}
+        image="/images/eeos-sanitized-dashboard.svg"
+      />
 
       <section className="section services-section">
         <div className="service-detail-grid">

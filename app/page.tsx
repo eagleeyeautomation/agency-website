@@ -88,8 +88,8 @@ export default function Home() {
 
       <section id="top" className="hero corporate-hero">
         <Image
-          src="/images/automation-command-center.png"
-          alt="Modern enterprise technology command center with connected automation dashboards"
+          src="/images/eeos-executive-intelligence-eagle.png"
+          alt="EEOS executive intelligence eagle with visible illuminated AI brain and business intelligence signals"
           fill
           priority
           sizes="100vw"
@@ -258,10 +258,10 @@ export default function Home() {
         </div>
         <div className="eeos-visual-card">
           <Image
-            src="/images/eeos-sanitized-dashboard.svg"
-            alt="Sanitized EEOS dashboard visual showing generic executive recommendations, lead generation, automation, and business intelligence panels"
-            width={1040}
-            height={760}
+            src="/images/eeos-logo-wide-official.png"
+            alt="Official EEOS Eagle Eye Operating System logo"
+            width={1792}
+            height={1024}
             sizes="(max-width: 900px) 100vw, 48vw"
             className="eeos-visual"
           />
@@ -423,10 +423,10 @@ export default function Home() {
       <section id="speak-to-eeos-brain" className="section brain-showcase-section" aria-labelledby="brain-title">
         <div className="brain-visual-card">
           <Image
-            src="/images/eeos-eagle-brain.svg"
+            src="/images/eeos-executive-intelligence-eagle.png"
             alt="Futuristic eagle with a clearly visible illuminated AI brain, circuitry, and executive intelligence signals"
-            width={960}
-            height={720}
+            width={1536}
+            height={1024}
             sizes="(max-width: 900px) 100vw, 48vw"
             className="brain-visual"
           />

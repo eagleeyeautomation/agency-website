@@ -4,6 +4,8 @@ import { ArrowRight, Check, LayoutDashboard } from "lucide-react";
 import {
   SiteFooter,
   SiteHeader,
+  CommandCenterPreview,
+  EagleGuide,
   crmSamples,
   crmTopics,
   eeosApplicationUrl
@@ -70,12 +72,13 @@ export default function CrmPage() {
       <SiteHeader active="CRM" />
       <section className="page-hero product-hero">
         <p className="eyebrow">CRM</p>
-        <h1>Turn Every Lead Into a Managed Opportunity</h1>
+        <h1>CRM data becomes command-center intelligence.</h1>
         <p>
           Eagle Eye Automation gives growing businesses the CRM structure,
           pipeline visibility, follow-up tools, and automation needed to operate
           with greater consistency and control.
         </p>
+        <EagleGuide message="The Eagle connects contacts, conversations, pipelines, and tasks into a leadership view the owner can act on." />
         <div className="hero-actions">
           <a className="button primary" href="#crm-capabilities">
             Explore CRM Solutions
@@ -86,6 +89,14 @@ export default function CrmPage() {
           </a>
         </div>
       </section>
+
+      <CommandCenterPreview
+        eyebrow="CRM command module"
+        title="Pipeline activity turns into executive visibility."
+        text="The page combines technology artwork with structured HTML signal rows that show how CRM activity becomes operating intelligence."
+        signals={["Contact captured", "Opportunity opened", "Task assigned", "Pipeline reviewed"]}
+        image="/images/crm-samples-sanitized.webp"
+      />
 
       <section className="section video-story-section">
         <div className="video-story-copy">

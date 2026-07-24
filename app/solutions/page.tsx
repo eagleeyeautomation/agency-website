@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { ArrowRight, Check } from "lucide-react";
-import { SiteFooter, SiteHeader, productPlatforms, solutions } from "../site-content";
+import {
+  CommandCenterPreview,
+  EagleGuide,
+  SiteFooter,
+  SiteHeader,
+  productPlatforms,
+  solutions
+} from "../site-content";
 
 export const metadata: Metadata = {
   title: "Solutions",
@@ -14,13 +21,21 @@ export default function SolutionsPage() {
       <SiteHeader />
       <section className="page-hero">
         <p className="eyebrow">Solutions</p>
-        <h1>Practical systems for response, follow-up, visibility, and growth.</h1>
+        <h1>Enter the operating system for tomorrow&apos;s business.</h1>
         <p>
-          Eagle Eye Automation combines AI, GoHighLevel, workflow automation,
-          dashboards, and business intelligence into systems that operators can
-          actually use.
+          Follow the EEOS Eagle through connected AI, automation, workflow
+          intelligence, secure operations, and executive command visibility.
         </p>
+        <EagleGuide message="Every solution is designed as a command module inside one connected business operating system." />
       </section>
+
+      <CommandCenterPreview
+        eyebrow="Solution command layer"
+        title="Cinematic technology on top. Real operating content underneath."
+        text="Each solution combines premium AI visuals with live HTML interface layers that explain what the business can see, manage, and improve."
+        signals={["Lead response", "Workflow intelligence", "Business health", "Executive visibility"]}
+        image="/images/eeos-company-solutions-eagle.png"
+      />
 
       <section className="section">
         <div className="portfolio-detail-grid">

@@ -4,6 +4,8 @@ import { ArrowRight, Check, Sparkles } from "lucide-react";
 import {
   SiteFooter,
   SiteHeader,
+  CommandCenterPreview,
+  EagleGuide,
   automationTopics,
   automationUseCases,
   eeosApplicationUrl
@@ -69,12 +71,13 @@ export default function AutomationPage() {
       <SiteHeader active="Automation" />
       <section className="page-hero product-hero">
         <p className="eyebrow">Automation</p>
-        <h1>Automate the Work That Slows Your Business Down</h1>
+        <h1>Automation that moves like an intelligent command system.</h1>
         <p>
           Eagle Eye Automation helps service businesses respond faster, reduce
           repetitive work, improve follow-up, and keep every opportunity moving
           through intelligent connected automation.
         </p>
+        <EagleGuide message="The Eagle tracks the workflow from first signal to next action so leaders can see what moved and what needs attention." />
         <div className="hero-actions">
           <a className="button primary" href="#automation-capabilities">
             Explore Automation Solutions
@@ -85,6 +88,14 @@ export default function AutomationPage() {
           </a>
         </div>
       </section>
+
+      <CommandCenterPreview
+        eyebrow="Automation command module"
+        title="Signals enter. AI responds. The operating layer keeps moving."
+        text="Automation pages pair cinematic workflow artwork with HTML signal rows so visitors can understand the logic instead of only seeing a graphic."
+        signals={["Lead detected", "AI response prepared", "CRM updated", "Follow-up measured"]}
+        image="/images/automation-flow-visual.webp"
+      />
 
       <section className="section video-story-section">
         <div className="video-story-copy">

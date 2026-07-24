@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ArrowRight, Check, Sparkles } from "lucide-react";
 import {
+  CommandCenterPreview,
+  EagleGuide,
   SiteFooter,
   SiteHeader,
   eeosApplicationUrl,
@@ -32,7 +34,16 @@ export default function EeosPage() {
           growth: leads, calls, missed opportunities, follow-ups, appointments,
           pipeline movement, and daily business performance.
         </p>
+        <EagleGuide message="The EEOS Eagle guides owners through business signals, AI reasoning, and the decisions that shape tomorrow's performance." />
       </section>
+
+      <CommandCenterPreview
+        eyebrow="EEOS command center"
+        title="Step inside tomorrow's owner operating system."
+        text="EEOS is presented as a guided command experience where cinematic intelligence artwork and live HTML signal layers work together."
+        signals={["Business signals", "AI reasoning", "Executive briefing", "Next best action"]}
+        image="/images/eeos-executive-intelligence-eagle.png"
+      />
 
       <section className="section split-section">
         <div>
