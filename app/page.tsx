@@ -418,7 +418,7 @@ export default function Home() {
                 {contactPhone}
               </a>
             ) : null}
-            <a className="button secondary light" href={eeosApplicationLoginUrl}>
+            <a className="button secondary light" href={eeosApplicationUrl}>
               Launch EEOS
             </a>
           </div>

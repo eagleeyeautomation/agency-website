@@ -706,7 +706,7 @@ export function SiteHeader({ active }: { active?: string } = {}) {
         <a className="nav-cta" href="/contact">
           Request a Demo
         </a>
-        <a className="nav-cta secondary" href={eeosApplicationLoginUrl}>
+        <a className="nav-cta secondary" href={eeosApplicationUrl}>
           Launch EEOS
         </a>
       </nav>
