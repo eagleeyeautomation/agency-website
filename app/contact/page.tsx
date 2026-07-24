@@ -120,10 +120,10 @@ export default function ContactPage() {
         </div>
         <div className="system-panel">
           <Image
-            src="/images/eeos-eagle-brain.svg"
+            src="/media/eeos/eeos-eagle-brain-closeup.jpg"
             alt="Futuristic eagle intelligence visual for EEOS Brain"
-            width={900}
-            height={675}
+            width={1254}
+            height={1254}
             className="eeos-visual"
           />
         </div>

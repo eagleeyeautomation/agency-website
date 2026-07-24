@@ -34,7 +34,7 @@ export default function SolutionsPage() {
         title="Cinematic technology on top. Real operating content underneath."
         text="Each solution combines premium AI visuals with live HTML interface layers that explain what the business can see, manage, and improve."
         signals={["Lead response", "Workflow intelligence", "Business health", "Executive visibility"]}
-        image="/images/eeos-company-solutions-eagle.png"
+        image="/media/eagle-eye/eea-company-solutions.jpg"
       />
 
       <section className="section">

@@ -96,7 +96,7 @@ export default function WebsitesPage() {
         title="Your website becomes a business signal intake layer."
         text="Cinematic digital presence is paired with live HTML content that shows how attention becomes inquiry, follow-up, and executive visibility."
         signals={["Visitor intent", "AI chat handoff", "Lead capture", "Executive visibility"]}
-        image="/images/website-samples-sanitized.webp"
+        image="/media/eagle-eye/eea-website-solutions.jpg"
       />
 
       <section className="section video-story-section">

@@ -42,7 +42,7 @@ export default function EeosPage() {
         title="Step inside tomorrow's owner operating system."
         text="EEOS is presented as a guided command experience where cinematic intelligence artwork and live HTML signal layers work together."
         signals={["Business signals", "AI reasoning", "Executive briefing", "Next best action"]}
-        image="/images/eeos-executive-intelligence-eagle.png"
+        image="/media/eeos/eeos-executive-intelligence.jpg"
       />
 
       <section className="section split-section">

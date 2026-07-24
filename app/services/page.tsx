@@ -36,7 +36,7 @@ export default function ServicesPage() {
         title="Services are built as operating-system modules, not isolated tasks."
         text="Each engagement is designed to fit into a larger AI operating system journey, with cinematic technology direction and real HTML content that explains the business outcome."
         signals={["AI intake", "Workflow control", "Dashboard visibility", "Owner decisions"]}
-        image="/images/eeos-company-solutions-eagle.png"
+        image="/media/eagle-eye/eea-company-solutions.jpg"
       />
 
       <section className="section services-section">

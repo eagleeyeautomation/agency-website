@@ -88,7 +88,7 @@ export default function Home() {
 
       <section id="top" className="hero corporate-hero">
         <Image
-          src="/images/eeos-hero-eagle-brain-closeup.png"
+          src="/media/eeos/eeos-eagle-brain-closeup.jpg"
           alt="Close-up EEOS eagle with a visible illuminated AI brain and electric blue intelligence signals"
           fill
           priority
@@ -146,7 +146,7 @@ export default function Home() {
         </div>
         <div className="video-frame">
           <Image
-            src="/images/eeos-executive-intelligence-eagle.png"
+            src="/media/eeos/eeos-executive-intelligence.jpg"
             alt="EEOS executive intelligence eagle with visible illuminated AI brain and AI-powered business growth message"
             width={1536}
             height={1024}
@@ -231,7 +231,7 @@ export default function Home() {
         </div>
         <div className="eeos-visual-card">
           <Image
-            src="/images/eeos-logo-wide-official.png"
+            src="/media/source-approved/eeos-logo-wide-official.png"
             alt="Official EEOS Eagle Eye Operating System logo"
             width={1792}
             height={1024}
@@ -396,7 +396,7 @@ export default function Home() {
       <section id="speak-to-eeos-brain" className="section brain-showcase-section" aria-labelledby="brain-title">
         <div className="brain-visual-card">
           <Image
-            src="/images/eeos-executive-intelligence-eagle.png"
+            src="/media/eeos/eeos-executive-intelligence.jpg"
             alt="Futuristic eagle with a clearly visible illuminated AI brain, circuitry, and executive intelligence signals"
             width={1536}
             height={1024}
