@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight, Check, MonitorSmartphone } from "lucide-react";
 import {
-  SiteFooter,
-  SiteHeader,
-  CommandCenterPreview,
-  EagleGuide,
-  eeosApplicationUrl,
-  websiteSamples,
-  websiteTopics
-} from "../site-content";
+  ArrowRight,
+  Blocks,
+  Gauge,
+  LayoutTemplate,
+  MessageSquareMore,
+  MonitorSmartphone,
+  Route,
+  Search,
+  ShieldCheck,
+  Sparkles,
+  TrendingUp,
+  Workflow
+} from "lucide-react";
+import { SiteFooter, SiteHeader, getContactDetails } from "../site-content";
 
 const pageUrl = "https://www.eagleeyeautomation.com/websites";
 
@@ -33,16 +38,68 @@ export const metadata: Metadata = {
   }
 };
 
-const processSteps = [
-  "Strategy",
-  "Design",
-  "Content",
-  "Development",
-  "CRM Connection",
-  "Automation",
-  "Testing",
-  "Launch",
-  "Optimization"
+const websiteCapabilities = [
+  {
+    title: "Custom Website Design",
+    description: "A professional website designed around your brand, audience, and business goals.",
+    icon: LayoutTemplate
+  },
+  {
+    title: "Mobile-Responsive Development",
+    description: "A seamless experience across desktop, tablet, and mobile devices.",
+    icon: MonitorSmartphone
+  },
+  {
+    title: "Lead-Capture Foundations",
+    description: "Clear calls to action, forms, chat, and pathways that help visitors take the next step.",
+    icon: MessageSquareMore
+  },
+  {
+    title: "SEO Foundations",
+    description: "Clean structure, page metadata, and technical foundations that support search visibility.",
+    icon: Search
+  },
+  {
+    title: "Fast and Secure Performance",
+    description: "Modern development practices focused on speed, stability, and responsible security.",
+    icon: Gauge
+  },
+  {
+    title: "Connected Business Systems",
+    description: "Connect website inquiries to approved CRM, communication, scheduling, and follow-up systems.",
+    icon: Blocks
+  }
+];
+
+const websiteBenefits = [
+  {
+    title: "Build Credibility",
+    description: "Present your business with a professional and trustworthy digital presence.",
+    icon: ShieldCheck
+  },
+  {
+    title: "Capture More Opportunities",
+    description: "Give visitors clear ways to call, request information, schedule, or begin a conversation.",
+    icon: TrendingUp
+  },
+  {
+    title: "Respond Faster",
+    description: "Route inquiries into connected systems so the right team can follow up quickly.",
+    icon: Route
+  },
+  {
+    title: "Support Growth",
+    description: "Create a scalable digital foundation that can expand with your services, locations, and customer needs.",
+    icon: Sparkles
+  }
+];
+
+const websiteProcess = [
+  { title: "Discover", description: "Understand the business, audience, goals, and required functionality." },
+  { title: "Plan", description: "Define the site structure, messaging, conversion paths, and integrations." },
+  { title: "Design", description: "Create a responsive visual experience aligned with the approved brand." },
+  { title: "Build", description: "Develop, test, optimize, and connect the approved systems." },
+  { title: "Launch", description: "Deploy the site and verify performance across desktop and mobile." }
 ];
 
 const structuredData = [
@@ -68,156 +125,110 @@ const structuredData = [
 ];
 
 export default function WebsitesPage() {
+  const { bookingHref } = getContactDetails();
+
   return (
     <main>
       <SiteHeader active="Websites" />
-      <section className="page-hero product-hero">
-        <p className="eyebrow">Websites</p>
-        <h1>Websites as the front door to the operating system.</h1>
-        <p>
-          We create modern, responsive websites that connect design, lead
-          capture, AI communication, CRM, analytics, and automation into one
-          business-growth system.
-        </p>
-        <EagleGuide message="The Eagle follows every visitor signal from the public website into the systems that help the business respond." />
-        <div className="hero-actions">
-          <a className="button primary" href="#website-capabilities">
-            Explore Website Solutions
-            <ArrowRight size={18} aria-hidden="true" />
-          </a>
-          <a className="button secondary" href={eeosApplicationUrl}>
-            Explore EEOS
-          </a>
-        </div>
-      </section>
 
-      <CommandCenterPreview
-        eyebrow="Website command module"
-        title="Your website becomes a business signal intake layer."
-        text="Cinematic digital presence is paired with live HTML content that shows how attention becomes inquiry, follow-up, and executive visibility."
-        signals={["Visitor intent", "AI chat handoff", "Lead capture", "Executive visibility"]}
-        image="/media/eagle-eye/eea-website-solutions.jpg"
-      />
-
-      <section className="section video-story-section">
-        <div className="video-story-copy">
-          <p className="eyebrow">Website motion sequence</p>
-          <h2>From website visit to CRM-ready opportunity.</h2>
+      <section className="page-hero product-hero websites-page-hero">
+        <div className="websites-hero-copy">
+          <p className="eyebrow">Websites</p>
+          <h1>Websites built to attract, engage, and convert.</h1>
           <p>
-            This sanitized motion sequence shows the business-growth pattern:
-            a visitor enters, AI responds, lead details move into CRM, follow-up
-            begins, and reporting becomes visible.
+            Eagle Eye Automation Group builds modern websites that strengthen
+            your brand, capture customer interest, and connect visitors to the
+            right next step.
           </p>
+          <div className="hero-actions">
+            <a className="button primary" href="/contact">
+              Start Your Website
+              <ArrowRight size={18} aria-hidden="true" />
+            </a>
+            <a className="button secondary" href="/contact">
+              Request a Demo
+            </a>
+          </div>
         </div>
-        <div className="video-frame">
-          <video
-            className="story-video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls
-            preload="metadata"
-            poster="/images/websites-growth-video-poster.webp"
-            aria-describedby="website-video-transcript"
-          >
-            <source
-              src="/videos/websites-growth-video.webm"
-              type="video/webm"
-              media="(min-width: 681px) and (prefers-reduced-motion: no-preference)"
-            />
-          </video>
-          <picture className="video-fallback" aria-hidden="true">
-            <source media="(max-width: 680px)" srcSet="/images/websites-growth-video-mobile.webp" />
-            <img src="/images/websites-growth-video-poster.webp" alt="" loading="lazy" />
-          </picture>
-          <p id="website-video-transcript" className="sr-only">
-            Silent sanitized website demo showing a premium website loading on
-            desktop, adapting to tablet and mobile, AI chat, lead form capture,
-            CRM handoff, follow-up automation, and analytics reporting. No real
-            customer data is displayed.
-          </p>
-        </div>
-      </section>
-
-      <section id="website-capabilities" className="section solutions-overview">
-        <div className="section-heading">
-          <p className="eyebrow">Website capabilities</p>
-          <h2>Business websites that do more than look good.</h2>
-        </div>
-        <div className="topic-grid">
-          {websiteTopics.map((topic) => (
-            <span key={topic}>{topic}</span>
-          ))}
-        </div>
-      </section>
-
-      <section className="section product-visual-section">
-        <div className="section-heading">
-          <p className="eyebrow">Website samples</p>
-          <h2>Sanitized device mockups and concept previews.</h2>
-          <p>
-            These are clearly labeled concept designs and sample previews. They
-            do not display private dashboards, credentials, consumer
-            information, or unapproved client branding.
-          </p>
-        </div>
-        <div className="visual-frame">
+        <div className="websites-hero-art">
           <Image
-            src="/images/website-samples-sanitized.webp"
-            alt="Sanitized website samples showing desktop, tablet, and mobile concept previews for business websites"
-            width={1280}
-            height={760}
-            sizes="(max-width: 900px) 100vw, 88vw"
-            className="wide-visual"
+            src="/media/eagle-eye/eea-website-builder-hero.png"
+            alt="Eagle Eye Automation Group website design services displayed across desktop, laptop, tablet, and mobile devices"
+            width={1536}
+            height={1024}
+            priority
+            sizes="(max-width: 1020px) 100vw, 58vw"
           />
         </div>
-        <div className="sample-grid">
-          {websiteSamples.map((sample) => (
-            <article className="sample-card" key={sample.type}>
-              <MonitorSmartphone size={24} aria-hidden="true" />
-              <span>{sample.label}</span>
-              <h3>{sample.type}</h3>
-              <p>{sample.industry}</p>
-              <ul className="clean-list">
-                {sample.capabilities.map((capability) => (
-                  <li key={capability}>
-                    <Check size={16} aria-hidden="true" />
-                    <span>{capability}</span>
-                  </li>
-                ))}
-              </ul>
-              <a className="button package-button" href="#website-capabilities">
-                See Capabilities
-              </a>
+      </section>
+
+      <section className="section websites-capability-section">
+        <div className="section-heading">
+          <p className="eyebrow">What We Build</p>
+          <h2>Professional websites built for growing businesses.</h2>
+        </div>
+        <div className="websites-capability-grid">
+          {websiteCapabilities.map(({ title, description, icon: Icon }) => (
+            <article className="websites-capability-card" key={title}>
+              <span className="tech-icon">
+                <Icon size={26} aria-hidden="true" />
+              </span>
+              <h3>{title}</h3>
+              <p>{description}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="section process-section">
+      <section className="section websites-benefit-section">
         <div className="section-heading">
-          <p className="eyebrow">Website process</p>
-          <h2>{processSteps.join(" → ")}</h2>
+          <p className="eyebrow">Business Benefits</p>
+          <h2>A website should do more than look good.</h2>
         </div>
-        <div className="process-strip">
-          {processSteps.map((step) => (
-            <span key={step}>{step}</span>
+        <div className="websites-benefit-grid">
+          {websiteBenefits.map(({ title, description, icon: Icon }) => (
+            <article className="websites-benefit-card" key={title}>
+              <Icon size={28} aria-hidden="true" />
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="section eeos-connection-section">
+      <section className="section websites-process-section">
+        <div className="section-heading">
+          <p className="eyebrow">Our Website Process</p>
+          <h2>A clear path from idea to launch.</h2>
+        </div>
+        <div className="websites-process-grid">
+          {websiteProcess.map((step, index) => (
+            <article className="websites-process-card" key={step.title}>
+              <span className="websites-process-number">{index + 1}</span>
+              <Workflow size={24} aria-hidden="true" />
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="cta-section websites-final-cta">
         <div>
-          <p className="eyebrow">EEOS connection</p>
-          <h2>Websites become more valuable when they connect to intelligence.</h2>
+          <p className="eyebrow">Start Your Website</p>
+          <h2>Build a website designed to move your business forward.</h2>
           <p>
-            A website becomes more valuable when it connects to EEOS, CRM,
-            automation, business intelligence, and executive visibility.
+            Tell us what your current website is missing. We will help you
+            identify the right structure, functionality, and next step.
           </p>
-          <a className="button primary" href={eeosApplicationUrl}>
-            Connect Your Website to EEOS
+        </div>
+        <div className="cta-actions">
+          <a className="button primary" href="/contact">
+            Start Your Website
             <ArrowRight size={18} aria-hidden="true" />
+          </a>
+          <a className="button secondary" href={bookingHref}>
+            Book Strategy Call
           </a>
         </div>
       </section>

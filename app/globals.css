@@ -842,6 +842,143 @@ h3 {
   margin-top: 0;
 }
 
+.websites-page-hero {
+  display: grid;
+  min-height: 80svh;
+  grid-template-columns: minmax(0, 0.82fr) minmax(520px, 1.18fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  padding-bottom: 56px;
+}
+
+.websites-page-hero::after {
+  display: none;
+}
+
+.websites-hero-copy {
+  min-width: 0;
+}
+
+.websites-hero-copy > p:not(.eyebrow) {
+  max-width: 680px;
+}
+
+.websites-hero-art {
+  overflow: hidden;
+  border: 1px solid rgba(201, 162, 39, 0.24);
+  border-radius: 8px;
+  background: #02070d;
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.42),
+    0 0 36px rgba(0, 168, 255, 0.1);
+}
+
+.websites-hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.websites-capability-section,
+.websites-benefit-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background:
+    linear-gradient(135deg, rgba(5, 5, 5, 0.98), rgba(15, 39, 71, 0.9)),
+    #050505;
+}
+
+.websites-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.websites-capability-card,
+.websites-benefit-card,
+.websites-process-card {
+  border: 1px solid rgba(201, 162, 39, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  box-shadow: 0 18px 56px rgba(0, 0, 0, 0.22);
+}
+
+.websites-capability-card {
+  min-height: 180px;
+  padding: 30px;
+}
+
+.websites-capability-card h3,
+.websites-benefit-card h3,
+.websites-process-card h3 {
+  color: #ffffff;
+}
+
+.websites-capability-card p,
+.websites-benefit-card p,
+.websites-process-card p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.65;
+}
+
+.websites-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.websites-benefit-card {
+  min-height: 180px;
+  padding: 28px;
+}
+
+.websites-benefit-card > svg {
+  margin-bottom: 40px;
+  color: var(--old-gold);
+}
+
+.websites-process-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background:
+    linear-gradient(135deg, rgba(7, 19, 33, 0.98), rgba(5, 5, 5, 0.94)),
+    var(--navy);
+}
+
+.websites-process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.websites-process-card {
+  min-height: 180px;
+  padding: 24px;
+}
+
+.websites-process-card > svg {
+  margin: 30px 0 18px;
+  color: var(--electric);
+}
+
+.websites-process-number {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  border-radius: 50%;
+  color: var(--old-gold);
+  font-weight: 900;
+}
+
+.websites-final-cta .cta-actions {
+  margin-top: 0;
+}
+
 .eeos-connection-section p:not(.eyebrow) {
   color: rgba(255, 255, 255, 0.76);
   font-size: 18px;
@@ -2084,15 +2221,22 @@ footer .brand-logo {
     grid-template-columns: 1fr;
   }
 
-  .page-hero.automation-page-hero {
+  .page-hero.automation-page-hero,
+  .page-hero.websites-page-hero {
     min-height: auto;
     grid-template-columns: 1fr;
     padding-top: 190px;
   }
 
   .automation-feature-grid,
-  .automation-benefit-grid {
+  .automation-benefit-grid,
+  .websites-capability-grid,
+  .websites-benefit-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .websites-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .homepage-intro {
@@ -2218,20 +2362,28 @@ footer .brand-logo {
   }
 
   .automation-feature-grid,
-  .automation-benefit-grid {
+  .automation-benefit-grid,
+  .websites-capability-grid,
+  .websites-benefit-grid,
+  .websites-process-grid {
     grid-template-columns: 1fr;
   }
 
-  .page-hero.automation-page-hero {
+  .page-hero.automation-page-hero,
+  .page-hero.websites-page-hero {
     padding-top: 64px;
   }
 
-  .automation-hero-art {
+  .automation-hero-art,
+  .websites-hero-art {
     order: 2;
   }
 
   .automation-feature-card,
-  .automation-benefit-card {
+  .automation-benefit-card,
+  .websites-capability-card,
+  .websites-benefit-card,
+  .websites-process-card {
     min-height: 0;
   }
 
