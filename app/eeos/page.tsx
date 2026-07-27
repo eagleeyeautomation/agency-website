@@ -1,164 +1,429 @@
 import type { Metadata } from "next";
-import { ArrowRight, Check, Sparkles } from "lucide-react";
+import Image from "next/image";
+import type { CSSProperties } from "react";
 import {
-  CommandCenterPreview,
+  AlertTriangle,
+  ArrowRight,
+  BarChart3,
+  BrainCircuit,
+  Building2,
+  CalendarCheck,
+  Check,
+  CircleDollarSign,
+  KeyRound,
+  Lightbulb,
+  Link2,
+  LockKeyhole,
+  MessageSquareWarning,
+  Network,
+  PhoneMissed,
+  Radar,
+  ScrollText,
+  ShieldCheck,
+  Sparkles,
+  Target,
+  TrendingUp,
+  Unplug,
+  UserRoundX,
+  Workflow
+} from "lucide-react";
+import {
   SiteFooter,
   SiteHeader,
-  eeosApplicationUrl,
-  productFullName,
-  productTagline
+  eeosApplicationUrl
 } from "../site-content";
 
 export const metadata: Metadata = {
-  title: "EEOS",
+  title: "Why EEOS? | The AI Operating System for Service Businesses",
   description:
-    "EEOS — Eagle Eye Operating System is the AI Operating System for Service Businesses and the executive AI layer for leads, calls, missed opportunities, follow-ups, appointments, pipeline activity, and daily performance."
+    "Discover how EEOS connects business systems, analyzes operational signals, and delivers executive intelligence for growing service businesses."
 };
 
-const monitorItems = [
+const businessChallenges = [
+  { label: "Missed calls", icon: PhoneMissed },
+  { label: "Lost leads", icon: UserRoundX },
+  { label: "Poor follow-up", icon: MessageSquareWarning },
+  { label: "Disconnected systems", icon: Unplug },
+  { label: "Scattered reporting", icon: BarChart3 },
+  { label: "Manual processes", icon: Workflow },
+  { label: "No executive visibility", icon: AlertTriangle }
+];
+
+const eeosSolutions = [
+  "Every lead tracked",
+  "Every call monitored",
+  "Every follow-up measured",
+  "Real-time dashboards",
+  "Executive recommendations",
+  "Connected systems",
+  "Predictive intelligence"
+];
+
+const executiveFeatures = [
   {
-    title: "Leads and new inquiries",
-    text: "See new demand and where opportunities are entering the business."
+    title: "Executive Intelligence",
+    text: "Translate daily activity into a leadership-level view of performance, risk, and opportunity.",
+    icon: Radar
   },
   {
-    title: "Answered and missed calls",
-    text: "Understand call activity and identify response gaps."
+    title: "AI Recommendations",
+    text: "Surface focused next actions grounded in the operational signals available to your business.",
+    icon: Lightbulb
   },
   {
-    title: "Follow-up status and aging",
-    text: "Track open follow-up and opportunities that need attention."
+    title: "Business Automation",
+    text: "Coordinate repetitive workflows so teams respond consistently and leaders regain time.",
+    icon: Workflow
   },
   {
-    title: "Appointments and missed appointments",
-    text: "Review scheduled activity, attendance, and missed visits."
+    title: "Connected Integrations",
+    text: "Bring approved systems into one operating environment built for clearer decisions.",
+    icon: Link2
   },
   {
-    title: "Pipeline movement and value",
-    text: "See how opportunities progress and where value is concentrated."
+    title: "Secure Operations",
+    text: "Protect access, data, and business workflows with enterprise-minded controls.",
+    icon: ShieldCheck
   },
   {
-    title: "Daily performance patterns",
-    text: "Recognize recurring activity, changes, and operational trends."
+    title: "Built for Growth",
+    text: "Scale visibility and operating discipline from one office to a national organization.",
+    icon: TrendingUp
   }
 ];
 
-const signalMap = [
-  "Connected activity",
-  "Operational context",
-  "Business patterns",
-  "Executive recommendations"
+const intelligenceSignals = [
+  "Performance",
+  "Risk",
+  "Growth",
+  "Missed opportunities",
+  "Operational bottlenecks",
+  "Next best actions"
+];
+
+const connectedSystems = [
+  "Website",
+  "CRM",
+  "Calls",
+  "Calendar",
+  "Automation",
+  "Reporting",
+  "Executive Dashboard",
+  "Recommendations"
+];
+
+const dashboardMetrics = [
+  { label: "Leads", value: "248", trend: "+18%", icon: Target },
+  { label: "Revenue", value: "$184K", trend: "+12%", icon: CircleDollarSign },
+  { label: "Appointments", value: "96", trend: "+9%", icon: CalendarCheck },
+  { label: "Missed Calls", value: "7", trend: "Needs review", icon: PhoneMissed }
+];
+
+const securityFeatures = [
+  { title: "Role Based Access", icon: KeyRound },
+  { title: "Encrypted Data", icon: LockKeyhole },
+  { title: "Audit Logs", icon: ScrollText },
+  { title: "Protected Integrations", icon: Link2 },
+  { title: "Compliance Ready", icon: ShieldCheck }
 ];
 
 export default function EeosPage() {
   return (
-    <main className="eeos-page-root">
-      <SiteHeader />
+    <main className="eeos-flagship">
+      <SiteHeader active="EEOS" />
 
-      <section className="page-hero product-hero eeos-page-hero">
-        <p className="eyebrow">
-          <Sparkles size={16} aria-hidden="true" />
-          {productTagline}
-        </p>
-        <h1>{productFullName}</h1>
-        <p>
-          EEOS gives service-business owners clearer operational visibility
-          across leads, calls, follow-up, appointments, pipeline activity, and
-          daily performance.
-        </p>
-        <div className="hero-actions">
-          <a className="button primary" href={eeosApplicationUrl}>
-            Open EEOS
-            <ArrowRight size={18} aria-hidden="true" />
-          </a>
-          <a className="button secondary" href="/contact">
-            Request a Demo
-          </a>
+      <section className="eeos-flagship-hero">
+        <div className="eeos-hero-grid" aria-hidden="true" />
+        <div className="eeos-particles" aria-hidden="true">
+          {Array.from({ length: 14 }, (_, index) => (
+            <span key={index} />
+          ))}
+        </div>
+        <div className="eeos-hero-content">
+          <p className="eyebrow">
+            <Sparkles size={16} aria-hidden="true" />
+            The AI Operating System for Service Businesses
+          </p>
+          <h1>Why EEOS?</h1>
+          <p className="eeos-hero-subheadline">
+            Because business owners deserve complete visibility, executive
+            intelligence, and AI-powered decision making.
+          </p>
+          <p className="eeos-hero-support">
+            EEOS connects your business systems, organizes operational data,
+            analyzes business performance, and delivers executive
+            recommendations that help you lead with confidence instead of
+            reacting to problems.
+          </p>
+          <div className="hero-actions">
+            <a className="button primary" href="#why-eeos">
+              Explore EEOS
+              <ArrowRight size={18} aria-hidden="true" />
+            </a>
+            <a className="button secondary" href="/contact">
+              Request Demo
+            </a>
+          </div>
+        </div>
+        <div className="eeos-hero-orbit" aria-hidden="true">
+          <div className="eeos-hero-orbit-ring" />
+          <Image
+            src="/media/eeos/eeos-eagle-brain-closeup.jpg"
+            alt=""
+            width={1254}
+            height={1254}
+            priority
+            sizes="(max-width: 900px) 90vw, 48vw"
+          />
+          <span className="eeos-orbit-label label-one">Executive signal</span>
+          <span className="eeos-orbit-label label-two">AI recommendation</span>
         </div>
       </section>
 
-      <CommandCenterPreview
-        eyebrow="EEOS executive intelligence"
-        title="See the business signals that deserve leadership attention."
-        text="EEOS brings approved business activity into a clearer operating view so owners can understand performance, identify patterns, and act on better information."
-        signals={["Business activity", "Operational context", "Executive visibility", "Recommended next steps"]}
-        image="/media/eeos/eeos-executive-intelligence.jpg"
-        priority
-      />
-
-      <section className="section eeos-how-section">
-        <div className="eeos-how-copy">
-          <p className="eyebrow">Executive AI Layer</p>
-          <h2>One operating view for the work that usually gets scattered.</h2>
+      <section id="why-eeos" className="eeos-product-section eeos-problem-section">
+        <div className="eeos-section-heading">
+          <p className="eyebrow">Why Business Owners Need EEOS</p>
+          <h2>Stop operating through blind spots.</h2>
           <p>
-            EEOS is designed to connect approved operational systems, organize
-            business activity, identify meaningful patterns, and provide
-            executive recommendations based on the information available.
+            The difference between reacting and leading is having the right
+            signal at the right time.
           </p>
         </div>
-        <div className="eeos-signal-panel">
-          <div className="eeos-signal-heading">
-            <Sparkles size={20} aria-hidden="true" />
-            EEOS signal map
-          </div>
-          <div className="eeos-signal-grid">
-            {signalMap.map((signal, index) => (
-              <div key={signal}>
-                <span>{index + 1}</span>
-                <strong>{signal}</strong>
-              </div>
-            ))}
-          </div>
+        <div className="eeos-problem-solution-grid">
+          <article className="eeos-compare-panel eeos-challenge-panel">
+            <div className="eeos-panel-heading">
+              <AlertTriangle size={22} aria-hidden="true" />
+              <h3>Business Challenges</h3>
+            </div>
+            <div className="eeos-compare-list">
+              {businessChallenges.map(({ label, icon: Icon }) => (
+                <div key={label}>
+                  <Icon size={19} aria-hidden="true" />
+                  <span>{label}</span>
+                </div>
+              ))}
+            </div>
+          </article>
+          <article className="eeos-compare-panel eeos-solution-panel">
+            <div className="eeos-panel-heading">
+              <Sparkles size={22} aria-hidden="true" />
+              <h3>The EEOS Solution</h3>
+            </div>
+            <div className="eeos-compare-list">
+              {eeosSolutions.map((solution) => (
+                <div key={solution}>
+                  <Check size={19} aria-hidden="true" />
+                  <span>{solution}</span>
+                </div>
+              ))}
+            </div>
+          </article>
         </div>
       </section>
 
-      <section className="section eeos-monitors-section">
-        <div className="section-heading">
-          <p className="eyebrow">What EEOS Monitors</p>
-          <h2>Daily business activity, organized for clearer decisions.</h2>
+      <section className="eeos-product-section eeos-advantage-section">
+        <div className="eeos-section-heading">
+          <p className="eyebrow">The EEOS Difference</p>
+          <h2>The executive advantage.</h2>
           <p>
-            Visibility is available based on onboarding, approved integrations,
-            and the systems connected for each organization.
+            One premium operating layer for intelligence, automation, and
+            connected business performance.
           </p>
         </div>
-        <div className="eeos-monitor-grid">
-          {monitorItems.map((item) => (
-            <article className="eeos-monitor-card" key={item.title}>
-              <Check size={20} aria-hidden="true" />
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+        <div className="eeos-feature-grid">
+          {executiveFeatures.map(({ title, text, icon: Icon }) => (
+            <article className="eeos-feature-card" key={title}>
+              <span>
+                <Icon size={25} aria-hidden="true" />
+              </span>
+              <h3>{title}</h3>
+              <p>{text}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="section eeos-access-section">
-        <div>
-          <p className="eyebrow">Application Access</p>
-          <h2>Access the EEOS Application</h2>
+      <section className="eeos-product-section eeos-intelligence-section">
+        <div className="eeos-intelligence-copy">
+          <p className="eyebrow">Executive Intelligence</p>
+          <h2>Meet the Intelligence Engine</h2>
           <p>
-            Existing customers and platform administrators can sign in to the
-            live EEOS application at app.geteeos.com.
+            EEOS continuously analyzes your operational signals and turns
+            business activity into focused executive context.
           </p>
+          <div className="eeos-signal-chips">
+            {intelligenceSignals.map((signal) => (
+              <span key={signal}>{signal}</span>
+            ))}
+          </div>
         </div>
-        <a className="button eeos-dark-button" href={eeosApplicationUrl}>
-          Login to EEOS
-          <ArrowRight size={18} aria-hidden="true" />
-        </a>
+        <div className="eeos-brain-visual">
+          <div className="eeos-neural-ring ring-one" aria-hidden="true" />
+          <div className="eeos-neural-ring ring-two" aria-hidden="true" />
+          <Image
+            src="/media/eeos/eeos-executive-intelligence.jpg"
+            alt="EEOS intelligence engine represented by an eagle with an illuminated neural brain"
+            width={1536}
+            height={1024}
+            sizes="(max-width: 900px) 100vw, 48vw"
+          />
+          <div className="eeos-brain-status">
+            <BrainCircuit size={21} aria-hidden="true" />
+            <span>Intelligence Engine</span>
+            <strong>Analyzing signals</strong>
+          </div>
+        </div>
       </section>
 
-      <section className="cta-section eeos-final-cta">
-        <div>
-          <p className="eyebrow">Explore EEOS</p>
-          <h2>See how executive intelligence can support your business.</h2>
+      <section className="eeos-product-section eeos-connected-section">
+        <div className="eeos-section-heading">
+          <p className="eyebrow">Connected Systems</p>
+          <h2>One connected business.</h2>
           <p>
-            Request a demonstration to explore the visibility, workflows, and
-            recommendations available for your organization.
+            Operational activity flows through EEOS and becomes executive
+            intelligence.
           </p>
         </div>
-        <a className="button primary light" href="/contact">
-          Request a Demo
-          <ArrowRight size={18} aria-hidden="true" />
-        </a>
+        <div className="eeos-ecosystem" aria-label="Connected EEOS business ecosystem">
+          {connectedSystems.map((system, index) => (
+            <div className="eeos-ecosystem-node" key={system}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{system}</strong>
+              {index < connectedSystems.length - 1 ? (
+                <i aria-hidden="true" />
+              ) : null}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="eeos-product-section eeos-dashboard-section">
+        <div className="eeos-section-heading">
+          <p className="eyebrow">Executive Dashboard</p>
+          <h2>Business health, brought into focus.</h2>
+          <p>
+            See the metrics, risks, and recommendations that deserve leadership
+            attention.
+          </p>
+        </div>
+        <div className="eeos-dashboard-shell">
+          <div className="eeos-dashboard-topbar">
+            <div>
+              <span>EEOS</span>
+              <strong>Executive Command Center</strong>
+            </div>
+            <em>
+              <span aria-hidden="true" />
+              Live operating view
+            </em>
+          </div>
+          <div className="eeos-dashboard-metrics">
+            {dashboardMetrics.map(({ label, value, trend, icon: Icon }) => (
+              <article
+                className={label === "Missed Calls" ? "is-alert" : undefined}
+                key={label}
+              >
+                <Icon size={20} aria-hidden="true" />
+                <span>{label}</span>
+                <strong>{value}</strong>
+                <em>{trend}</em>
+              </article>
+            ))}
+          </div>
+          <div className="eeos-dashboard-lower">
+            <div className="eeos-chart-panel">
+              <div>
+                <span>Pipeline performance</span>
+                <strong>$428,600</strong>
+              </div>
+              <div className="eeos-chart-bars" aria-label="Pipeline growth chart">
+                {[38, 54, 48, 72, 64, 88, 96].map((height, index) => (
+                  <span
+                    key={index}
+                    style={{ "--bar-height": `${height}%` } as CSSProperties}
+                  />
+                ))}
+              </div>
+            </div>
+            <aside className="eeos-recommendation-panel">
+              <div>
+                <Sparkles size={18} aria-hidden="true" />
+                <span>AI recommendation</span>
+              </div>
+              <strong>Prioritize follow-up on seven high-value opportunities.</strong>
+              <p>
+                Response timing and pipeline value indicate the strongest
+                near-term conversion opportunity.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section className="eeos-product-section eeos-security-section">
+        <div className="eeos-security-intro">
+          <span className="eeos-security-shield">
+            <ShieldCheck size={42} aria-hidden="true" />
+          </span>
+          <p className="eyebrow">Enterprise Security</p>
+          <h2>Built for trusted operations.</h2>
+          <p>
+            Security, access, and integration discipline are part of the
+            operating system—not an afterthought.
+          </p>
+        </div>
+        <div className="eeos-security-grid">
+          {securityFeatures.map(({ title, icon: Icon }) => (
+            <article key={title}>
+              <Icon size={22} aria-hidden="true" />
+              <h3>{title}</h3>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="eeos-product-section eeos-growth-section">
+        <div>
+          <p className="eyebrow">Future Ready</p>
+          <h2>Built for growth at every stage.</h2>
+          <p>
+            Whether your business has one office, five offices, 25 offices, or
+            nationwide operations, EEOS scales with you.
+          </p>
+        </div>
+        <div className="eeos-scale-visual" aria-label="EEOS business scale">
+          {[1, 5, 25].map((offices, index) => (
+            <div key={offices}>
+              <Building2 size={22 + index * 5} aria-hidden="true" />
+              <strong>{offices}</strong>
+              <span>{offices === 1 ? "Office" : "Offices"}</span>
+            </div>
+          ))}
+          <div>
+            <Network size={37} aria-hidden="true" />
+            <strong>∞</strong>
+            <span>Nationwide</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="eeos-flagship-cta">
+        <div>
+          <p className="eyebrow">The Next Operating Standard</p>
+          <h2>Lead With Intelligence.</h2>
+          <p>
+            See how EEOS helps business owners stop reacting and start leading.
+          </p>
+        </div>
+        <div className="eeos-flagship-cta-actions">
+          <a className="button primary" href="/contact">
+            Request Demo
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
+          <a className="button secondary" href={eeosApplicationUrl}>
+            Open EEOS
+          </a>
+        </div>
       </section>
 
       <SiteFooter showEeosTransition={false} />
