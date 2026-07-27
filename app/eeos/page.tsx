@@ -223,6 +223,30 @@ export default function EeosPage() {
             identifies patterns, and supports executive recommendations.
           </p>
         </div>
+        <figure className="eeos-brain-artwork">
+          <Image
+            src="/images/eeos-brain-intelligence.png"
+            alt="EEOS Intelligence Engine with a stationary eagle and holographic brain dashboard"
+            width={1448}
+            height={1086}
+            sizes="(max-width: 1500px) 100vw, 1448px"
+            unoptimized
+          />
+          <div className="eeos-brain-motion" aria-hidden="true">
+            <span className="eeos-neural-orbit orbit-a" />
+            <span className="eeos-neural-orbit orbit-b" />
+            <span className="eeos-neural-shimmer" />
+            <span className="eeos-neural-node node-a" />
+            <span className="eeos-neural-node node-b" />
+            <span className="eeos-neural-node node-c" />
+            <span className="eeos-neural-node node-d" />
+            <span className="eeos-neural-node node-e" />
+            <span className="eeos-dashboard-scan scan-left" />
+            <span className="eeos-dashboard-scan scan-right" />
+            <span className="eeos-data-line line-a" />
+            <span className="eeos-data-line line-b" />
+          </div>
+        </figure>
         <div className="eeos-flow" aria-label="EEOS Intelligence Engine flow">
           {intelligenceFlow.map(({ label, icon: Icon }, index) => (
             <div className="eeos-flow-step" key={label}>

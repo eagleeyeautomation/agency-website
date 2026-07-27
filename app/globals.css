@@ -2508,6 +2508,196 @@ h3 {
   margin-left: auto;
 }
 
+.eeos-brain-artwork {
+  position: relative;
+  width: min(100%, 1448px);
+  overflow: hidden;
+  margin: 0 auto clamp(42px, 5vw, 72px);
+  border: 1px solid rgba(0, 168, 255, 0.3);
+  border-radius: 24px;
+  background: #02060b;
+  box-shadow:
+    0 38px 110px rgba(0, 0, 0, 0.48),
+    0 0 58px rgba(0, 168, 255, 0.08);
+  isolation: isolate;
+}
+
+.eeos-brain-artwork > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.eeos-brain-motion {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.eeos-neural-orbit {
+  position: absolute;
+  width: 27%;
+  aspect-ratio: 1.08;
+  top: 13.5%;
+  left: 62.4%;
+  border-radius: 48%;
+  background:
+    conic-gradient(
+      from 30deg,
+      transparent 0deg 36deg,
+      rgba(75, 206, 255, 0.66) 52deg,
+      transparent 70deg 142deg,
+      rgba(0, 151, 255, 0.78) 160deg,
+      transparent 180deg 252deg,
+      rgba(143, 226, 255, 0.55) 270deg,
+      transparent 292deg 360deg
+    );
+  filter: drop-shadow(0 0 9px rgba(0, 174, 255, 0.62));
+  mask: radial-gradient(ellipse, transparent 59%, #000 61% 64%, transparent 66%);
+  opacity: 0.78;
+  transform: translateZ(0);
+  animation:
+    eeos-brain-rotate 14s linear infinite,
+    eeos-brain-bloom 4.8s ease-in-out infinite;
+  will-change: transform, opacity, filter;
+}
+
+.eeos-neural-orbit.orbit-b {
+  width: 23%;
+  top: 15.8%;
+  left: 64.4%;
+  opacity: 0.52;
+  animation-direction: reverse, normal;
+  animation-duration: 13s, 5.6s;
+}
+
+.eeos-neural-shimmer {
+  position: absolute;
+  width: 32%;
+  height: 43%;
+  top: 11.5%;
+  left: 60%;
+  overflow: hidden;
+  border-radius: 48%;
+  background:
+    linear-gradient(
+      112deg,
+      transparent 32%,
+      rgba(195, 241, 255, 0.04) 42%,
+      rgba(190, 240, 255, 0.36) 49%,
+      rgba(0, 168, 255, 0.08) 56%,
+      transparent 66%
+    );
+  mix-blend-mode: screen;
+  opacity: 0;
+  transform: translate3d(-34%, 0, 0);
+  animation: eeos-brain-shimmer 7.2s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.eeos-neural-node {
+  position: absolute;
+  width: clamp(3px, 0.48vw, 7px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #bfeeff;
+  box-shadow:
+    0 0 6px #ffffff,
+    0 0 14px #00a8ff,
+    0 0 28px rgba(0, 168, 255, 0.8);
+  opacity: 0.45;
+  transform: translateZ(0);
+  animation: eeos-node-pulse 3.6s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.eeos-neural-node.node-a { top: 22%; left: 72.8%; }
+.eeos-neural-node.node-b { top: 29.8%; left: 79.2%; animation-delay: -0.8s; }
+.eeos-neural-node.node-c { top: 36%; left: 70.7%; animation-delay: -1.7s; }
+.eeos-neural-node.node-d { top: 42.4%; left: 82.8%; animation-delay: -2.4s; }
+.eeos-neural-node.node-e { top: 31.2%; left: 75.7%; animation-delay: -3s; }
+
+.eeos-dashboard-scan {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 190, 255, 0.88), transparent);
+  box-shadow: 0 0 12px rgba(0, 168, 255, 0.78);
+  opacity: 0;
+  transform: translate3d(0, -18px, 0);
+  animation: eeos-monitor-scan 6.8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.eeos-dashboard-scan.scan-left {
+  width: 18%;
+  top: 63%;
+  left: 2%;
+}
+
+.eeos-dashboard-scan.scan-right {
+  width: 31%;
+  top: 84%;
+  left: 66%;
+  animation-delay: -3.2s;
+}
+
+.eeos-data-line {
+  position: absolute;
+  width: 9%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #00a8ff 45%, transparent);
+  box-shadow: 0 0 9px rgba(0, 168, 255, 0.68);
+  opacity: 0.18;
+  transform: translate3d(-55%, 0, 0);
+  animation: eeos-data-flow 5.4s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.eeos-data-line.line-a {
+  top: 87.8%;
+  left: 68%;
+}
+
+.eeos-data-line.line-b {
+  top: 93.2%;
+  left: 79%;
+  animation-delay: -2.7s;
+}
+
+@keyframes eeos-brain-rotate {
+  to { transform: translateZ(0) rotate(360deg); }
+}
+
+@keyframes eeos-brain-bloom {
+  0%, 100% { opacity: 0.48; filter: drop-shadow(0 0 7px rgba(0, 174, 255, 0.46)); }
+  50% { opacity: 0.9; filter: drop-shadow(0 0 15px rgba(0, 174, 255, 0.82)); }
+}
+
+@keyframes eeos-brain-shimmer {
+  0%, 18%, 100% { opacity: 0; transform: translate3d(-34%, 0, 0); }
+  38% { opacity: 0.68; }
+  60% { opacity: 0; transform: translate3d(42%, 0, 0); }
+}
+
+@keyframes eeos-node-pulse {
+  0%, 100% { opacity: 0.32; transform: translateZ(0) scale(0.72); }
+  48% { opacity: 1; transform: translateZ(0) scale(1.28); }
+}
+
+@keyframes eeos-monitor-scan {
+  0%, 18%, 100% { opacity: 0; transform: translate3d(0, -18px, 0); }
+  34% { opacity: 0.54; }
+  68% { opacity: 0; transform: translate3d(0, 54px, 0); }
+}
+
+@keyframes eeos-data-flow {
+  0%, 100% { opacity: 0.12; transform: translate3d(-55%, 0, 0); }
+  45% { opacity: 0.72; }
+  70% { opacity: 0.16; transform: translate3d(150%, 0, 0); }
+}
+
 .eeos-flow {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2710,6 +2900,10 @@ h3 {
     border-radius: 12px;
   }
 
+  .eeos-brain-artwork {
+    border-radius: 12px;
+  }
+
   .eeos-flow,
   .eeos-ecosystem-seven {
     grid-template-columns: 1fr;
@@ -2753,6 +2947,28 @@ h3 {
 
   .eeos-ecosystem-seven .eeos-ecosystem-node:nth-child(4) i {
     display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eeos-neural-orbit,
+  .eeos-neural-shimmer,
+  .eeos-neural-node,
+  .eeos-dashboard-scan,
+  .eeos-data-line {
+    animation: none !important;
+  }
+
+  .eeos-neural-orbit,
+  .eeos-neural-shimmer,
+  .eeos-dashboard-scan,
+  .eeos-data-line {
+    opacity: 0 !important;
+  }
+
+  .eeos-neural-node {
+    opacity: 0.42 !important;
+    transform: none !important;
   }
 }
 
