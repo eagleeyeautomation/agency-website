@@ -1330,6 +1330,72 @@ h3 {
   font-size: clamp(28px, 3vw, 42px);
 }
 
+.industries-page-hero {
+  padding-top: 210px;
+  padding-bottom: 56px;
+}
+
+.industries-page-hero::after {
+  display: none;
+}
+
+.industries-visual-section {
+  padding-top: 0;
+  padding-bottom: 64px;
+}
+
+.industries-hero-image {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(201, 162, 39, 0.22);
+  border-radius: 8px;
+  background: #02070d;
+  box-shadow:
+    0 30px 84px rgba(0, 0, 0, 0.36),
+    0 0 32px rgba(0, 168, 255, 0.08);
+}
+
+.industries-hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.industries-details-section {
+  padding-top: 64px;
+  padding-bottom: 80px;
+}
+
+.industries-live-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.industries-live-item {
+  min-height: 176px;
+  padding: 24px;
+  border: 1px solid rgba(201, 162, 39, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  box-shadow: 0 18px 56px rgba(0, 0, 0, 0.22);
+}
+
+.industries-live-item h2 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 23px;
+}
+
+.industries-live-item p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.6;
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2235,6 +2301,10 @@ footer .brand-logo {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .industries-live-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .websites-process-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2365,8 +2435,26 @@ footer .brand-logo {
   .automation-benefit-grid,
   .websites-capability-grid,
   .websites-benefit-grid,
-  .websites-process-grid {
+  .websites-process-grid,
+  .industries-live-list {
     grid-template-columns: 1fr;
+  }
+
+  .industries-page-hero {
+    padding-bottom: 40px;
+  }
+
+  .industries-visual-section {
+    padding-bottom: 44px;
+  }
+
+  .industries-details-section {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+
+  .industries-live-item {
+    min-height: 0;
   }
 
   .page-hero.automation-page-hero,
