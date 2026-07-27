@@ -1396,6 +1396,142 @@ h3 {
   line-height: 1.6;
 }
 
+.about-page-hero {
+  padding-top: 210px;
+  padding-bottom: 56px;
+}
+
+.about-page-hero::after {
+  display: none;
+}
+
+.about-visual-section {
+  padding-top: 0;
+  padding-bottom: 64px;
+}
+
+.about-hero-image {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(201, 162, 39, 0.24);
+  border-radius: 8px;
+  background: #02070d;
+  box-shadow:
+    0 30px 84px rgba(0, 0, 0, 0.38),
+    0 0 32px rgba(0, 168, 255, 0.08);
+}
+
+.about-hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.about-principles-section {
+  padding-top: 72px;
+  padding-bottom: 80px;
+  background:
+    linear-gradient(135deg, rgba(5, 5, 5, 0.98), rgba(15, 39, 71, 0.94)),
+    #050505;
+}
+
+.about-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.about-principle-card {
+  min-height: 270px;
+  padding: 30px;
+  border: 1px solid rgba(201, 162, 39, 0.28);
+  border-radius: 8px;
+  background: #0b1a2b;
+  color: #ffffff;
+  box-shadow: 0 18px 56px rgba(0, 0, 0, 0.28);
+}
+
+.about-principle-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  margin-bottom: 42px;
+  border: 1px solid rgba(0, 168, 255, 0.4);
+  border-radius: 8px;
+  background: rgba(0, 168, 255, 0.12);
+  color: #49bdff;
+}
+
+.about-principle-card h3 {
+  color: #ffffff;
+}
+
+.about-principle-card p {
+  margin-bottom: 0;
+  color: #c8d1dc;
+  line-height: 1.65;
+}
+
+.about-relationship-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(420px, 1fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #071321;
+}
+
+.about-relationship-section h2 {
+  color: #ffffff;
+}
+
+.about-relationship-card {
+  padding: clamp(28px, 4vw, 42px);
+  border: 1px solid rgba(201, 162, 39, 0.38);
+  border-radius: 8px;
+  background: #0b1a2b;
+  color: #ffffff;
+  box-shadow: 0 22px 64px rgba(0, 0, 0, 0.3);
+}
+
+.about-relationship-card h3 {
+  color: #ffffff;
+  font-size: clamp(24px, 2.5vw, 34px);
+}
+
+.about-relationship-card p {
+  color: #c8d1dc;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.about-relationship-card a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  color: #f0d769;
+  font-weight: 900;
+}
+
+.about-relationship-card a:hover,
+.about-relationship-card a:focus-visible {
+  color: #ffffff;
+}
+
+.about-final-cta {
+  scroll-margin-top: 210px;
+}
+
+.about-page-root .footer-note {
+  color: #c8d1dc;
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2305,6 +2441,14 @@ footer .brand-logo {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .about-principles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-relationship-section {
+    grid-template-columns: 1fr;
+  }
+
   .websites-process-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2436,25 +2580,35 @@ footer .brand-logo {
   .websites-capability-grid,
   .websites-benefit-grid,
   .websites-process-grid,
-  .industries-live-list {
+  .industries-live-list,
+  .about-principles-grid {
     grid-template-columns: 1fr;
   }
 
-  .industries-page-hero {
+  .industries-page-hero,
+  .about-page-hero {
     padding-bottom: 40px;
   }
 
-  .industries-visual-section {
+  .industries-visual-section,
+  .about-visual-section {
     padding-bottom: 44px;
   }
 
-  .industries-details-section {
+  .industries-details-section,
+  .about-principles-section {
     padding-top: 48px;
     padding-bottom: 56px;
   }
 
-  .industries-live-item {
+  .industries-live-item,
+  .about-principle-card {
     min-height: 0;
+  }
+
+  .about-relationship-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
   .page-hero.automation-page-hero,

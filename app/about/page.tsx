@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Eye, HeartHandshake, Target } from "lucide-react";
 import {
   SiteFooter,
   SiteHeader,
-  companyValues,
   companyMission,
-  companyStrengths,
-  corporateHeadline,
   productFullName
 } from "../site-content";
 
@@ -16,104 +14,100 @@ export const metadata: Metadata = {
     "About Eagle Eye Automation, the company building EEOS, AI software, GoHighLevel-ready websites, workflow automation, dashboards, and business intelligence systems."
 };
 
+const companyPrinciples = [
+  {
+    title: "Mission",
+    text: companyMission,
+    icon: Target
+  },
+  {
+    title: "Vision",
+    text: "A future where small and growing service businesses can access powerful technology without enterprise complexity.",
+    icon: Eye
+  },
+  {
+    title: "Values",
+    text: "Human-centered automation, connected systems, practical intelligence, integrity, and scalable foundations.",
+    icon: HeartHandshake
+  }
+];
+
 export default function AboutPage() {
   return (
-    <main>
+    <main className="about-page-root">
       <SiteHeader />
-      <section className="page-hero">
-        <p className="eyebrow">About</p>
-        <h1>{corporateHeadline}</h1>
+
+      <section className="page-hero about-page-hero">
+        <p className="eyebrow">About Eagle Eye Automation</p>
+        <h1>Building AI today that helps businesses succeed tomorrow.</h1>
         <p>
-          Eagle Eye Automation was created to close the technology gap between
-          large enterprises and small service businesses. {companyMission}
+          Eagle Eye Automation Group builds practical AI, automation, and
+          executive intelligence for small and growing service businesses.
         </p>
       </section>
 
-      <section className="section about-section">
-        <div className="about-grid">
-          <article className="story-panel">
-            <p className="eyebrow">Company story</p>
-            <h2>Intelligent software for service businesses that need more operational power.</h2>
-            <p>
-              We build intelligent software and connected automation systems
-              that help organizations capture more opportunities, improve
-              customer experiences, simplify operations, and make better
-              decisions.
-            </p>
-          </article>
-          <article className="company-panel">
-            <div className="company-avatar" aria-hidden="true">
-              AI
-            </div>
-            <div>
-              <p className="eyebrow">Product philosophy</p>
-              <h2>Connected systems over disconnected tools.</h2>
-              <p>
-                {productFullName} is the flagship software platform from Eagle
-                Eye Automation. EEOS brings lead generation, CRM, automation,
-                operational visibility, business intelligence, and executive
-                recommendations into one connected ecosystem.
-              </p>
-            </div>
-            <div className="experience-list">
-              {companyStrengths.map((item) => (
-                <span key={item}>{item}</span>
-              ))}
-            </div>
-          </article>
+      <section className="section about-visual-section">
+        <div className="about-hero-image">
+          <Image
+            src="/images/eea-about-hero.png"
+            alt="Eagle Eye Automation Group overview showing the company mission, values, AI automation, and executive intelligence"
+            width={1536}
+            height={1024}
+            priority
+            sizes="(max-width: 1440px) 100vw, 1440px"
+          />
         </div>
       </section>
 
-      <section className="section">
+      <section className="section about-principles-section">
         <div className="section-heading">
-          <p className="eyebrow">Mission, vision, and values</p>
-          <h2>Building AI today that helps businesses succeed tomorrow.</h2>
+          <p className="eyebrow">Mission, Vision, and Values</p>
+          <h2>Technology built around people, clarity, and real operations.</h2>
           <p>
-            Our vision is a market where small and growing service businesses
-            can access the technology advantage, operational discipline, and
-            customer-management intelligence normally reserved for much larger
-            companies.
+            We exist to close the technology gap between large enterprises and
+            the service businesses that power their communities.
           </p>
         </div>
-        <div className="service-grid">
-          {companyValues.map((value) => (
-            <article className="service-card" key={value.title}>
-              <h3>{value.title}</h3>
-              <p>{value.text}</p>
+        <div className="about-principles-grid">
+          {companyPrinciples.map(({ title, text, icon: Icon }) => (
+            <article className="about-principle-card" key={title}>
+              <span className="about-principle-icon">
+                <Icon size={26} aria-hidden="true" />
+              </span>
+              <h3>{title}</h3>
+              <p>{text}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="section split-section">
+      <section className="section about-relationship-section">
         <div>
-          <p className="eyebrow">Industries served</p>
-          <h2>Focused on service businesses where response, follow-up, and visibility matter.</h2>
-          <p>
-            Eagle Eye Automation supports organizations such as home care,
-            healthcare services, churches and faith organizations, professional
-            services, contractors, local service companies, and multi-location
-            businesses.
-          </p>
+          <p className="eyebrow">Eagle Eye Automation + EEOS</p>
+          <h2>One company. One flagship operating system.</h2>
         </div>
-        <div className="system-panel">
-          <div className="system-panel-header">Eagle Eye Automation + EEOS</div>
+        <article className="about-relationship-card">
+          <h3>Eagle Eye Automation Group builds {productFullName}.</h3>
           <p>
-            Eagle Eye Automation is the company. EEOS is the flagship software
-            platform. Together, they give service businesses a connected
-            operating layer for leads, customers, workflows, reporting, and
-            executive intelligence.
+            Eagle Eye Automation is the company. EEOS is its flagship software
+            platform, bringing business visibility, connected intelligence,
+            workflow automation, and executive recommendations into one
+            environment for service-business owners.
           </p>
-        </div>
+          <a href="/eeos">
+            Explore EEOS
+            <ArrowRight size={17} aria-hidden="true" />
+          </a>
+        </article>
       </section>
 
-      <section className="cta-section">
+      <section className="cta-section about-final-cta">
         <div>
           <p className="eyebrow">Work with us</p>
           <h2>Build the system your team actually needs.</h2>
           <p>
-            Start with a demo request and we will map the fastest path from
-            operational bottleneck to useful business software.
+            Tell us where your business is losing time, opportunities, or
+            visibility. We will help identify the right next step.
           </p>
         </div>
         <a className="button primary light" href="/contact">
@@ -121,6 +115,7 @@ export default function AboutPage() {
           <ArrowRight size={18} aria-hidden="true" />
         </a>
       </section>
+
       <SiteFooter />
     </main>
   );
