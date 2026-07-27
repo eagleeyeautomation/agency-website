@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import {
   ArrowRight,
   BarChart3,
@@ -105,15 +104,6 @@ export default function EeosPage() {
             Because business owners deserve clarity, control, and confidence.
           </p>
         </div>
-        <Image
-          src="/images/why-eeos.png"
-          alt="Why EEOS overview showing business problems, EEOS solutions, executive advantages, and the connected operating system"
-          width={1536}
-          height={1024}
-          sizes="(max-width: 1600px) 100vw, 1536px"
-          priority
-          unoptimized
-        />
       </section>
 
       <section className="eeos-product-section eeos-advantage-section">
@@ -139,30 +129,6 @@ export default function EeosPage() {
           <p className="eyebrow">Executive Intelligence</p>
           <h2>How EEOS Works</h2>
         </div>
-        <figure className="eeos-brain-artwork">
-          <Image
-            src="/images/eeos-brain-intelligence.png"
-            alt="EEOS Intelligence Engine with a stationary eagle and holographic brain dashboard"
-            width={1448}
-            height={1086}
-            sizes="(max-width: 1500px) 100vw, 1448px"
-            unoptimized
-          />
-          <div className="eeos-brain-motion" aria-hidden="true">
-            <span className="eeos-neural-orbit orbit-a" />
-            <span className="eeos-neural-orbit orbit-b" />
-            <span className="eeos-neural-shimmer" />
-            <span className="eeos-neural-node node-a" />
-            <span className="eeos-neural-node node-b" />
-            <span className="eeos-neural-node node-c" />
-            <span className="eeos-neural-node node-d" />
-            <span className="eeos-neural-node node-e" />
-            <span className="eeos-dashboard-scan scan-left" />
-            <span className="eeos-dashboard-scan scan-right" />
-            <span className="eeos-data-line line-a" />
-            <span className="eeos-data-line line-b" />
-          </div>
-        </figure>
         <div className="eeos-flow" aria-label="EEOS Intelligence Engine flow">
           {intelligenceFlow.map(({ label, icon: Icon }, index) => (
             <div className="eeos-flow-step" key={label}>

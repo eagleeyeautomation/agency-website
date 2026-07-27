@@ -2472,20 +2472,10 @@ h3 {
 
 .eeos-approved-visual .eeos-section-heading {
   max-width: 1000px;
-  margin-bottom: clamp(32px, 4vw, 48px);
+  margin-bottom: 0;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-}
-
-.eeos-approved-visual > img {
-  display: block;
-  width: min(100%, 920px);
-  height: auto;
-  margin: 0 auto;
-  border: 1px solid rgba(201, 162, 39, 0.34);
-  border-radius: 22px;
-  box-shadow: 0 38px 110px rgba(0, 0, 0, 0.48);
 }
 
 .eeos-concise .eeos-feature-card {
@@ -2902,14 +2892,6 @@ h3 {
 
   .eeos-approved-visual {
     padding: 64px 14px;
-  }
-
-  .eeos-approved-visual > img {
-    border-radius: 12px;
-  }
-
-  .eeos-brain-artwork {
-    border-radius: 12px;
   }
 
   .eeos-flow,
