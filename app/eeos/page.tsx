@@ -5,7 +5,6 @@ import {
   SiteFooter,
   SiteHeader,
   eeosApplicationUrl,
-  eeosApplicationLoginUrl,
   productFullName,
   productTagline
 } from "../site-content";
@@ -66,6 +65,15 @@ export default function EeosPage() {
           across leads, calls, follow-up, appointments, pipeline activity, and
           daily performance.
         </p>
+        <div className="hero-actions">
+          <a className="button primary" href={eeosApplicationUrl}>
+            Open EEOS
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
+          <a className="button secondary" href="/contact">
+            Request a Demo
+          </a>
+        </div>
       </section>
 
       <CommandCenterPreview
@@ -86,10 +94,6 @@ export default function EeosPage() {
             business activity, identify meaningful patterns, and provide
             executive recommendations based on the information available.
           </p>
-          <a className="button eeos-dark-button" href={eeosApplicationLoginUrl}>
-            Login to EEOS
-            <ArrowRight size={18} aria-hidden="true" />
-          </a>
         </div>
         <div className="eeos-signal-panel">
           <div className="eeos-signal-heading">
@@ -130,12 +134,10 @@ export default function EeosPage() {
       <section className="section eeos-access-section">
         <div>
           <p className="eyebrow">Application Access</p>
-          <h2>Customers access EEOS through the branded application.</h2>
+          <h2>Access the EEOS Application</h2>
           <p>
-            Eagle Eye Automation Group is the company. EEOS is its flagship
-            software platform. Approved customers and administrators access
-            EEOS through app.geteeos.com after their organization has been
-            created and onboarding is complete.
+            Existing customers and platform administrators can sign in to the
+            live EEOS application at app.geteeos.com.
           </p>
         </div>
         <a className="button eeos-dark-button" href={eeosApplicationUrl}>
