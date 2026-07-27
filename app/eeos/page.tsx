@@ -132,14 +132,9 @@ export default function EeosPage() {
           </div>
         </div>
         <div className="eeos-hero-mark" aria-hidden="true">
-          <Image
-            src="/media/eeos/eeos-eagle-brain-closeup.jpg"
-            alt=""
-            width={1254}
-            height={1254}
-            priority
-            sizes="(max-width: 900px) 88vw, 42vw"
-          />
+          <video autoPlay muted loop playsInline preload="auto">
+            <source src="/videos/eeos-hero.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
 
