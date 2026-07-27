@@ -812,7 +812,7 @@ export function CommandCenterPreview({
           alt="Cinematic EEOS command center technology artwork"
           width={960}
           height={720}
-          priority={priority}
+          loading={priority ? "eager" : "lazy"}
           sizes="(max-width: 900px) 100vw, 48vw"
           className="command-art-image"
         />
