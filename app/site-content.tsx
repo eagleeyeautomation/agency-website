@@ -124,12 +124,12 @@ export const primaryNav = [
   { label: "Websites", href: "/websites" },
   { label: "Industries", href: "/industries" },
   { label: "About", href: "/about" },
-  { label: "EEOS", href: eeosApplicationUrl },
-  { label: "Login to EEOS", href: eeosApplicationLoginUrl }
+  { label: "EEOS", href: "/eeos" }
 ];
 
 export const footerNav = [
   ...primaryNav,
+  { label: "Login", href: eeosApplicationLoginUrl },
   { label: "Products", href: "/products" },
   { label: "Services", href: "/services" },
   { label: "Success Stories", href: "/success-stories" },
@@ -756,10 +756,10 @@ export function LogoMark() {
   return (
     <span className="brand-logo" aria-hidden="true">
       <Image
-        src="/images/eeos-logo-official.png"
+        src="/images/eagle-eye-automation-logo.png"
         alt=""
-        width={1792}
-        height={1024}
+        width={1748}
+        height={899}
         priority
       />
     </span>
@@ -854,8 +854,8 @@ export function SiteHeader({ active }: { active?: string } = {}) {
         <a className="nav-cta" href="/contact">
           Request a Demo
         </a>
-        <a className="nav-cta secondary" href={eeosApplicationUrl}>
-          Launch EEOS
+        <a className="nav-cta secondary" href={eeosApplicationLoginUrl}>
+          Login
         </a>
       </nav>
     </header>

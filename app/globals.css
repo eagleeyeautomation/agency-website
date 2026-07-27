@@ -113,7 +113,7 @@ nav {
 
 nav a {
   display: inline-flex;
-  min-height: 38px;
+  min-height: 44px;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
@@ -173,7 +173,7 @@ video:focus-visible {
 }
 
 .corporate-hero {
-  min-height: 92vh;
+  min-height: min(860px, 88vh);
 }
 
 .hero-image {
@@ -406,6 +406,79 @@ h3 {
   background:
     linear-gradient(135deg, rgba(5, 5, 5, 0.98), rgba(15, 39, 71, 0.9)),
     #050505;
+}
+
+.benefits-section {
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+
+.benefit-card {
+  min-height: 250px;
+}
+
+.benefit-card h3 {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.benefit-card p {
+  margin-bottom: 0;
+}
+
+.homepage-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: clamp(36px, 7vw, 96px);
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(7, 19, 33, 0.98), rgba(5, 5, 5, 0.94)),
+    var(--navy);
+}
+
+.homepage-intro > div > p:not(.eyebrow) {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.homepage-point-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.homepage-point-list li {
+  display: flex;
+  min-height: 70px;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(201, 162, 39, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 18px;
+  font-weight: 800;
+}
+
+.homepage-point-list svg {
+  flex: 0 0 auto;
+  color: var(--old-gold);
+}
+
+.homepage-eeos .cta-actions {
+  margin-top: 28px;
+}
+
+.homepage-mission .section-heading {
+  max-width: 960px;
+  margin-bottom: 0;
+}
+
+.homepage-final-cta .cta-actions {
+  margin-top: 0;
 }
 
 .video-story-section {
@@ -1891,6 +1964,10 @@ footer .brand-logo {
     grid-template-columns: 1fr;
   }
 
+  .homepage-intro {
+    grid-template-columns: 1fr;
+  }
+
   .process-grid,
   .pricing-grid,
   .service-detail-grid,
@@ -1921,29 +1998,33 @@ footer .brand-logo {
 
 @media (max-width: 680px) {
   .site-header {
-    position: absolute;
+    position: relative;
     align-items: flex-start;
     flex-direction: column;
     width: calc(100% - 28px);
-    top: 14px;
+    top: auto;
+    left: auto;
+    margin: 14px 14px 0;
+    transform: none;
     padding: 12px;
   }
 
   nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
-    justify-content: space-between;
     align-items: stretch;
-    flex-direction: column;
   }
 
   .nav-links {
+    grid-column: 1 / -1;
     width: 100%;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
 
   .nav-cta {
-    width: 100%;
+    width: auto;
   }
 
   nav a {
@@ -1958,8 +2039,16 @@ footer .brand-logo {
 
   .hero {
     min-height: 86vh;
-    padding-top: 218px;
+    padding-top: 64px;
     padding-bottom: 44px;
+  }
+
+  .corporate-hero {
+    min-height: auto;
+  }
+
+  .corporate-hero .hero-image {
+    object-position: 64% center;
   }
 
   .hero-content {
