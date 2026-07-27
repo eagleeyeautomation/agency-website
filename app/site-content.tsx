@@ -794,13 +794,15 @@ export function CommandCenterPreview({
   title,
   text,
   signals,
-  image = "/images/eeos-eagle-brain.svg"
+  image = "/images/eeos-eagle-brain.svg",
+  priority = false
 }: {
   eyebrow: string;
   title: string;
   text: string;
   signals: string[];
   image?: string;
+  priority?: boolean;
 }) {
   return (
     <section className="section command-center-section">
@@ -810,6 +812,7 @@ export function CommandCenterPreview({
           alt="Cinematic EEOS command center technology artwork"
           width={960}
           height={720}
+          priority={priority}
           sizes="(max-width: 900px) 100vw, 48vw"
           className="command-art-image"
         />
