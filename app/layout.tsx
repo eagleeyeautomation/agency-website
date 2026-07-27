@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Eagle Eye Automation" }],
   category: "AI software",
   icons: {
-    icon: "/images/eagle-eye-automation-icon.png",
-    apple: "/images/eagle-eye-automation-icon.png"
+    icon: "/images/eea-group-icon-official.png",
+    apple: "/images/eea-group-icon-official.png"
   },
   openGraph: {
     title: "Eagle Eye Automation | Fortune 500 Power for Small Business",
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     siteName: "Eagle Eye Automation",
     images: [
       {
-        url: "/images/eeos-logo-official.png",
-        width: 1792,
+        url: "/images/eea-group-logo-official.png",
+        width: 1536,
         height: 1024,
-        alt: "EEOS Eagle Eye Operating System logo"
+        alt: "Eagle Eye Automation Group official logo"
       }
     ],
     locale: "en_US",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "Eagle Eye Automation | Fortune 500 Power for Small Business",
     description:
       "AI software, intelligent automation, executive dashboards, decision support, and business health monitoring for growing service businesses.",
-    images: ["/images/eeos-logo-official.png"]
+    images: ["/images/eea-group-logo-official.png"]
   }
 };
 
@@ -59,7 +59,7 @@ const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Eagle Eye Automation",
+    name: "Eagle Eye Automation Group",
     url: canonicalSiteUrl,
     slogan: "See More. Manage Smarter. Grow Faster.",
     email: "eagle@eagleeyeautomation.com",

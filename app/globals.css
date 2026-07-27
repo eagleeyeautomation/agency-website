@@ -81,8 +81,8 @@ main {
 
 .brand-logo {
   display: block;
-  width: clamp(150px, 18vw, 230px);
-  height: 58px;
+  width: clamp(180px, 16vw, 220px);
+  aspect-ratio: 3 / 2;
 }
 
 .brand-logo img {
@@ -1889,8 +1889,24 @@ footer {
 }
 
 footer .brand-logo {
-  width: clamp(170px, 18vw, 250px);
-  height: 64px;
+  width: clamp(180px, 20vw, 220px);
+}
+
+.footer-brand-block {
+  display: grid;
+  max-width: 280px;
+  gap: 6px;
+}
+
+.footer-brand-block > strong {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.footer-brand-block > span {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .footer-contact {
@@ -2033,8 +2049,7 @@ footer .brand-logo {
   }
 
   .brand-logo {
-    width: min(220px, 72vw);
-    height: 62px;
+    width: min(200px, 62vw);
   }
 
   .hero {

@@ -756,10 +756,10 @@ export function LogoMark() {
   return (
     <span className="brand-logo" aria-hidden="true">
       <Image
-        src="/images/eagle-eye-automation-logo.png"
+        src="/images/eea-group-logo-official.png"
         alt=""
-        width={1748}
-        height={899}
+        width={1536}
+        height={1024}
         priority
       />
     </span>
@@ -868,8 +868,12 @@ export function SiteFooter() {
 
   return (
     <footer>
-      <div className="brand footer-brand">
-        <LogoMark />
+      <div className="footer-brand-block">
+        <div className="brand footer-brand">
+          <LogoMark />
+        </div>
+        <strong>Eagle Eye Automation Group</strong>
+        <span>Building AI Today That Helps Businesses Succeed Tomorrow.</span>
       </div>
       <div className="footer-contact" aria-label="Contact information">
         <a className="footer-note" href={`mailto:${contactEmail}`}>
