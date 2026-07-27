@@ -213,26 +213,6 @@ export default function WebsitesPage() {
         </div>
       </section>
 
-      <section className="cta-section websites-final-cta">
-        <div>
-          <p className="eyebrow">Start Your Website</p>
-          <h2>Build a website designed to move your business forward.</h2>
-          <p>
-            Tell us what your current website is missing. We will help you
-            identify the right structure, functionality, and next step.
-          </p>
-        </div>
-        <div className="cta-actions">
-          <a className="button primary" href="/contact">
-            Start Your Website
-            <ArrowRight size={18} aria-hidden="true" />
-          </a>
-          <a className="button secondary" href={bookingHref}>
-            Book Strategy Call
-          </a>
-        </div>
-      </section>
-
       <SiteFooter />
       <script
         type="application/ld+json"

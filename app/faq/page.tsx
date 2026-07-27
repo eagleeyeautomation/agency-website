@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ArrowRight } from "lucide-react";
 import { SiteFooter, SiteHeader, faqs } from "../site-content";
 
 export const metadata: Metadata = {
@@ -32,20 +31,6 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <section className="cta-section">
-        <div>
-          <p className="eyebrow">Still deciding?</p>
-          <h2>Bring the messy workflow to the call.</h2>
-          <p>
-            We will help identify whether you need CRM structure, AI
-            communication, automation, dashboards, or all of the above.
-          </p>
-        </div>
-        <a className="button primary light" href="/contact">
-          Ask a question
-          <ArrowRight size={18} aria-hidden="true" />
-        </a>
-      </section>
       <SiteFooter />
     </main>
   );

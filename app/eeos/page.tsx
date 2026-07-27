@@ -159,7 +159,7 @@ export default function EeosPage() {
         </a>
       </section>
 
-      <SiteFooter />
+      <SiteFooter showEeosTransition={false} />
     </main>
   );
 }

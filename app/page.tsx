@@ -6,7 +6,6 @@ import {
   corporateHeroSupportingMessage,
   corporateHeadline,
   eeosApplicationLoginUrl,
-  eeosApplicationUrl,
   getContactDetails,
   tagline
 } from "./site-content";
@@ -75,7 +74,7 @@ export default function Home() {
             intelligence without requiring an enterprise-size team.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href={eeosApplicationUrl}>
+            <a className="button primary" href="/eeos">
               Explore EEOS
               <ArrowRight size={18} aria-hidden="true" />
             </a>
@@ -151,7 +150,7 @@ export default function Home() {
             ))}
           </ul>
           <div className="cta-actions">
-            <a className="button primary" href={eeosApplicationUrl}>
+            <a className="button primary" href="/eeos">
               Explore EEOS
               <ArrowRight size={18} aria-hidden="true" />
             </a>
@@ -183,25 +182,6 @@ export default function Home() {
             connected systems larger companies use to manage demand, serve
             customers, automate work, and lead with better information.
           </p>
-        </div>
-      </section>
-
-      <section className="cta-section homepage-final-cta">
-        <div>
-          <p className="eyebrow">Start the conversation</p>
-          <h2>Build a smarter operating system for your business.</h2>
-          <p>
-            Tell us where your business is losing time, leads, or visibility.
-            We will help you identify the right next step.
-          </p>
-        </div>
-        <div className="cta-actions">
-          <a className="button primary light" href="/contact">
-            Request a Demo
-          </a>
-          <a className="button secondary light" href={bookingHref}>
-            Book Strategy Call
-          </a>
         </div>
       </section>
 

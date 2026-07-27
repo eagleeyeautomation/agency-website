@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { SiteFooter, SiteHeader } from "../site-content";
 
 export const metadata: Metadata = {
@@ -87,20 +86,6 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <section className="cta-section">
-        <div>
-          <p className="eyebrow">Industry fit</p>
-          <h2>Build smarter systems around the way your business works.</h2>
-          <p>
-            Tell us where work slows down, communication breaks, or visibility
-            is limited. We will help identify the right next step.
-          </p>
-        </div>
-        <a className="button primary light" href="/contact">
-          Discuss Your Industry
-          <ArrowRight size={18} aria-hidden="true" />
-        </a>
-      </section>
       <SiteFooter />
     </main>
   );

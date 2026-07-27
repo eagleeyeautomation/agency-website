@@ -13,11 +13,7 @@ import {
   TrendingUp,
   Workflow
 } from "lucide-react";
-import {
-  SiteFooter,
-  SiteHeader,
-  eeosApplicationUrl
-} from "../site-content";
+import { SiteFooter, SiteHeader } from "../site-content";
 
 const pageUrl = "https://www.eagleeyeautomation.com/automation";
 
@@ -193,24 +189,9 @@ export default function AutomationPage() {
             trends, and provides executive recommendations so business owners
             can make better decisions.
           </p>
-          <a className="button primary" href={eeosApplicationUrl}>
+          <a className="button primary" href="/eeos">
             See How EEOS Connects It All
             <ArrowRight size={18} aria-hidden="true" />
-          </a>
-        </div>
-      </section>
-
-      <section className="cta-section automation-final-cta">
-        <div>
-          <p className="eyebrow">Take the Next Step</p>
-          <h2>Ready to Automate Your Business?</h2>
-        </div>
-        <div className="cta-actions">
-          <a className="button primary light" href="/contact">
-            Request a Demo
-          </a>
-          <a className="button secondary light" href={eeosApplicationUrl}>
-            Explore EEOS
           </a>
         </div>
       </section>

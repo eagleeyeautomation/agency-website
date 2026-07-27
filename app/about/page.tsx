@@ -101,21 +101,6 @@ export default function AboutPage() {
         </article>
       </section>
 
-      <section className="cta-section about-final-cta">
-        <div>
-          <p className="eyebrow">Work with us</p>
-          <h2>Build the system your team actually needs.</h2>
-          <p>
-            Tell us where your business is losing time, opportunities, or
-            visibility. We will help identify the right next step.
-          </p>
-        </div>
-        <a className="button primary light" href="/contact">
-          Request a Demo
-          <ArrowRight size={18} aria-hidden="true" />
-        </a>
-      </section>
-
       <SiteFooter />
     </main>
   );

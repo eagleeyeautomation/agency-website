@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import {
   CommandCenterPreview,
   EagleGuide,
@@ -62,20 +62,6 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <section className="cta-section">
-        <div>
-          <p className="eyebrow">Build the operating layer</p>
-          <h2>Turn GoHighLevel into executive software.</h2>
-          <p>
-            Start with CRM structure, AI communication, and the dashboard layer
-            leadership needs to run the business every morning.
-          </p>
-        </div>
-        <a className="button primary light" href="/contact">
-          Request a Demo
-          <ArrowRight size={18} aria-hidden="true" />
-        </a>
-      </section>
       <SiteFooter />
     </main>
   );

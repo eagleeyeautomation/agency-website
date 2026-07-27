@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import {
   CommandCenterPreview,
   EagleGuide,
@@ -75,20 +75,6 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section className="cta-section">
-        <div>
-          <p className="eyebrow">Next step</p>
-          <h2>Map the workflow before building the automation.</h2>
-          <p>
-            We start with your current lead, intake, CRM, and reporting process,
-            then design the right implementation path.
-          </p>
-        </div>
-        <a className="button primary light" href="/contact">
-          Request a Demo
-          <ArrowRight size={18} aria-hidden="true" />
-        </a>
-      </section>
       <SiteFooter />
     </main>
   );

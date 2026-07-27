@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { SiteFooter, SiteHeader, prnStaffersCaseStudy } from "../../site-content";
 
 export const metadata: Metadata = {
@@ -77,20 +77,6 @@ export default function PrnStaffersCaseStudyPage() {
         </div>
       </section>
 
-      <section className="cta-section">
-        <div>
-          <p className="eyebrow">Transformation</p>
-          <h2>Want a transformation like PRN Staffers?</h2>
-          <p>
-            Request a demo and we will map the websites, AI, GoHighLevel,
-            automation, and reporting systems that fit your business.
-          </p>
-        </div>
-        <a className="button primary light" href="/contact">
-          Request a Demo
-          <ArrowRight size={18} aria-hidden="true" />
-        </a>
-      </section>
       <SiteFooter />
     </main>
   );

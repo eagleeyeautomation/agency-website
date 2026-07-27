@@ -211,7 +211,7 @@ export const productPlatforms = [
       "Missed opportunity intelligence",
       "Daily performance visibility"
     ],
-    href: eeosApplicationUrl
+    href: "/eeos"
   },
   {
     title: "AI Voice Receptionist",
@@ -865,54 +865,89 @@ export function SiteHeader({ active }: { active?: string } = {}) {
   );
 }
 
-export function SiteFooter() {
+export function EeosTransition() {
+  return (
+    <section className="eeos-transition" aria-labelledby="eeos-transition-title">
+      <div className="eeos-transition-copy">
+        <p className="eyebrow">Eagle Eye Automation + EEOS</p>
+        <h2 id="eeos-transition-title">
+          Ready to see how it all works together?
+        </h2>
+        <p>
+          Eagle Eye Automation builds the systems.
+          <br />
+          EEOS connects the data, analyzes the activity, and delivers executive
+          intelligence that helps business owners make better decisions.
+        </p>
+      </div>
+      <div className="eeos-transition-actions">
+        <a className="button primary" href="/eeos">
+          Explore EEOS
+          <ArrowRight size={18} aria-hidden="true" />
+        </a>
+        <a className="button secondary" href="/contact">
+          Request a Demo
+        </a>
+      </div>
+    </section>
+  );
+}
+
+export function SiteFooter({
+  showEeosTransition = true
+}: {
+  showEeosTransition?: boolean;
+} = {}) {
   const { contactEmail, contactPhone, contactPhoneHref, siteUrl } =
     getContactDetails();
 
   return (
-    <footer>
-      <div className="footer-brand-block">
-        <div className="brand footer-brand">
-          <LogoMark />
+    <>
+      {showEeosTransition ? <EeosTransition /> : null}
+      <footer>
+        <div className="footer-brand-block">
+          <div className="brand footer-brand">
+            <LogoMark />
+          </div>
+          <strong>Eagle Eye Automation Group</strong>
+          <span>Building AI Today That Helps Businesses Succeed Tomorrow.</span>
         </div>
-        <strong>Eagle Eye Automation Group</strong>
-        <span>Building AI Today That Helps Businesses Succeed Tomorrow.</span>
-      </div>
-      <div className="footer-contact" aria-label="Contact information">
-        <a className="footer-note" href={`mailto:${contactEmail}`}>
-          <MailCheck size={16} aria-hidden="true" />
-          <span>{contactEmail}</span>
-        </a>
-        {contactPhone && contactPhoneHref ? (
-          <a className="footer-note" href={contactPhoneHref}>
-            <PhoneCall size={16} aria-hidden="true" />
-            <span>{contactPhone}</span>
+        <div className="footer-contact" aria-label="Contact information">
+          <a className="footer-note" href={`mailto:${contactEmail}`}>
+            <MailCheck size={16} aria-hidden="true" />
+            <span>{contactEmail}</span>
           </a>
-        ) : null}
-        <a className="footer-note" href={siteUrl}>
-          <Globe2 size={16} aria-hidden="true" />
-          <span>www.eagleeyeautomation.com</span>
-        </a>
-        <span className="footer-note">
-          <Sparkles size={16} aria-hidden="true" />
-          <span>AI support available 24/7</span>
-        </span>
-      </div>
-      <div className="social-links" aria-label="Social media links">
-        {socialLinks.map(({ href, label, mark }) => (
-          <a key={label} href={href} aria-label={label}>
-            <span aria-hidden="true">{mark}</span>
+          {contactPhone && contactPhoneHref ? (
+            <a className="footer-note" href={contactPhoneHref}>
+              <PhoneCall size={16} aria-hidden="true" />
+              <span>{contactPhone}</span>
+            </a>
+          ) : null}
+          <a className="footer-note" href={siteUrl}>
+            <Globe2 size={16} aria-hidden="true" />
+            <span>www.eagleeyeautomation.com</span>
           </a>
-        ))}
-      </div>
-      <nav className="footer-nav" aria-label="Footer navigation">
-        {footerNav.map((item) => (
-          <a key={item.href} href={item.href}>
-            {item.label}
-          </a>
-        ))}
-      </nav>
-    </footer>
+          <span className="footer-note">
+            <Sparkles size={16} aria-hidden="true" />
+            <span>AI support available 24/7</span>
+          </span>
+        </div>
+        <div className="social-links" aria-label="Social media links">
+          {socialLinks.map(({ href, label, mark }) => (
+            <a key={label} href={href} aria-label={label}>
+              <span aria-hidden="true">{mark}</span>
+            </a>
+          ))}
+        </div>
+        <nav className="footer-nav" aria-label="Footer navigation">
+          {footerNav.map((item) => (
+            <a key={item.href} href={item.href}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </footer>
+    </>
   );
 }
 
