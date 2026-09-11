@@ -3035,6 +3035,180 @@ h3 {
   border-color: var(--old-gold);
 }
 
+.pricing-page-hero {
+  min-height: 72svh;
+}
+
+.pricing-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.pricing-heading {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.pricing-code,
+.pricing-billing-type,
+.pricing-addon-details dt {
+  color: var(--gold-dark) !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.price-line span {
+  margin-left: 6px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pricing-limit,
+.pricing-fee-note,
+.pricing-exclusion {
+  border: 1px solid rgba(141, 107, 18, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.pricing-limit {
+  padding: 12px 14px;
+  font-weight: 700;
+}
+
+.pricing-fee-note,
+.pricing-exclusion {
+  display: grid;
+  gap: 7px;
+  margin-top: 22px;
+  padding: 14px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.pricing-addons-section,
+.pricing-faq-section {
+  background: var(--soft);
+}
+
+.pricing-addon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pricing-addon-card,
+.pricing-faq-grid article {
+  border: 1px solid rgba(141, 107, 18, 0.2);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 26px;
+  box-shadow: 0 20px 48px rgba(15, 39, 71, 0.08);
+}
+
+.pricing-addon-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.pricing-addon-card h3 {
+  margin-top: 7px;
+  font-size: 24px;
+}
+
+.pricing-addon-card h4 {
+  margin: 22px 0 0;
+  font-size: 14px;
+}
+
+.pricing-addon-details {
+  display: grid;
+  gap: 18px;
+  margin: 22px 0 0;
+}
+
+.pricing-addon-details dd {
+  margin: 5px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.pricing-requirement {
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--gold-dark) !important;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.pricing-disclosures {
+  margin-top: 24px;
+  border: 1px solid rgba(141, 107, 18, 0.22);
+  border-radius: 8px;
+  background: rgba(201, 162, 39, 0.08);
+  padding: 26px;
+}
+
+.pricing-disclosures .clean-list,
+.setup-fee-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 22px;
+  margin-top: 18px;
+}
+
+.pricing-setup-section .setup-fee-card {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.pricing-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pricing-faq-grid article p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1020px) {
+  .pricing-addon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .pricing-page-hero {
+    min-height: 0;
+  }
+
+  .pricing-hero-actions,
+  .pricing-hero-actions .button {
+    width: 100%;
+  }
+
+  .pricing-addon-grid,
+  .pricing-disclosures .clean-list,
+  .setup-fee-list,
+  .pricing-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card,
+  .pricing-addon-card,
+  .pricing-faq-grid article {
+    padding: 22px;
+  }
+}
+
 .split-section {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1fr);

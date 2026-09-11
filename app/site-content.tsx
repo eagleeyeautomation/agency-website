@@ -123,6 +123,7 @@ export const primaryNav = [
   { label: "Automation", href: "/automation" },
   { label: "Websites", href: "/websites" },
   { label: "Industries", href: "/industries" },
+  { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
   { label: "EEOS", href: "/eeos" }
 ];
@@ -659,14 +660,14 @@ export const pricingPackages = [
   {
     title: "Starter",
     price: "$99/month",
-    text: "A focused EEOS starting point for small businesses that want executive visibility and GoHighLevel-first operating clarity.",
-    items: ["EEOS owner access", "Business health monitoring", "GoHighLevel integration readiness"],
+    text: "A focused Eagle Eye Automation service package for small businesses that want executive visibility and GoHighLevel-first operating clarity.",
+    items: ["Owner command-center support", "Business health monitoring", "GoHighLevel integration readiness"],
     cta: "Request a Demo"
   },
   {
     title: "Growth",
     price: "$199/month",
-    text: "A practical growth path for teams ready to combine executive dashboards, automation visibility, and decision support.",
+    text: "A practical Eagle Eye Automation service package for teams ready to combine executive dashboards, automation visibility, and decision support.",
     items: ["Executive dashboards", "AI executive intelligence", "Workflow automation visibility"],
     cta: "Request a Demo",
     featured: true
@@ -674,7 +675,7 @@ export const pricingPackages = [
   {
     title: "Scale",
     price: "$299/month",
-    text: "A stronger operating layer for multi-location businesses that need deeper visibility and more disciplined execution.",
+    text: "An expanded Eagle Eye Automation service package for multi-location businesses that need deeper visibility and more disciplined execution.",
     items: ["Multi-location executive visibility", "Business intelligence", "Priority and risk monitoring"],
     cta: "Request a Demo"
   }
