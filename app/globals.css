@@ -4736,3 +4736,126 @@ footer .brand-logo {
   .eeos-gateway .eeos-hero-mark { width: 100%; max-width: 300px; }
   .pricing-compressed .pricing-addon-grid { grid-template-columns: 1fr; }
 }
+
+/* Premium rhythm: retain the concise page architecture while letting each element breathe. */
+.compressed-page .section { padding-top: 66px; padding-bottom: 66px; }
+.compressed-page .section-heading { margin-bottom: 32px; }
+.compressed-page .section-heading h2 { margin-bottom: 12px; }
+.compressed-page .eyebrow { margin-bottom: 13px; }
+.compressed-page .page-hero { padding-top: 210px; padding-bottom: 76px; }
+.compressed-page .page-hero p:not(.eyebrow) { font-size: 17px; line-height: 1.65; }
+.compressed-page .hero-actions { gap: 14px; margin-top: 28px; }
+
+.home-compressed .corporate-hero { min-height: 740px; padding-top: 175px; padding-bottom: 85px; }
+.compact-area-grid { gap: 18px; }
+.compact-area-card, .compact-solution-card { padding: 25px; border-radius: 10px; }
+.compact-area-card h3, .compact-solution-card h3 { margin-bottom: 11px; }
+.compact-area-card p, .compact-solution-card p { line-height: 1.6; }
+.compact-area-card span, .compact-solution-card a { margin-top: 19px; }
+.home-eeos { grid-template-columns: 310px 1fr; gap: 42px; }
+.home-eeos img { height: 220px; }
+.home-eeos h2 { margin-bottom: 15px; }
+.home-eeos p:not(.eyebrow) { margin-bottom: 22px; line-height: 1.65; }
+.home-compressed .eeos-transition { padding-top: 58px; padding-bottom: 58px; }
+
+.solutions-compressed .page-hero { min-height: 620px; }
+.solutions-compressed .compact-solutions { padding-top: 100px; padding-bottom: 100px; }
+.compact-solution-grid { gap: 18px; }
+.compact-solution-card li { gap: 8px; margin-top: 9px; font-size: 13px; line-height: 1.45; }
+.compact-eeos-link { padding-top: 50px; padding-bottom: 50px; }
+
+.automation-compressed .automation-page-hero, .websites-compressed .websites-page-hero { min-height: 570px; padding-top: 178px; padding-bottom: 55px; }
+.automation-compressed .automation-hero-art img, .websites-compressed .websites-hero-art img { max-height: 340px; }
+.automation-compressed .automation-feature-grid, .websites-compressed .websites-capability-grid,
+.automation-compressed .automation-benefit-grid, .websites-compressed .websites-benefit-grid,
+.websites-compressed .websites-process-grid { gap: 16px; }
+.automation-compressed .automation-feature-card, .websites-compressed .websites-capability-card { padding: 23px; }
+.automation-compressed .automation-feature-card .tech-icon, .websites-compressed .websites-capability-card .tech-icon { width: 38px; height: 38px; margin-bottom: 13px; }
+.automation-compressed .automation-feature-card h3, .websites-compressed .websites-capability-card h3 { margin-bottom: 9px; }
+.automation-compressed .automation-feature-card p, .websites-compressed .websites-capability-card p { font-size: 14px; line-height: 1.55; }
+.automation-compressed .automation-benefit-card, .websites-compressed .websites-benefit-card { padding: 22px; }
+.automation-compressed .automation-benefit-card > svg, .websites-compressed .websites-benefit-card > svg { margin-bottom: 12px; }
+.automation-compressed .automation-benefit-card h3, .websites-compressed .websites-benefit-card h3 { margin: 8px 0; }
+.automation-compressed .automation-benefit-card p, .websites-compressed .websites-benefit-card p { font-size: 14px; line-height: 1.55; }
+.automation-compressed .automation-eeos-section { padding-top: 38px; padding-bottom: 38px; }
+.automation-compressed .automation-eeos-section p:not(.eyebrow) { margin: 15px 0; line-height: 1.6; }
+.websites-compressed .websites-process-card { padding: 22px; }
+.websites-compressed .websites-process-card h3 { margin: 12px 0 9px; }
+.websites-compressed .websites-process-card p { font-size: 13px; line-height: 1.55; }
+.websites-compressed .websites-process-section { padding-top: 40px; padding-bottom: 40px; }
+
+.industries-compressed .industries-page-hero, .about-compressed .about-page-hero { min-height: 475px; padding-top: 175px; padding-bottom: 48px; }
+.industries-compressed .industries-visual-section, .about-compressed .about-visual-section { padding-top: 28px; padding-bottom: 22px; }
+.industries-compressed .industries-hero-image { height: 270px; }
+.about-compressed .about-hero-image { height: 210px; }
+.industries-compressed .industries-live-list, .about-compressed .about-principles-grid { gap: 17px; }
+.industries-compressed .industries-live-item { padding: 22px; }
+.industries-compressed .industries-live-item h2 { margin-bottom: 9px; }
+.industries-compressed .industries-live-item p { font-size: 14px; line-height: 1.55; }
+.about-compressed .about-principle-card { padding: 24px; }
+.about-compressed .about-principle-icon { width: 42px; height: 42px; margin-bottom: 13px; }
+.about-compressed .about-principle-card h3 { margin: 8px 0; }
+.about-compressed .about-principle-card p { font-size: 14px; line-height: 1.55; }
+.about-compressed .about-relationship-section { gap: 35px; }
+.about-compressed .about-relationship-card { padding: 27px; }
+.about-compressed .about-relationship-card p { line-height: 1.6; }
+
+.eeos-gateway .eeos-concise-hero { min-height: 625px; grid-template-columns: minmax(0,1fr) 360px; padding-top: 190px; padding-bottom: 70px; }
+.eeos-gateway .eeos-hero-content h1 { margin-bottom: 18px; }
+.eeos-gateway .eeos-hero-support { margin-bottom: 24px; line-height: 1.6; }
+.eeos-gateway .eeos-hero-mark { width: 360px; height: 265px; }
+.eeos-gateway-grid { gap: 15px; }
+.eeos-gateway-grid article { padding: 21px; }
+.eeos-gateway-grid h3 { margin: 12px 0 8px; }
+.eeos-gateway-grid p { font-size: 13px; line-height: 1.55; }
+.eeos-gateway-brain { padding-top: 54px; padding-bottom: 54px; }
+.eeos-gateway-brain h2 { margin: 12px 0; line-height: 1.25; }
+.eeos-gateway-brain p:not(.eyebrow) { line-height: 1.6; }
+
+/* Pricing uses the same dark, restrained gold-and-blue system as the rest of EEA. */
+.pricing-compressed { background: #050a12; color: #e9eff6; }
+.pricing-compressed .pricing-page-hero { min-height: 510px; background: radial-gradient(circle at 82% 38%, rgba(0,168,255,.16), transparent 32%), radial-gradient(circle at 10% 86%, rgba(201,162,39,.11), transparent 40%), linear-gradient(145deg,#03060b,#0a1a2b); }
+.pricing-compressed .pricing-page-hero h1, .pricing-compressed .section-heading h2, .pricing-compressed .pricing-card h3,
+.pricing-compressed .pricing-addon-card h3, .pricing-compressed .pricing-addon-card h4,
+.pricing-compressed .pricing-faq-grid h3 { color: #f6f8fb; }
+.pricing-compressed .section { padding-top: 60px; padding-bottom: 60px; }
+.pricing-compressed .pricing-section, .pricing-compressed .pricing-setup-section { background: #050a12; }
+.pricing-compressed .pricing-addons-section, .pricing-compressed .pricing-faq-section { background: #081522; }
+.pricing-compressed .pricing-card, .pricing-compressed .pricing-addon-card, .pricing-compressed .pricing-faq-grid article,
+.pricing-compressed .setup-fee-card { border: 1px solid rgba(91,160,202,.27); background: linear-gradient(155deg,rgba(16,37,58,.95),rgba(6,14,25,.98)); box-shadow: 0 16px 38px rgba(0,0,0,.18); color: #d4dce5; }
+.pricing-compressed .pricing-card.featured { border-color: rgba(201,162,39,.58); background: linear-gradient(155deg,rgba(39,40,39,.96),rgba(9,24,40,.98)); }
+.pricing-compressed .pricing-card { padding: 24px; }
+.pricing-compressed .pricing-addon-grid { gap: 15px; }
+.pricing-compressed .pricing-addon-card { padding: 20px; }
+.pricing-compressed .pricing-addon-card p { color: #d0d9e4; line-height: 1.55; }
+.pricing-compressed .pricing-addon-details dd, .pricing-compressed .pricing-faq-grid article p,
+.pricing-compressed .price-line span { color: #b7c5d3; }
+.pricing-compressed .pricing-code, .pricing-compressed .pricing-billing-type,
+.pricing-compressed .pricing-addon-details dt, .pricing-compressed .pricing-requirement { color: #e9c95e !important; }
+.pricing-compressed .price-line { color: #f1d46d !important; }
+.pricing-compressed .pricing-limit, .pricing-compressed .pricing-fee-note, .pricing-compressed .pricing-exclusion,
+.pricing-compressed .pricing-disclosures { border-color: rgba(85,166,214,.27); background: rgba(0,92,151,.11); color: #d4dce5; }
+.pricing-compressed .pricing-disclosures .clean-list, .pricing-compressed .setup-fee-list,
+.pricing-compressed .pricing-card .clean-list, .pricing-compressed .pricing-addon-card .clean-list { color: #d4dce5; }
+.pricing-compressed .setup-fee-card h2 { color: #f1d46d; }
+.pricing-compressed .package-badge { border-color: rgba(201,162,39,.52); background: rgba(201,162,39,.12); color: #f1d46d; }
+.pricing-compressed .pricing-hero-actions .button:first-child { border: 1px solid #d0ad43; background: linear-gradient(135deg,#edce69,#c49a31); color: #101820; }
+.pricing-compressed .pricing-hero-actions .button:first-child:hover { background: #f2d773; }
+.pricing-compressed .package-button, .pricing-compressed .button-secondary { border-color: rgba(64,183,238,.52); background: rgba(0,113,177,.12); color: #d9f4ff; }
+.pricing-compressed .package-button:hover, .pricing-compressed .button-secondary:hover { border-color: #37bdf5; background: rgba(0,133,207,.22); }
+
+@media (max-width: 680px) {
+  .compressed-page .section { padding-top: 48px; padding-bottom: 48px; }
+  .compressed-page .page-hero { padding-top: 72px; padding-bottom: 48px; }
+  .home-compressed .corporate-hero { min-height: 0; padding-top: 72px; padding-bottom: 64px; }
+  .home-eeos { grid-template-columns: 1fr; gap: 24px; }
+  .home-eeos img { height: 190px; }
+  .automation-compressed .automation-page-hero, .websites-compressed .websites-page-hero { min-height: 0; grid-template-columns: 1fr; padding-top: 72px; padding-bottom: 48px; }
+  .industries-compressed .industries-page-hero, .about-compressed .about-page-hero { min-height: 0; padding-top: 72px; padding-bottom: 44px; }
+  .industries-compressed .industries-hero-image, .about-compressed .about-hero-image { height: 190px; }
+  .eeos-gateway .eeos-concise-hero { min-height: 0; grid-template-columns: 1fr; padding-top: 72px; padding-bottom: 48px; }
+  .eeos-gateway .eeos-hero-mark { width: 100%; max-width: 300px; height: 225px; }
+  .pricing-compressed .pricing-page-hero { min-height: 0; }
+  .pricing-compressed .section { padding-top: 48px; padding-bottom: 48px; }
+  .pricing-compressed .pricing-addon-grid { grid-template-columns: 1fr; }
+}
