@@ -32,6 +32,6 @@ export default function EeosPage() {
       <div className="eeos-gateway-grid">{advantages.map(({title,text,icon:Icon}) => <article key={title}><Icon size={22} aria-hidden="true" /><h3>{title}</h3><p>{text}</p></article>)}</div>
     </section>
     <section className="eeos-gateway-brain"><div><p className="eyebrow">Executive intelligence</p><h2>Business signals → intelligence → recommendations → next best action.</h2><p>Speak to EEOS Brain about connected systems and the operating decisions they support.</p></div><EeosBrainButton /></section>
-    <SiteFooter />
+    <SiteFooter showEeosTransition={false} />
   </main>;
 }

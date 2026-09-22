@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-/** Keep the existing LeadConnector launcher accessible on narrow screens. */
+/** Keep LeadConnector's launcher accessible without an automatic greeting covering CTAs. */
 export function ChatMobileGuard() {
   useEffect(() => {
     const install = () => {
@@ -10,7 +10,7 @@ export function ChatMobileGuard() {
       if (!root || root.querySelector("#eea-mobile-chat-position")) return;
       const style = document.createElement("style");
       style.id = "eea-mobile-chat-position";
-      style.textContent = "@media (max-width: 680px) { .lc_text-widget--prompt { display: none !important; } }";
+      style.textContent = ".lc_text-widget--prompt { display: none !important; }";
       root.appendChild(style);
     };
     install();
