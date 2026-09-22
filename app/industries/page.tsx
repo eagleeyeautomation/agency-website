@@ -41,7 +41,7 @@ const industryDetails = [
 
 export default function IndustriesPage() {
   return (
-    <main>
+    <main className="compressed-page industries-compressed">
       <SiteHeader />
       <section className="page-hero industries-page-hero">
         <p className="eyebrow">Industries</p>
@@ -55,14 +55,14 @@ export default function IndustriesPage() {
 
       <section className="section industries-visual-section">
         <div className="industries-hero-image">
-          <Image
+          <a href="/images/eea-industries-hero.png" target="_blank" rel="noopener noreferrer" aria-label="View the full approved EEA industries artwork"><Image
             src="/images/eea-industries-hero.png"
             alt="Eagle Eye Automation Group industries graphic showing AI and automation solutions for home care, healthcare, real estate, contractors, restaurants, professional services, and e-commerce."
             width={1536}
             height={1024}
             priority
             sizes="(max-width: 1440px) 100vw, 1440px"
-          />
+          /></a>
         </div>
       </section>
 
@@ -86,7 +86,7 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <SiteFooter />
+      <SiteFooter showEeosTransition={false} />
     </main>
   );
 }

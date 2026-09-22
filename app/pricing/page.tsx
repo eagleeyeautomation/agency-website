@@ -40,7 +40,7 @@ const FAQS = [
 
 export default function PricingPage() {
   return (
-    <main>
+    <main className="compressed-page pricing-compressed">
       <SiteHeader />
 
       <section className="page-hero pricing-page-hero">
@@ -188,7 +188,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <SiteFooter />
+      <SiteFooter showEeosTransition={false} />
     </main>
   );
 }

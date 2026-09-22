@@ -34,7 +34,7 @@ const companyPrinciples = [
 
 export default function AboutPage() {
   return (
-    <main className="about-page-root">
+    <main className="about-page-root compressed-page about-compressed">
       <SiteHeader />
 
       <section className="page-hero about-page-hero">
@@ -48,14 +48,14 @@ export default function AboutPage() {
 
       <section className="section about-visual-section">
         <div className="about-hero-image">
-          <Image
+          <a href="/images/eea-about-hero.png" target="_blank" rel="noopener noreferrer" aria-label="View the full approved EEA about artwork"><Image
             src="/images/eea-about-hero.png"
             alt="Eagle Eye Automation Group overview showing the company mission, values, AI automation, and executive intelligence"
             width={1536}
             height={1024}
             priority
             sizes="(max-width: 1440px) 100vw, 1440px"
-          />
+          /></a>
         </div>
       </section>
 
@@ -83,13 +83,13 @@ export default function AboutPage() {
 
       <section className="section about-relationship-section">
         <div>
-          <p className="eyebrow">Eagle Eye Automation + EEOS</p>
+          <p className="eyebrow">EETG + Eagle Eye Automation + EEOS</p>
           <h2>One company. One flagship operating system.</h2>
         </div>
         <article className="about-relationship-card">
           <h3>Eagle Eye Automation Group builds {productFullName}.</h3>
           <p>
-            Eagle Eye Automation is the company. EEOS is its flagship software
+            Within Eagle Eye Technology Group, Eagle Eye Automation is the operating company. EEOS is its flagship software
             platform, bringing business visibility, connected intelligence,
             workflow automation, and executive recommendations into one
             environment for service-business owners.
@@ -101,7 +101,7 @@ export default function AboutPage() {
         </article>
       </section>
 
-      <SiteFooter />
+      <SiteFooter showEeosTransition={false} />
     </main>
   );
 }

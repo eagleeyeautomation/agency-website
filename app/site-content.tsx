@@ -862,6 +862,16 @@ export function SiteHeader({ active }: { active?: string } = {}) {
           Login
         </a>
       </nav>
+      <details className="tablet-navigation">
+        <summary>Menu</summary>
+        <nav aria-label="Tablet and mobile navigation">
+          {primaryNav.map((item) => (
+            <a key={item.href} href={item.href} aria-current={active === item.label ? "page" : undefined}>{item.label}</a>
+          ))}
+          <a className="nav-cta" href="/contact">Request a Demo</a>
+          <a className="nav-cta secondary" href={eeosApplicationLoginUrl}>Login</a>
+        </nav>
+      </details>
     </header>
   );
 }

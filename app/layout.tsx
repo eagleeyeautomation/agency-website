@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { ChatMobileGuard } from "./chat-mobile-guard";
 import "./globals.css";
 
 const siteUrl =
@@ -107,6 +108,7 @@ export default function RootLayout({
         data-ghl-ready="true"
       >
         {children}
+        <ChatMobileGuard />
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"

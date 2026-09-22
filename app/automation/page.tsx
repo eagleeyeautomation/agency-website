@@ -117,7 +117,7 @@ const structuredData = [
 
 export default function AutomationPage() {
   return (
-    <main>
+    <main className="compressed-page automation-compressed">
       <SiteHeader active="Automation" />
 
       <section className="page-hero product-hero automation-page-hero">
@@ -196,7 +196,7 @@ export default function AutomationPage() {
         </div>
       </section>
 
-      <SiteFooter />
+      <SiteFooter showEeosTransition={false} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

@@ -1,81 +1,28 @@
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
-import {
-  CommandCenterPreview,
-  EagleGuide,
-  SiteFooter,
-  SiteHeader,
-  productPlatforms,
-  solutions
-} from "../site-content";
+import { ArrowRight, Check } from "lucide-react";
+import { SiteFooter, SiteHeader, productPlatforms, solutions } from "../site-content";
 
-export const metadata: Metadata = {
-  title: "Solutions",
-  description:
-    "Solutions for AI voice, AI chat, GoHighLevel CRM implementation, workflow automation, executive dashboards, and business intelligence."
+export const metadata: Metadata = { title: "Solutions", description: "Solutions for AI voice, AI chat, GoHighLevel CRM implementation, workflow automation, executive dashboards, and business intelligence." };
+
+const destinations: Record<string, string> = {
+  "AI Voice Receptionist": "/automation", "AI Chat Assistant": "/automation",
+  "GoHighLevel CRM Implementation": "/solutions", "Workflow Automation": "/automation",
+  "Business Intelligence": "/eeos", "Executive Dashboards": "/eeos",
+  "Website Development": "/websites"
 };
 
 export default function SolutionsPage() {
-  return (
-    <main>
-      <SiteHeader />
-      <section className="page-hero">
-        <p className="eyebrow">Solutions</p>
-        <h1>Enter the operating system for tomorrow&apos;s business.</h1>
-        <p>
-          Follow the EEOS Eagle through connected AI, automation, workflow
-          intelligence, secure operations, and executive command visibility.
-        </p>
-        <EagleGuide message="Every solution is designed as a command module inside one connected business operating system." />
-      </section>
-
-      <CommandCenterPreview
-        eyebrow="Solution command layer"
-        title="Cinematic technology on top. Real operating content underneath."
-        text="Each solution combines premium AI visuals with live HTML interface layers that explain what the business can see, manage, and improve."
-        signals={["Lead response", "Workflow intelligence", "Business health", "Executive visibility"]}
-        image="/media/eagle-eye/eea-company-solutions.jpg"
-      />
-
-      <section className="section">
-        <div className="portfolio-detail-grid">
-          {solutions.map((solution) => (
-            <article className="portfolio-detail-card" key={solution.title}>
-              <span>Solution</span>
-              <h2>{solution.title}</h2>
-              <p>{solution.text}</p>
-              <ul className="clean-list">
-                {solution.items.map((item) => (
-                  <li key={item}>
-                    <Check size={16} aria-hidden="true" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section services-section">
-        <div className="section-heading">
-          <p className="eyebrow">Core capabilities</p>
-          <h2>Everything connects back to the operating system.</h2>
-        </div>
-        <div className="service-grid service-grid-wide">
-          {productPlatforms.map(({ icon: Icon, title, text }) => (
-            <article className="service-card" key={title}>
-              <div className="icon-box">
-                <Icon size={24} aria-hidden="true" />
-              </div>
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <SiteFooter />
-    </main>
-  );
+  return <main className="compressed-page solutions-compressed">
+    <SiteHeader active="Solutions" />
+    <section className="page-hero"><p className="eyebrow">Solutions</p><h1>Systems built around the way your business works.</h1><p>From first customer contact to executive decisions, Eagle Eye Automation connects the tools, workflows, and intelligence that service businesses need.</p></section>
+    <section className="section compact-solutions" aria-labelledby="solutions-title">
+      <div className="section-heading"><p className="eyebrow">What we build</p><h2 id="solutions-title">One connected set of capabilities.</h2></div>
+      <div className="compact-solution-grid">
+        {solutions.map((item) => <article className="compact-solution-card" key={item.title}><h3>{item.title}</h3><p>{item.text}</p><ul>{item.items.map((point) => <li key={point}><Check size={14} aria-hidden="true" />{point}</li>)}</ul></article>)}
+        {productPlatforms.filter((item) => !item.title.startsWith("EEOS")).map((item) => <article className="compact-solution-card" key={item.title}><h3>{item.title}</h3><p>{item.text}</p><a href={destinations[item.title] || item.href}>Learn more <ArrowRight size={15} aria-hidden="true" /></a></article>)}
+      </div>
+    </section>
+    <section className="compact-eeos-link"><p><strong>Eagle Eye Automation builds the systems.</strong> EEOS connects their data and provides executive intelligence.</p><a href="/eeos">Explore EEOS <ArrowRight size={16} aria-hidden="true" /></a></section>
+    <SiteFooter showEeosTransition={false} />
+  </main>;
 }

@@ -128,7 +128,7 @@ export default function WebsitesPage() {
   const { bookingHref } = getContactDetails();
 
   return (
-    <main>
+    <main className="compressed-page websites-compressed">
       <SiteHeader active="Websites" />
 
       <section className="page-hero product-hero websites-page-hero">
@@ -213,7 +213,7 @@ export default function WebsitesPage() {
         </div>
       </section>
 
-      <SiteFooter />
+      <SiteFooter showEeosTransition={false} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
