@@ -4747,6 +4747,7 @@ footer .brand-logo {
 .compressed-page .hero-actions { gap: 14px; margin-top: 28px; }
 
 .home-compressed .corporate-hero { min-height: 740px; padding-top: 175px; padding-bottom: 85px; }
+.home-compressed .corporate-hero .hero-image { object-fit: contain; object-position: right bottom; transform: scale(.78); transform-origin: right bottom; }
 .compact-area-grid { gap: 18px; }
 .compact-area-card, .compact-solution-card { padding: 25px; border-radius: 10px; }
 .compact-area-card h3, .compact-solution-card h3 { margin-bottom: 11px; }
@@ -4848,6 +4849,7 @@ footer .brand-logo {
   .compressed-page .section { padding-top: 48px; padding-bottom: 48px; }
   .compressed-page .page-hero { padding-top: 72px; padding-bottom: 48px; }
   .home-compressed .corporate-hero { min-height: 0; padding-top: 72px; padding-bottom: 64px; }
+  .home-compressed .corporate-hero .hero-image { transform: none; }
   .home-eeos { grid-template-columns: 1fr; gap: 24px; }
   .home-eeos img { height: 190px; }
   .automation-compressed .automation-page-hero, .websites-compressed .websites-page-hero { min-height: 0; grid-template-columns: 1fr; padding-top: 72px; padding-bottom: 48px; }
