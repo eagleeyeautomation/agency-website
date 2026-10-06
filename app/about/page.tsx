@@ -84,15 +84,16 @@ export default function AboutPage() {
       <section className="section about-relationship-section">
         <div>
           <p className="eyebrow">EETG + Eagle Eye Automation + EEOS</p>
-          <h2>One company. One flagship operating system.</h2>
+          <h2>One parent company. One operating brand. Two focused products.</h2>
         </div>
         <article className="about-relationship-card">
           <h3>Eagle Eye Automation Group builds {productFullName}.</h3>
           <p>
-            Within Eagle Eye Technology Group, Eagle Eye Automation is the operating company. EEOS is its flagship software
-            platform, bringing business visibility, connected intelligence,
-            workflow automation, and executive recommendations into one
-            environment for service-business owners.
+            Eagle Eye Technology Group is the parent company. Eagle Eye
+            Automation is its operating AI and automation brand. EEOS is the
+            flagship product, and EEA Scout is the market and opportunity
+            intelligence product currently in development. Scout is not
+            commercially available at this time.
           </p>
           <a href="/eeos">
             Explore EEOS

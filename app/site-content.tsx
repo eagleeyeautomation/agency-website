@@ -77,8 +77,8 @@ export const whatWeBuild = [
 export const eeosRoadmap = [
   {
     title: "EEOS Core",
-    status: "Available",
-    text: "The central AI operating system for business intelligence and executive visibility."
+    status: "Controlled access",
+    text: "The central AI operating system for business intelligence and executive visibility. Customer access remains controlled while production-readiness work continues."
   },
   {
     title: "Intelligence Engine",
@@ -92,8 +92,8 @@ export const eeosRoadmap = [
   },
   {
     title: "EEA Scout",
-    status: "Planned",
-    text: "Future prospect intelligence platform designed to identify local business opportunities and demand signals."
+    status: "In development",
+    text: "The market and opportunity intelligence product from Eagle Eye Automation. EEA Scout is not currently commercially available."
   },
   {
     title: "Automation Hub",
@@ -216,17 +216,17 @@ export const productPlatforms = [
   },
   {
     title: "AI Voice Receptionist",
-    eyebrow: "24/7 call coverage",
+    eyebrow: "Configured client capability",
     icon: PhoneCall,
-    text: "AI call handling that answers, qualifies, captures details, and routes follow-up so opportunities are not missed when the team is busy.",
+    text: "AI call handling can be configured for approved client systems to answer, qualify, capture details, and route follow-up.",
     items: ["Call answering", "Lead qualification", "Missed-call recovery"],
     href: "/solutions"
   },
   {
     title: "AI Chat Assistant",
-    eyebrow: "Website conversion",
+    eyebrow: "Configured client capability",
     icon: MessageCircle,
-    text: "Website chat support that helps visitors ask questions, request help, and move into the right CRM workflow.",
+    text: "Website chat can be configured for approved client systems to help visitors ask questions, request help, and enter the right CRM workflow.",
     items: ["Website chat", "Lead capture", "CRM handoff"],
     href: "/solutions"
   },
@@ -396,23 +396,6 @@ export const prnStaffersCaseStudy = {
     "Centralized business visibility",
     "Stronger foundation for future growth"
   ],
-  testimonials: [
-    {
-      quote:
-        "Eagle Eye Automation helped us organize our digital systems and improve how we respond to opportunities.",
-      role: "PRN Staffers team member"
-    },
-    {
-      quote:
-        "The AI tools help our team stay focused while making sure inquiries are not missed.",
-      role: "PRN Staffers team member"
-    },
-    {
-      quote:
-        "The Command Center gives leadership a clearer view of what is happening across the business.",
-      role: "PRN Staffers leadership"
-    }
-  ]
 };
 
 export const solutions = [
@@ -571,7 +554,7 @@ export const ghlReadinessAreas = [
   },
   {
     title: "Tracking scripts",
-    text: "The site is ready for future GHL tracking, funnel attribution, and automation code snippets."
+    text: "The site can support future GHL tracking, funnel attribution, and automation code snippets."
   },
   {
     title: "Funnels",
@@ -647,7 +630,7 @@ export const faqs = [
   {
     question: "Do you offer AI phone and chat tools?",
     answer:
-      "Yes. The site highlights AI Voice Receptionist and AI Chat Assistant services for businesses that need faster response and better lead capture."
+      "Eagle Eye Automation can configure AI voice and chat capabilities for approved client systems after a readiness and scope review."
   },
   {
     question: "Is PRN Staffers a real implementation?",
@@ -662,14 +645,14 @@ export const pricingPackages = [
     price: "$99/month",
     text: "A focused Eagle Eye Automation service package for small businesses that want executive visibility and GoHighLevel-first operating clarity.",
     items: ["Owner command-center support", "Business health monitoring", "GoHighLevel integration readiness"],
-    cta: "Request a Demo"
+    cta: "Request Information"
   },
   {
     title: "Growth",
     price: "$199/month",
     text: "A practical Eagle Eye Automation service package for teams ready to combine executive dashboards, automation visibility, and decision support.",
     items: ["Executive dashboards", "AI executive intelligence", "Workflow automation visibility"],
-    cta: "Request a Demo",
+    cta: "Request Information",
     featured: true
   },
   {
@@ -677,7 +660,7 @@ export const pricingPackages = [
     price: "$299/month",
     text: "An expanded Eagle Eye Automation service package for multi-location businesses that need deeper visibility and more disciplined execution.",
     items: ["Multi-location executive visibility", "Business intelligence", "Priority and risk monitoring"],
-    cta: "Request a Demo"
+    cta: "Request Information"
   }
 ];
 
@@ -698,15 +681,15 @@ export const eagleEyeBrainQuestions = [
 
 export const contactOptions = [
   "Request a Demo",
-  "GoHighLevel-ready Contact Form",
-  "GoHighLevel Calendar Slot",
+  "Email Contact Path",
+  "Calendar Integration Planned",
   "Business Hours: Monday-Friday, 9 AM-5 PM ET",
-  "AI Support: 24/7"
+  "AI Support: By Approved Configuration"
 ];
 
 export const businessHours = [
   { label: "Business Hours", value: "Monday-Friday, 9 AM-5 PM ET" },
-  { label: "AI Phone & Chat Support", value: "Available 24/7" },
+  { label: "AI Phone & Chat", value: "Available by approved configuration" },
   { label: "Demo Requests", value: "Reviewed during business hours" }
 ];
 
@@ -827,7 +810,7 @@ export function CommandCenterPreview({
             <div className="signal-row" key={signal}>
               <span>{String(index + 1).padStart(2, "0")}</span>
               <strong>{signal}</strong>
-              <em>Ready</em>
+              <em>Capability</em>
             </div>
           ))}
         </div>
@@ -940,7 +923,7 @@ export function SiteFooter({
           </a>
           <span className="footer-note">
             <Sparkles size={16} aria-hidden="true" />
-            <span>AI support available 24/7</span>
+            <span>Business inquiries reviewed during business hours</span>
           </span>
         </div>
         <div className="social-links" aria-label="Social media links">

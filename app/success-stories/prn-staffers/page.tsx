@@ -62,21 +62,6 @@ export default function PrnStaffersCaseStudyPage() {
         </div>
       </section>
 
-      <section className="section testimonials-section">
-        <div className="section-heading">
-          <p className="eyebrow">Testimonials</p>
-          <h2>Placeholder quotes from the PRN Staffers team.</h2>
-        </div>
-        <div className="portfolio-grid testimonials-grid">
-          {prnStaffersCaseStudy.testimonials.map((testimonial) => (
-            <blockquote className="portfolio-card testimonial-card" key={testimonial.quote}>
-              <p>&ldquo;{testimonial.quote}&rdquo;</p>
-              <cite>{testimonial.role}</cite>
-            </blockquote>
-          ))}
-        </div>
-      </section>
-
       <SiteFooter />
     </main>
   );

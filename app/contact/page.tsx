@@ -42,8 +42,9 @@ export default function ContactPage() {
           <h2>Tell us what needs to work better.</h2>
           <p>
             Use the form, send an email, or book directly through the calendar
-            link. Business inquiries are reviewed during business hours, and AI
-            phone and chat support can help capture opportunities 24/7.
+            link. Business inquiries are reviewed during business hours. AI
+            phone and chat capabilities are available only when configured for
+            an approved client system.
           </p>
           <div className="hours-grid" aria-label="Business hours">
             {businessHours.map((item) => (

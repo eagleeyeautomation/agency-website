@@ -47,9 +47,10 @@ export default function PricingPage() {
         <p className="eyebrow">Eagle Eye Automation Services</p>
         <h1>Service packages built for clearer operations and practical growth.</h1>
         <p>
-          Choose an Eagle Eye Automation service package for executive visibility,
-          GoHighLevel connection, automation planning, and ongoing operating support.
-          These are company service packages; SaaS product pricing is separate.
+          Review planned Eagle Eye Automation service packages for executive
+          visibility, GoHighLevel connection, automation planning, and ongoing
+          operating support. Controlled customer access is not currently open
+          for general commercial purchase.
         </p>
         <div className="pricing-hero-actions">
           <a className="button" href="/contact">
@@ -64,10 +65,10 @@ export default function PricingPage() {
       <section className="section pricing-section">
         <div className="section-heading pricing-heading">
           <p className="eyebrow">Eagle Eye Automation Services</p>
-          <h2>Monthly service packages</h2>
+          <h2>Planned monthly service packages</h2>
           <p>
-            Package capabilities are limited to services currently available or
-            actively supported during onboarding.
+            These packages are presented for planning and consultation. They are
+            not currently open for general commercial purchase.
           </p>
         </div>
 
@@ -102,11 +103,12 @@ export default function PricingPage() {
 
       <section className="section pricing-addons-section">
         <div className="section-heading pricing-heading">
-          <p className="eyebrow">Optional Intelligence and Growth Add-ons</p>
-          <h2>Add services only when the business is ready.</h2>
+          <p className="eyebrow">Optional service add-ons</p>
+          <h2>Additional configuration options under review.</h2>
           <p>
-            Add-ons are approved service entitlements. No payment provider is
-            connected and no organization is charged automatically.
+            These add-ons remain subject to readiness and scope review. No
+            payment provider is connected and no organization is charged
+            automatically.
           </p>
         </div>
 
@@ -154,6 +156,19 @@ export default function PricingPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section className="section pricing-addons-section">
+        <div className="section-heading pricing-heading">
+          <p className="eyebrow">Product roadmap</p>
+          <h2>EEA Scout</h2>
+          <p>
+            EEA Scout is Eagle Eye Automation&apos;s market and opportunity
+            intelligence product. It replaces the former separate intelligence
+            add-on presentation. EEA Scout is in
+            development and is not currently commercially available.
+          </p>
         </div>
       </section>
 

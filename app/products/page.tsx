@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
+import { BrainCircuit, Check } from "lucide-react";
 import {
   CommandCenterPreview,
   EagleGuide,
@@ -11,10 +11,12 @@ import {
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Eagle Eye Automation products including EEOS — Eagle Eye Operating System, AI Voice Receptionist, AI Chat Assistant, GoHighLevel implementation, workflow automation, executive dashboards, business intelligence, and website development."
+    "Eagle Eye Automation products: EEOS — Eagle Eye Operating System and EEA Scout market and opportunity intelligence."
 };
 
 export default function ProductsPage() {
+  const eeos = productPlatforms[0];
+
   return (
     <main>
       <SiteHeader />
@@ -22,9 +24,8 @@ export default function ProductsPage() {
         <p className="eyebrow">Products</p>
         <h1>EEOS is the flagship AI operating system.</h1>
         <p>
-          The product experience is built like a command center: intelligence,
-          automation, visibility, and secure operating control in one premium
-          software ecosystem.
+          EEOS is Eagle Eye Automation&apos;s flagship product. Customer access
+          remains controlled while production-readiness work continues.
         </p>
         <EagleGuide message="The Eagle points each owner toward the next layer of visibility: signals, priorities, recommendations, and action." />
       </section>
@@ -39,7 +40,7 @@ export default function ProductsPage() {
 
       <section className="section services-section">
         <div className="service-detail-grid">
-          {productPlatforms.map(({ icon: Icon, eyebrow, title, text, items }) => (
+          {[eeos].map(({ icon: Icon, eyebrow, title, text, items }) => (
             <article className="service-detail-card" key={title}>
               <div className="icon-box">
                 <Icon size={24} aria-hidden="true" />
@@ -59,6 +60,24 @@ export default function ProductsPage() {
               </div>
             </article>
           ))}
+          <article className="service-detail-card">
+            <div className="icon-box">
+              <BrainCircuit size={24} aria-hidden="true" />
+            </div>
+            <div>
+              <p className="eyebrow">In development</p>
+              <h2>EEA Scout</h2>
+              <p>
+                EEA Scout is Eagle Eye Automation&apos;s market and opportunity
+                intelligence product. It is not currently commercially available.
+              </p>
+              <ul className="clean-list">
+                <li><Check size={16} aria-hidden="true" /><span>Market intelligence</span></li>
+                <li><Check size={16} aria-hidden="true" /><span>Opportunity research</span></li>
+                <li><Check size={16} aria-hidden="true" /><span>Human-controlled next steps</span></li>
+              </ul>
+            </div>
+          </article>
         </div>
       </section>
 

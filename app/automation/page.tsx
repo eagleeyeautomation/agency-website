@@ -87,8 +87,8 @@ const automationBenefits = [
     icon: HeartHandshake
   },
   {
-    title: "Operate 24/7",
-    text: "Automation never sleeps.",
+    title: "Extend response coverage",
+    text: "Approved automations can support response workflows beyond core business hours when configured.",
     icon: MoonStar
   }
 ];

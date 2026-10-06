@@ -22,8 +22,8 @@ export default function EeosPage() {
       <div className="eeos-hero-content">
         <p className="eyebrow">Flagship product of Eagle Eye Automation</p>
         <h1>EEOS</h1>
-        <p className="eeos-hero-support"><strong>The AI Operating System for Service Businesses.</strong> EEOS connects business signals, automation, operational visibility, and executive recommendations in one intelligent operating experience.</p>
-        <div className="hero-actions"><a className="button primary" href={eeosApplicationUrl}>Explore EEOS <ArrowRight size={18} aria-hidden="true" /></a><a className="button secondary" href={eeosApplicationLoginUrl}>Login to EEOS</a></div>
+        <p className="eeos-hero-support"><strong>The AI Operating System for Service Businesses.</strong> EEOS connects business signals, automation, operational visibility, and executive recommendations in one intelligent operating experience. Customer access remains controlled while production-readiness work continues.</p>
+        <div className="hero-actions"><a className="button primary" href={eeosApplicationUrl}>EEOS Application <ArrowRight size={18} aria-hidden="true" /></a><a className="button secondary" href={eeosApplicationLoginUrl}>Login to EEOS</a></div>
       </div>
       <div className="eeos-hero-mark" aria-hidden="true"><video autoPlay muted loop playsInline preload="metadata" poster="/media/eeos/eeos-executive-intelligence.jpg"><source src="/videos/eeos-hero.mp4" type="video/mp4" /></video></div>
     </section>

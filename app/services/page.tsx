@@ -67,6 +67,10 @@ export default function ServicesPage() {
         <div className="section-heading">
           <p className="eyebrow">Engagement paths</p>
           <h2>Start focused, then expand the system as value becomes clear.</h2>
+          <p>
+            These service-package concepts are available for planning and
+            consultation, not general online purchase.
+          </p>
         </div>
         <div className="pricing-grid">
           {pricingPackages.map((tier) => (
