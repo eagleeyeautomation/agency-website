@@ -3855,6 +3855,29 @@ h3 {
   gap: 16px;
 }
 
+.contact-form-embed {
+  overflow: hidden;
+}
+
+.contact-form-frame {
+  width: 100%;
+  min-height: 720px;
+  border: 0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.contact-form-fallback {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+}
+
+.contact-form-fallback a {
+  color: #ffffff;
+  font-weight: 800;
+}
+
 .contact-form-stack .ghl-embed-slot {
   min-height: 180px;
   border-color: rgba(207, 181, 59, 0.5);
