@@ -970,51 +970,32 @@ export function GhlEmbedSlot({
 }
 
 export function ContactForm() {
-  const { formAction } = getContactDetails();
+  const { contactEmail } = getContactDetails();
 
   return (
-    <form
-      className="contact-form"
-      action={formAction}
-      method="post"
+    <div
+      className="contact-form contact-form-embed"
       data-ghl-ready="true"
       data-ghl-form-purpose="demo-request"
       data-ghl-product={productName}
       data-ghl-company={companyName}
     >
-      <label>
-        Name
-        <input name="name" type="text" autoComplete="name" required />
-      </label>
-      <label>
-        Email
-        <input name="email" type="email" autoComplete="email" required />
-      </label>
-      <label>
-        What do you need help with?
-        <select name="service" defaultValue={productFullName}>
-          <option>{productFullName}</option>
-          <option>AI & Automation</option>
-          <option>CRM</option>
-          <option>Web</option>
-          <option>Dashboards</option>
-          <option>Request a Demo</option>
-          <option>Custom Business Software</option>
-        </select>
-      </label>
-      <label>
-        Message
-        <textarea
-          name="message"
-          rows={5}
-          placeholder="Share the workflow, system, or bottleneck you want to improve."
-          required
-        />
-      </label>
-      <button className="button primary" type="submit">
-        Request a Demo
-        <ArrowRight size={18} aria-hidden="true" />
-      </button>
-    </form>
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/sR5AfQYSPRysL3IMUoHL"
+        title="Eagle Eye Automation website inquiry"
+        className="contact-form-frame"
+        loading="lazy"
+        referrerPolicy="strict-origin-when-cross-origin"
+      />
+      <p className="contact-form-privacy">
+        Submissions are processed through GoHighLevel and LeadConnector. By
+        submitting, you acknowledge our <a href="/privacy">Privacy Policy</a>{" "}
+        and <a href="/terms">Terms of Use</a>.
+      </p>
+      <p className="contact-form-fallback">
+        If the form does not load, email{" "}
+        <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
+      </p>
+    </div>
   );
 }
