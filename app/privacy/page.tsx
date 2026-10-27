@@ -25,7 +25,7 @@ export default function PrivacyPage() {
         <p className="eyebrow">Website privacy</p>
         <h1>Privacy Policy</h1>
         <p className="legal-meta"><strong>Future effective date:</strong> November 2, 2026 · <strong>Website:</strong> eagleeyeautomation.com</p>
-        <p>This policy describes the information practices presently identified for the public Eagle Eye Automation website. Eagle Eye Technology Group LLC ("EETG") is the legal entity, and Eagle Eye Automation is its registered DBA. Eagle Eye Automation is not a separate legal entity.</p>
+        <p>This policy describes the information practices presently identified for the public Eagle Eye Automation website. Eagle Eye Technology Group LLC ("EETG") is the legal entity, and Eagle Eye Automation is its registered Virginia DBA and operating brand, not a separate legal entity.</p>
 
         <h2>Information you provide</h2>
         <p>When you submit an inquiry, request information, use an enabled chat experience, call, or email, we may receive information such as your name, email address, telephone number, company, service interest, message, and the content of your communication. Please do not submit passwords, payment-card information, protected health information, or other sensitive information through general inquiry or chat fields.</p>
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
         </ul>
 
         <h2>CRM, forms, and chat providers</h2>
-        <p>The active website uses Vercel for hosting and uses GoHighLevel and LeadConnector for the public contact form, CRM records, conversations, and chat functionality. Microsoft Outlook provides the business email used for inquiries. These providers may process submitted and technical information to operate the configured services. No other website service is identified here unless its active use has been verified. The public website does not provide online payments at launch.</p>
+        <p>The active website uses Vercel for hosting and uses GoHighLevel and LeadConnector for the public contact form, CRM records, conversations, and chat functionality. Microsoft Outlook provides the business email used for inquiries. Stripe processes subscription and onboarding payments under its applicable notices; payment-card details must not be submitted through general inquiry or chat fields. These providers may process submitted and technical information to operate the configured services. No other website service is identified here unless its active use has been verified.</p>
 
         <h2>Cookies and similar technologies</h2>
         <p>The website loads LeadConnector chat resources, and the active LeadConnector loader reads a <code>cookie-config</code> consent cookie and may use browser storage needed to provide the configured chat and communications functions. Vercel and LeadConnector may also receive standard request, device, security, and interaction data needed to deliver their services. The reviewed website does not include Google Analytics, Google Tag Manager, Meta Pixel, or another identified advertising or cross-site behavioral-analytics integration.</p>

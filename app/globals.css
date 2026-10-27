@@ -3035,6 +3035,22 @@ h3 {
   border-color: var(--old-gold);
 }
 
+.pricing-card-actions {
+  align-self: end;
+  display: grid;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.pricing-card-actions .package-button {
+  margin-top: 0;
+}
+
+.checkout-button-disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
 .pricing-page-hero {
   min-height: 72svh;
 }

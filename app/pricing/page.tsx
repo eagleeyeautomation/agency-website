@@ -47,11 +47,12 @@ export default function PricingPage() {
         <p className="eyebrow">Eagle Eye Automation Services</p>
         <h1>Service packages built for clearer operations and practical growth.</h1>
         <p>
-          Review planned Eagle Eye Automation service packages for executive
+          Review Eagle Eye Automation service packages for executive
           visibility, GoHighLevel connection, automation planning, and ongoing
-          operating support. Controlled customer access is not currently open
-          for general commercial purchase.
+          operating support. Stripe-powered checkout is available for the
+          monthly packages shown below.
         </p>
+        <p><strong>Virginia launch:</strong> Online purchase is available only for eligible Virginia service locations.</p>
         <div className="pricing-hero-actions">
           <a className="button" href="/contact">
             Request a Consultation <ArrowRight size={18} aria-hidden="true" />
@@ -65,10 +66,10 @@ export default function PricingPage() {
       <section className="section pricing-section">
         <div className="section-heading pricing-heading">
           <p className="eyebrow">Eagle Eye Automation Services</p>
-          <h2>Planned monthly service packages</h2>
+          <h2>Monthly service packages</h2>
           <p>
-            These packages are presented for planning and consultation. They are
-            not currently open for general commercial purchase.
+            Each package uses Stripe-powered subscription checkout with a
+            separate one-time setup and onboarding fee.
           </p>
         </div>
 
@@ -93,9 +94,20 @@ export default function PricingPage() {
                 <strong>{SETUP_FEE.label}: {SETUP_FEE.price}</strong>
                 <span>{SETUP_FEE.disclosure}</span>
               </div>
-              <a className="button package-button" href="/contact">
-                {plan.cta} <ArrowRight size={18} aria-hidden="true" />
-              </a>
+              <div className="pricing-card-actions">
+                {plan.checkoutUrl ? (
+                  <a className="button" href={plan.checkoutUrl} rel="noopener noreferrer">
+                    Get Started <ArrowRight size={18} aria-hidden="true" />
+                  </a>
+                ) : (
+                  <span className="button checkout-button-disabled" aria-disabled="true">
+                    Get Started — Checkout Pending
+                  </span>
+                )}
+                <a className="button package-button" href="/contact">
+                  {plan.cta} <ArrowRight size={18} aria-hidden="true" />
+                </a>
+              </div>
             </article>
           ))}
         </div>
@@ -106,9 +118,9 @@ export default function PricingPage() {
           <p className="eyebrow">Optional service add-ons</p>
           <h2>Additional configuration options under review.</h2>
           <p>
-            These add-ons remain subject to readiness and scope review. No
-            payment provider is connected and no organization is charged
-            automatically.
+            These add-ons remain subject to readiness and scope review. Stripe
+            checkout preparation currently covers the three monthly packages;
+            add-ons are not included or charged automatically.
           </p>
         </div>
 

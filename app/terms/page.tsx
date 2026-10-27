@@ -31,7 +31,7 @@ export default function TermsPage() {
         <p>The website provides general information about Eagle Eye Automation services, capabilities, planned products, pricing concepts, and ways to request information. Submitting a form, email, chat, or scheduling request does not obligate either party to enter an engagement.</p>
 
         <h2>Brand and company relationship</h2>
-        <p>Eagle Eye Technology Group LLC ("EETG") is the legal entity, and Eagle Eye Automation is its registered DBA. Eagle Eye Automation is not a separate legal entity. Any final customer agreement must identify Eagle Eye Technology Group LLC as the contracting entity and may identify its Eagle Eye Automation DBA where applicable.</p>
+        <p>Eagle Eye Technology Group LLC ("EETG") is the legal and contracting entity. Eagle Eye Automation is its registered Virginia DBA and operating brand, not a separate legal entity.</p>
 
         <h2>EEOS and EEA Scout</h2>
         <p>EEOS remains under controlled access. EEA Scout remains in development and is not represented as commercially available. Website descriptions do not promise a release date, feature, performance level, or access right. Any authorized product use requires separate written terms.</p>
@@ -52,7 +52,25 @@ export default function TermsPage() {
         <p>The active website uses Vercel for hosting, GoHighLevel and LeadConnector for the public contact form, CRM, conversations, and chat, and Microsoft Outlook for business email. The website also links to social networks and other external destinations. Their availability, content, and processing are governed by their own terms and notices.</p>
 
         <h2>Payments</h2>
-        <p>The public website does not provide online payments at launch. Any future payment process and applicable billing, refund, cancellation, and tax terms must be presented and authorized separately before use.</p>
+        <p>Stripe-powered checkout is available for eligible Virginia customers. Consultation options remain available without purchase.</p>
+
+        <h2>Subscription billing and renewal</h2>
+        <p>Starter is $99 per month, Growth is $299 per month, and Scale is $499 per month. Each subscription includes a separate $250 one-time setup and onboarding fee charged with the first payment. Monthly subscriptions begin upon successful checkout and automatically renew each month on the original billing date until canceled. The $250 onboarding fee does not recur. Any price change requires at least 30 days&apos; advance written notice and applies only to a future renewal.</p>
+
+        <h2>Cancellation</h2>
+        <p>You may cancel by emailing <a href="mailto:eagle@eagleeyeautomation.com">eagle@eagleeyeautomation.com</a>. Cancellation becomes effective at the end of the current paid billing period, and no later renewal will be charged. There is no minimum commitment. Partial-month credits or prorated refunds are not provided except where required by law or expressly approved in writing.</p>
+
+        <h2>Refunds</h2>
+        <p>Monthly subscription payments are non-refundable once processed, except for duplicate or unauthorized charges, where required by law, or when EETG approves a written exception. The $250 onboarding fee is refundable only if EETG cancels before onboarding work begins. The onboarding fee becomes earned and non-refundable when the kickoff meeting occurs or configuration work begins, whichever happens first, except where required by law. Approved refunds are returned to the original payment method.</p>
+
+        <h2>Onboarding</h2>
+        <p>The $250 one-time onboarding fee covers account setup, organization and location configuration, GoHighLevel connection, initial data synchronization, dashboard configuration, basic customer training, and launch support within the purchased plan. Onboarding begins at the earlier of the scheduled kickoff meeting or the first documented configuration action. Customer delays, missing access or information, and third-party outages may extend delivery dates. Out-of-scope work requires separate written approval.</p>
+
+        <h2>Taxes</h2>
+        <p>Published prices exclude applicable taxes. Taxes will be calculated and collected only where EETG is required to do so. Tax-exempt treatment requires acceptable documentation before the applicable charge. Tax collection remains disabled unless and until a jurisdiction-specific obligation is documented and Eagle authorizes the applicable registration and Stripe configuration.</p>
+
+        <h2>Customer acceptance</h2>
+        <p>Checkout activation requires an unchecked customer-acceptance control linking to the approved subscription terms, refund and cancellation policy, Privacy Policy, and these Terms of Use. Custom scope, enterprise terms, or exceptions require a signed service agreement before payment.</p>
 
         <h2>Governing law</h2>
         <p>These terms are governed by the laws of the Commonwealth of Virginia, subject to applicable consumer protections and other rights that cannot lawfully be waived.</p>
