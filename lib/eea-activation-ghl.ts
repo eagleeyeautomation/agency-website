@@ -2,7 +2,7 @@ import { ActivationError, type ActivationGateway, type ActivationRecord, type De
 
 const BASE_URL = "https://services.leadconnectorhq.com";
 
-type CustomField = { id?: string; key?: string; fieldValueString?: string; value?: unknown };
+type CustomField = { id?: string; key?: string; fieldValue?: unknown; fieldValueString?: string; value?: unknown };
 type OpportunityResponse = {
   opportunity?: {
     id?: string;
@@ -25,7 +25,7 @@ export type ActivationFieldIds = {
 
 function fieldValue(fields: CustomField[], id: string) {
   const field = fields.find((candidate) => candidate.id === id || candidate.key === id);
-  const value = field?.fieldValueString ?? field?.value;
+  const value = field?.fieldValue ?? field?.fieldValueString ?? field?.value;
   return typeof value === "string" ? value.trim() : "";
 }
 
