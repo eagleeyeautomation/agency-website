@@ -16,6 +16,13 @@ function listEnv(name: string) {
   return new Set(requiredEnv(name).split(",").map((value) => value.trim().toLowerCase()).filter(Boolean));
 }
 
+function activationDatabaseUrl() {
+  const productionUrl = process.env.EEA_PAYMENT_PRODUCTION_DATABASE_DATABASE_URL;
+  if (productionUrl) return productionUrl;
+  if (process.env.VERCEL_ENV === "preview") return requiredEnv("EEA_PAYMENT_STAGING_DATABASE_URL");
+  throw new ActivationError("missing_configuration:EEA_PAYMENT_PRODUCTION_DATABASE_DATABASE_URL", 503);
+}
+
 export async function POST(request: Request) {
   try {
     authenticateActivation(request.headers.get("authorization") ?? "", requiredEnv("EEA_ACTIVATION_API_SECRET"));
@@ -46,7 +53,7 @@ export async function POST(request: Request) {
       requiredEnv("EEA_ACTIVATION_SERVICES_ACTIVE_STAGE_ID"),
       fields,
     );
-    const store = new PostgresActivationStore(requiredEnv("EEA_PAYMENT_PRODUCTION_DATABASE_DATABASE_URL"));
+    const store = new PostgresActivationStore(activationDatabaseUrl());
     await store.initialize();
     const policy: ActivationPolicy = {
       tenantId,
