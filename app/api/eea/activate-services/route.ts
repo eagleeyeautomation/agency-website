@@ -60,7 +60,7 @@ export async function POST(request: Request) {
     };
     if (!Number.isFinite(policy.maxAgeMs) || policy.maxAgeMs <= 0) throw new ActivationError("invalid_configuration:max_age", 503);
     const result = await activateServices(activationRequest, gateway, store, policy);
-    return NextResponse.json({ activated: result.status === "activated", status: result.status });
+    return NextResponse.json({ activated: result.status === "activated", status: result.status, displaySync: result.displaySync });
   } catch (error) {
     const known = error instanceof ActivationError ? error : new ActivationError("internal_error", 500);
     console.error("eea_service_activation", { code: known.code, status: known.status });

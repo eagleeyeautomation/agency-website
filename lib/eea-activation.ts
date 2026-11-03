@@ -36,10 +36,21 @@ export type ActivationGrant = {
   token: string;
 };
 
+export type AuthoritativeActivation = {
+  opportunityId: string;
+  tenantId: string;
+  locationId: string;
+  fingerprint: string;
+  state: "active" | "revoked";
+};
+
 export interface ActivationStore {
   claim(requestId: string, opportunityId: string, fingerprint: string): Promise<"claimed" | "duplicate">;
   complete(requestId: string): Promise<void>;
   fail(requestId: string, reason: string): Promise<void>;
+  authorize(grant: AuthoritativeActivation): Promise<void>;
+  revoke(opportunityId: string, reason: string): Promise<void>;
+  readAuthorization(opportunityId: string): Promise<AuthoritativeActivation | null>;
 }
 
 export interface ActivationGateway {
@@ -140,23 +151,98 @@ export async function activateServices(
   store: ActivationStore,
   policy: ActivationPolicy,
   now = Date.now(),
-): Promise<{ status: "activated" | "duplicate"; grant?: ActivationGrant }> {
+): Promise<{ status: "activated" | "duplicate"; displaySync: "synced" | "pending"; grant?: ActivationGrant }> {
   const record = await gateway.read(request.opportunityId);
   const { fingerprint } = validateActivation(request, record, policy, now);
-  if (await store.claim(request.requestId, request.opportunityId, fingerprint) === "duplicate") return { status: "duplicate" };
+  if (await store.claim(request.requestId, request.opportunityId, fingerprint) === "duplicate") {
+    const existing = await store.readAuthorization(request.opportunityId);
+    if (!existing || existing.state !== "active" || existing.fingerprint !== fingerprint) {
+      throw new ActivationError("duplicate_without_active_authorization", 409);
+    }
+    return { status: "duplicate", displaySync: "pending" };
+  }
   const grant: ActivationGrant = { requestId: request.requestId, opportunityId: request.opportunityId, fingerprint, token: randomUUID() };
   try {
-    await gateway.setGuardToken(request.opportunityId, grant.token);
-    await gateway.moveToServicesActive(request.opportunityId);
-    if (await gateway.readStage(request.opportunityId) !== policy.servicesActiveStageId) {
-      throw new ActivationError("activation_not_retained", 409);
-    }
-    await gateway.clearGuardToken(request.opportunityId);
+    await store.authorize({
+      opportunityId: request.opportunityId,
+      tenantId: request.tenantId,
+      locationId: request.locationId,
+      fingerprint,
+      state: "active",
+    });
     await store.complete(request.requestId);
-    return { status: "activated", grant };
   } catch (error) {
-    await gateway.clearGuardToken(request.opportunityId).catch(() => undefined);
     await store.fail(request.requestId, error instanceof Error ? error.message : "activation_failed");
     throw error;
+  }
+
+  const displaySync = await syncActivationDisplay(request.opportunityId, gateway, policy, grant.token);
+  return { status: "activated", displaySync, grant };
+}
+
+async function syncActivationDisplay(
+  opportunityId: string,
+  gateway: ActivationGateway,
+  policy: ActivationPolicy,
+  token: string = randomUUID(),
+): Promise<"synced" | "pending"> {
+  try {
+    await gateway.setGuardToken(opportunityId, token);
+    await gateway.moveToServicesActive(opportunityId);
+    const synced = await gateway.readStage(opportunityId) === policy.servicesActiveStageId;
+    await gateway.clearGuardToken(opportunityId);
+    return synced ? "synced" : "pending";
+  } catch {
+    await gateway.clearGuardToken(opportunityId).catch(() => undefined);
+    return "pending";
+  }
+}
+
+export async function synchronizeActivationDisplay(
+  store: ActivationStore,
+  opportunityId: string,
+  tenantId: string,
+  locationId: string,
+  gateway: ActivationGateway,
+  policy: ActivationPolicy,
+) {
+  await requireAuthoritativeActivation(store, opportunityId, tenantId, locationId);
+  return syncActivationDisplay(opportunityId, gateway, policy);
+}
+
+export async function requireAuthoritativeActivation(
+  store: ActivationStore,
+  opportunityId: string,
+  tenantId: string,
+  locationId: string,
+) {
+  const activation = await store.readAuthorization(opportunityId);
+  if (!activation || activation.state !== "active") throw new ActivationError("services_not_authorized", 403);
+  if (activation.tenantId !== tenantId || activation.locationId !== locationId) throw new ActivationError("authorization_scope_mismatch", 403);
+  return activation;
+}
+
+export async function reconcileActivation(
+  opportunityId: string,
+  gateway: ActivationGateway,
+  store: ActivationStore,
+  policy: ActivationPolicy,
+  now = Date.now(),
+) {
+  const activation = await store.readAuthorization(opportunityId);
+  if (!activation || activation.state !== "active") return "inactive" as const;
+  try {
+    const record = await gateway.read(opportunityId);
+    const { fingerprint } = validateActivation({
+      requestId: `reconcile:${opportunityId}`,
+      tenantId: activation.tenantId,
+      locationId: activation.locationId,
+      opportunityId,
+    }, { ...record, stageId: policy.qualityReviewStageId }, policy, now);
+    if (fingerprint !== activation.fingerprint) throw new ActivationError("authorization_changed", 409);
+    return "active" as const;
+  } catch (error) {
+    await store.revoke(opportunityId, error instanceof Error ? error.message : "reconciliation_failed");
+    return "revoked" as const;
   }
 }

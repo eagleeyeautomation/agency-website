@@ -4,6 +4,9 @@ import {
   ActivationError,
   activateServices,
   authenticateActivation,
+  reconcileActivation,
+  requireAuthoritativeActivation,
+  synchronizeActivationDisplay,
   type ActivationGateway,
   type ActivationPolicy,
   type ActivationRecord,
@@ -41,6 +44,7 @@ class MemoryStore implements ActivationStore {
   private claims = new Set<string>();
   completed = 0;
   failed = 0;
+  authorization: import("../lib/eea-activation").AuthoritativeActivation | null = null;
   async claim(requestId: string, _opportunityId: string, fingerprint: string) {
     const key = `${requestId}:${fingerprint}`;
     if (this.claims.has(key)) return "duplicate" as const;
@@ -49,6 +53,11 @@ class MemoryStore implements ActivationStore {
   }
   async complete() { this.completed += 1; }
   async fail() { this.failed += 1; }
+  async authorize(grant: import("../lib/eea-activation").AuthoritativeActivation) { this.authorization = grant; }
+  async revoke(_opportunityId: string, _reason: string) {
+    if (this.authorization) this.authorization = { ...this.authorization, state: "revoked" };
+  }
+  async readAuthorization() { return this.authorization; }
 }
 
 class MemoryGateway implements ActivationGateway {
@@ -121,11 +130,16 @@ test("all valid approvals retain Services Active and clear the guard token", asy
   assert.equal(gateway.moves, 1);
   assert.equal(gateway.externalEffects, 0);
   assert.equal(store.completed, 1);
+  assert.equal(store.authorization?.state, "active");
 });
 
-test("guard conflict fails closed and never bypasses rollback", async () => {
+test("GHL guard conflict cannot revoke authoritative activation", async () => {
   const gateway = new MemoryGateway(record(), false);
-  await assert.rejects(() => activateServices(request, gateway, new MemoryStore(), policy, NOW), /activation_not_retained/);
+  const store = new MemoryStore();
+  const result = await activateServices(request, gateway, store, policy, NOW);
+  assert.equal(result.status, "activated");
+  assert.equal(result.displaySync, "pending");
+  assert.equal(store.authorization?.state, "active");
   assert.equal(gateway.stage, policy.qualityReviewStageId);
   assert.equal(gateway.token, "");
 });
@@ -155,4 +169,54 @@ test("manual stage movement cannot execute provisioning in the activation bounda
   const gateway = new MemoryGateway();
   gateway.stage = policy.servicesActiveStageId;
   assert.equal(gateway.externalEffects, 0);
+  await assert.rejects(() => requireAuthoritativeActivation(new MemoryStore(), request.opportunityId, policy.tenantId, policy.locationId), /services_not_authorized/);
+});
+
+test("downstream entitlement requires an active tenant-scoped server grant", async () => {
+  const store = new MemoryStore();
+  const gateway = new MemoryGateway();
+  await activateServices(request, gateway, store, policy, NOW);
+  assert.equal((await requireAuthoritativeActivation(store, request.opportunityId, policy.tenantId, policy.locationId)).state, "active");
+  await assert.rejects(() => requireAuthoritativeActivation(store, request.opportunityId, "other", policy.locationId), /authorization_scope_mismatch/);
+});
+
+test("changed or revoked approval is revoked during bounded reconciliation", async () => {
+  const store = new MemoryStore();
+  const data = record();
+  const gateway = new MemoryGateway(data);
+  await activateServices(request, gateway, store, policy, NOW);
+  data.activationAuthorization.status = "Rejected";
+  assert.equal(await reconcileActivation(request.opportunityId, gateway, store, policy, NOW), "revoked");
+  await assert.rejects(() => requireAuthoritativeActivation(store, request.opportunityId, policy.tenantId, policy.locationId), /services_not_authorized/);
+});
+
+test("restart preserves authoritative activation independently of GHL stage", async () => {
+  const store = new MemoryStore();
+  await store.authorize({ opportunityId: request.opportunityId, tenantId: policy.tenantId, locationId: policy.locationId, fingerprint: "persisted", state: "active" });
+  const restartedGateway = new MemoryGateway();
+  restartedGateway.stage = policy.qualityReviewStageId;
+  assert.equal((await requireAuthoritativeActivation(store, request.opportunityId, policy.tenantId, policy.locationId)).fingerprint, "persisted");
+  assert.equal(restartedGateway.externalEffects, 0);
+});
+
+test("GHL display failure recovers idempotently without re-authorizing services", async () => {
+  class FlakyGateway extends MemoryGateway {
+    failures = 1;
+    async moveToServicesActive() {
+      if (this.failures-- > 0) throw new ActivationError("ghl_http_503", 502);
+      await super.moveToServicesActive();
+    }
+  }
+  const gateway = new FlakyGateway();
+  const store = new MemoryStore();
+  const first = await activateServices(request, gateway, store, policy, NOW);
+  assert.equal(first.status, "activated");
+  assert.equal(first.displaySync, "pending");
+  assert.equal(store.authorization?.state, "active");
+  const replay = await activateServices(request, gateway, store, policy, NOW);
+  assert.equal(replay.status, "duplicate");
+  assert.equal(replay.displaySync, "pending");
+  const recovery = await synchronizeActivationDisplay(store, request.opportunityId, policy.tenantId, policy.locationId, gateway, policy);
+  assert.equal(recovery, "synced");
+  assert.equal(gateway.moves, 1);
 });
