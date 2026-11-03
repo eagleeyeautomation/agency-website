@@ -6,6 +6,7 @@ import "./globals.css";
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.eagleeyeautomation.com/";
 const canonicalSiteUrl = siteUrl.replace(/\/$/, "");
+const googleAnalyticsId = "G-X6H6L75JFH";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${canonicalSiteUrl}/`),
@@ -116,6 +117,18 @@ export default function RootLayout({
           data-source="WEB_USER"
           strategy="afterInteractive"
         />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${googleAnalyticsId}');
+          `}
+        </Script>
         <script
           id="eagle-eye-automation-structured-data"
           type="application/ld+json"
