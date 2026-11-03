@@ -2,7 +2,7 @@
   "name": "agency-website",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@11.7.0",
+  "packageManager": "pnpm@11.25.0",
   "engines": {
     "node": ">=20.9.0"
   },
@@ -12,11 +12,13 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "check": "pnpm typecheck && pnpm build"
+    "check": "pnpm typecheck && pnpm test:bridge && pnpm build",
+    "test:bridge": "tsx --test tests/*.test.ts"
   },
   "dependencies": {
+    "@neondatabase/serverless": "1.0.2",
     "lucide-react": "1.22.0",
-    "next": "16.2.9",
+    "next": "16.4.4",
     "react": "19.2.7",
     "react-dom": "19.2.7"
   },
@@ -24,6 +26,7 @@
     "@types/node": "26.0.1",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
+    "tsx": "4.20.6",
     "typescript": "6.0.3"
   }
 }

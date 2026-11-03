@@ -52,7 +52,7 @@ export default function TermsPage() {
         <p>The active website uses Vercel for hosting, GoHighLevel and LeadConnector for the public contact form, CRM, conversations, and chat, and Microsoft Outlook for business email. The website also links to social networks and other external destinations. Their availability, content, and processing are governed by their own terms and notices.</p>
 
         <h2>Payments</h2>
-        <p>Stripe-powered checkout is available for eligible Virginia customers. Consultation options remain available without purchase.</p>
+        <p>Eagle Eye Automation&apos;s services and pricing may be displayed for informational purposes. Online purchasing and checkout are not currently open for general commercial transactions. Payment options, including Stripe-powered checkout, may become available when enrollment is officially opened. Any applicable fees, payment terms, and service conditions will be presented before a customer completes a purchase.</p>
 
         <h2>Subscription billing and renewal</h2>
         <p>Starter is $99 per month, Growth is $299 per month, and Scale is $499 per month. Each subscription includes a separate $250 one-time setup and onboarding fee charged with the first payment. Monthly subscriptions begin upon successful checkout and automatically renew each month on the original billing date until canceled. The $250 onboarding fee does not recur. Any price change requires at least 30 days&apos; advance written notice and applies only to a future renewal.</p>

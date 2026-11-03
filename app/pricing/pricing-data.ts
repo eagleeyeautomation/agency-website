@@ -8,7 +8,7 @@ export const PUBLIC_CONTACT = {
 export const SETUP_FEE = {
   label: "One-Time Setup and Onboarding Fee",
   price: "$250",
-  disclosure: "The $250 fee is charged once with the initial subscription payment, does not recur, and covers the approved setup and onboarding scope.",
+  disclosure: "The one-time setup and onboarding fee is due when onboarding begins and is separate from the monthly subscription.",
   covers: [
     "Account setup",
     "Organization configuration",
@@ -30,7 +30,6 @@ export const FOUNDING_CUSTOMER_PLANS = [
     planCode: "FOUNDATION",
     price: "$99",
     cadence: "/month",
-    checkoutUrl: process.env.STRIPE_STARTER_PAYMENT_LINK ?? "",
     customerType: "For a single-location business beginning with executive visibility.",
     locationLimit: "1 GoHighLevel location",
     cta: "Request Starter Information",
@@ -49,7 +48,6 @@ export const FOUNDING_CUSTOMER_PLANS = [
     planCode: "INTELLIGENCE",
     price: "$299",
     cadence: "/month",
-    checkoutUrl: process.env.STRIPE_GROWTH_PAYMENT_LINK ?? "",
     customerType: "For a growing business that needs clearer follow-up and operating visibility.",
     locationLimit: "Up to 3 GoHighLevel locations",
     cta: "Request Growth Information",
@@ -69,7 +67,6 @@ export const FOUNDING_CUSTOMER_PLANS = [
     planCode: "ENTERPRISE",
     price: "$499",
     cadence: "/month",
-    checkoutUrl: process.env.STRIPE_SCALE_PAYMENT_LINK ?? "",
     customerType: "For a multi-location operator preparing for deeper executive intelligence.",
     locationLimit: "Up to 5 GoHighLevel locations",
     cta: "Request Scale Information",

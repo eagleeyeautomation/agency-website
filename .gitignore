@@ -57,3 +57,4 @@ prn-command-center/
 ghl-workflows/
 automation-library/
 .env*
+.env*.local
