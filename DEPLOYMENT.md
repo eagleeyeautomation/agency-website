@@ -18,10 +18,10 @@ Copy `.env.example` into the Vercel project settings.
 NEXT_PUBLIC_SITE_URL=https://www.eagleeyeautomation.com/
 NEXT_PUBLIC_CONTACT_EMAIL=hello@eagleeyeautomation.com
 NEXT_PUBLIC_CONTACT_PHONE=
-NEXT_PUBLIC_BOOKING_URL=
+NEXT_PUBLIC_BOOKING_URL=https://api.leadconnectorhq.com/widget/booking/OExPCFbbYbQmrKf7pymD
 ```
 
-Leave `NEXT_PUBLIC_BOOKING_URL` blank to route scheduling requests through email. Add `NEXT_PUBLIC_CONTACT_PHONE` when the public phone number is ready to display.
+`NEXT_PUBLIC_BOOKING_URL` may override the verified EEA Consultation calendar only when an approved replacement calendar is deployed. Add `NEXT_PUBLIC_CONTACT_PHONE` when the public phone number is ready to display.
 
 ## Vercel Setup
 

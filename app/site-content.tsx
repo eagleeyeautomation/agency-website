@@ -684,10 +684,13 @@ export const eagleEyeBrainQuestions = [
 export const contactOptions = [
   "Request a Demo",
   "Email Contact Path",
-  "Calendar Integration Planned",
+  "Live Consultation Calendar",
   "Business Hours: Monday-Friday, 9 AM-5 PM ET",
   "AI Support: By Approved Configuration"
 ];
+
+export const consultationBookingUrl =
+  "https://api.leadconnectorhq.com/widget/booking/OExPCFbbYbQmrKf7pymD";
 
 export const businessHours = [
   { label: "Business Hours", value: "Monday-Friday, 9 AM-5 PM ET" },
@@ -722,11 +725,8 @@ export function getContactDetails() {
     : undefined;
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.eagleeyeautomation.com/";
-  const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL;
-  const bookingHref =
-    bookingUrl && bookingUrl.length > 0
-      ? bookingUrl
-      : `mailto:${contactEmail}?subject=Discovery%20call%20request`;
+  const configuredBookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL?.trim();
+  const bookingHref = configuredBookingUrl || consultationBookingUrl;
 
   return {
     bookingHref,

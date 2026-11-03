@@ -81,7 +81,7 @@ export default function ContactPage() {
           <GhlEmbedSlot
             label="Book Demo Calendar"
             kind="calendar"
-            detail="Prepared for a GoHighLevel calendar embed when live scheduling is connected."
+            detail="The verified EEA Consultation calendar is available through the booking links on this page."
           />
         </div>
       </section>

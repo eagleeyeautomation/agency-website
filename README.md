@@ -34,10 +34,10 @@ Set these environment variables in the deployment target:
 NEXT_PUBLIC_SITE_URL=https://www.eagleeyeautomation.com/
 NEXT_PUBLIC_CONTACT_EMAIL=hello@eagleeyeautomation.com
 NEXT_PUBLIC_CONTACT_PHONE=
-NEXT_PUBLIC_BOOKING_URL=
+NEXT_PUBLIC_BOOKING_URL=https://api.leadconnectorhq.com/widget/booking/OExPCFbbYbQmrKf7pymD
 ```
 
-Leave `NEXT_PUBLIC_BOOKING_URL` blank to use an email-based scheduling link. Add `NEXT_PUBLIC_CONTACT_PHONE` when you want a phone number shown in the contact and footer areas.
+`NEXT_PUBLIC_BOOKING_URL` may override the verified EEA Consultation calendar only when an approved replacement calendar is deployed. Add `NEXT_PUBLIC_CONTACT_PHONE` when you want a phone number shown in the contact and footer areas.
 
 The homepage content lives in `app/page.tsx`, global styling in `app/globals.css`, and project imagery in `public/images`.
 
