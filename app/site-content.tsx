@@ -135,6 +135,8 @@ export const footerNav = [
   { label: "Services", href: "/services" },
   { label: "Success Stories", href: "/success-stories" },
   { label: "FAQ", href: "/faq" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
   { label: "PRN Staffers Digital Transformation", href: "/success-stories/prn-staffers" },
   { label: "Blog", href: "/blog" }
 ];
@@ -984,7 +986,14 @@ export function ContactForm() {
         src="https://api.leadconnectorhq.com/widget/form/sR5AfQYSPRysL3IMUoHL"
         title="Eagle Eye Automation website inquiry"
         className="contact-form-frame"
+        loading="lazy"
+        referrerPolicy="strict-origin-when-cross-origin"
       />
+      <p className="contact-form-privacy">
+        Submissions are processed through GoHighLevel and LeadConnector. By
+        submitting, you acknowledge our <a href="/privacy">Privacy Policy</a>{" "}
+        and <a href="/terms">Terms of Use</a>.
+      </p>
       <p className="contact-form-fallback">
         If the form does not load, email{" "}
         <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
