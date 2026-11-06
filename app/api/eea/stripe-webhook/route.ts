@@ -79,7 +79,7 @@ export async function POST(request: Request) {
     const signature = request.headers.get("stripe-signature") ?? "";
     const prefix = mode === "production" ? "PRODUCTION" : "STAGING";
     const databaseUrl = mode === "production"
-      ? requiredEnv("EEA_PAYMENT_PRODUCTION_DATABASE_DATABASE_URL")
+      ? requiredEnv("EEA_PAYMENT_PRODUCTION_DATABASE_URL")
       : requiredEnv("EEA_PAYMENT_STAGING_DATABASE_URL");
     const store = new PostgresDedupStore(databaseUrl);
     await store.initialize();
