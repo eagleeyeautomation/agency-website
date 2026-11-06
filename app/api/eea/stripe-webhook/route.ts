@@ -13,6 +13,10 @@ function requiredEnv(name: string): string {
   return value;
 }
 
+function requiredAnyEnv(primary: string, fallback: string): string {
+  return process.env[primary] || process.env[fallback] || requiredEnv(primary);
+}
+
 async function enrichCheckoutLineItems(raw: Uint8Array): Promise<Uint8Array> {
   const event = JSON.parse(Buffer.from(raw).toString("utf8")) as { data?: { object?: { id?: string; line_items?: unknown } } };
   const object = event.data?.object;
@@ -79,7 +83,10 @@ export async function POST(request: Request) {
     const signature = request.headers.get("stripe-signature") ?? "";
     const prefix = mode === "production" ? "PRODUCTION" : "STAGING";
     const databaseUrl = mode === "production"
-      ? requiredEnv("EEA_PAYMENT_PRODUCTION_DATABASE_URL")
+      ? requiredAnyEnv(
+          "EEA_PAYMENT_PRODUCTION_DATABASE_URL",
+          "EEA_PAYMENT_PRODUCTION_DATABASE_DATABASE_URL",
+        )
       : requiredEnv("EEA_PAYMENT_STAGING_DATABASE_URL");
     const store = new PostgresDedupStore(databaseUrl);
     await store.initialize();
